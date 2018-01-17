@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>iqons.svg</title>
+    <style type="text/css">
+    html,
+    body {
+        background: linear-gradient(#536DFE, #b453fe);
+        text-align: center;
+        padding-top: 48px;
+        min-height: 100vh;
+    }
+
+    #iqons{
+        width: 320px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .iqons {
+        width: 160px;
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .small {
+        width: 80px;
+    }
+
+    input {
+        background: none;
+        outline: none;
+        border: none;
+        color: white;
+        font-size: 40px;
+        font-family: Arial;
+        padding: 16px;
+        margin: 24px;
+        text-align: center;
+        border-bottom: 1px solid white;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div class="iqons" id="iqons"></div>
+            <input onkeyup="document.querySelectorAll('.iqons').forEach((e, i) => Iqons.render(this.value+i, e))" placeholder="iqons a Text" autofocus="true">
+        </div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div>
+        <div class="iqons"></div><br>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+        <div class="iqons small"></div>
+    </div>
+    <script src="src/js/iqons.js"></script>
+    <!-- <script src="dist/iqons.min.js"></script> -->
+    <script type="text/javascript">
+    const now = Date.now()
+    document.querySelectorAll('.iqons').forEach((e, i) => Iqons.render(now + 'identicon' + i, e))
+    </script>
+</body>
+
+</html>
