@@ -4,7 +4,7 @@ class Iqons {
 
     static svg(text) {
         const hash = this._hash(text);
-        return this._svgTemplate(this.colors[hash[0]], this.bgColors[hash[1]], hash[2], hash[3], hash[4], hash[5], hash[6]);
+        return this._svgTemplate(this.colors[hash[0]], this.bgColors[hash[2]], hash[3] + hash[4], hash[5] + hash[6], hash[7] + hash[8], hash[9] + hash[10], this.accentColors[hash[11]]);
     }
 
     static render(text, $element) {
@@ -16,13 +16,13 @@ class Iqons {
     }
 
     /* Private API */
-    static _svgTemplate(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr) {
-        return this._$svg(this._$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr));
+    static _svgTemplate(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor) {
+        return this._$svg(this._$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor));
     }
 
-    static _$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr) {
+    static _$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor) {
         return `
-            <g style="color:${color}">
+            <g style="color:${color}; fill:${accentColor};">
                 <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
                 <circle cx="80" cy="80" r="40" fill="${color}" stroke="black"></circle>
                 ${this._$use('face',faceNr)}
@@ -43,7 +43,7 @@ class Iqons {
     }
 
     static _$use(part, index) {
-        return `<use width="160" height="160" xlink:href="${location.origin}/iqons/dist/iqons.min.svg#${part}-${this._assetIndex(index)}" />`;
+        return `<use width="160" height="160" xlink:href="${location.origin}/iqons/dist/iqons.min.svg#${part}-${this._assetIndex(index,part)}"/>`;
     }
 
     static get colors() {
@@ -83,7 +83,30 @@ class Iqons {
         ]
     }
 
-    static _assetIndex(index) { index = Number(index) % 4  + 1; return index  }
+    static get accentColors() {
+        return [
+            '#ff9800', // orange-500
+            '#E53935', // red-600
+            '#FDD835', // yellow-600
+            '#3f51b5', // indigo-500
+            '#03a9f4', // light-blue-500
+            '#9c27b0', // purple-500
+            '#009688', // teal-500
+            '#EC407A', // pink-400
+            '#8bc34a', // light-green-500
+            '#795548' // brown-500
+        ]
+    }
+    static get assetCounts() {
+        return {
+            'face': 24,
+            'side': 18,
+            'top': 20,
+            'bottom': 17
+        }
+    }
+
+    static _assetIndex(index, part) { index = Number(index) % Iqons.assetCounts[part] + 1; return index }
 
     static _hash(text) {
         return ('' + text
@@ -92,7 +115,7 @@ class Iqons {
                 .reduce((a, e) => a * (1 - a) * this.__chaosHash(e), 0.5))
             .split('')
             .reduce((a, e) => e + a, '')
-            .substr(4, 10);
+            .substr(4, 17);
     }
 
     static __chaosHash(number) {
