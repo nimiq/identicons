@@ -102,7 +102,7 @@ class Iqons {
     }
     static get assetCounts() {
         return {
-            'face': 25,
+            'face': 24,
             'side': 18,
             'top': 20,
             'bottom': 17
