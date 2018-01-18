@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style type="text/css">
+html,
+body {
+    background: linear-gradient(#536DFE, #b453fe);
+    text-align: center;
+    padding-top: 48px;
+    min-height: 100vh;
+    color: white;
+    font-family: system-ui;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body{
+    padding: 0 32px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1{
+    font-weight: 300;
+    font-size: 54px;
+    margin-top: 64px;
+}
+
+.iqon {
+    width: 80px;
+    display: inline-block;
+    margin: 8px;
+    background-image: url('data:image/svg+xml,<svg width="160px" height="144px" viewBox="0 0 160 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M88.1247411,-5.3618916 L142.907644,26.2670322 C147.858061,29.125157 150.907644,34.4071893 150.907644,40.1234387 L150.907644,103.381286 C150.907644,109.097536 147.858061,114.379568 142.907644,117.237693 L88.1247411,148.866617 C83.1743239,151.724741 77.0751584,151.724741 72.1247411,148.866617 L17.3418381,117.237693 C12.3914209,114.379568 9.34183808,109.097536 9.34183808,103.381286 L9.34183808,40.1234387 C9.34183808,34.4071893 12.3914209,29.125157 17.3418381,26.2670322 L72.1247411,-5.3618916 C77.0751584,-8.22001632 83.1743239,-8.22001632 88.1247411,-5.3618916 Z" fill="#fff" transform="translate(80.124741, 71.752363) rotate(30.000000) translate(-80.124741, -71.752363)"></path></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 4px;
+    background-position: 0px 4px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+}
+</style>
+
+<body>
+    <div id="top">
+        <h1>Top</h1>
+    </div>
+    <div id="face">
+        <h1>Face</h1>
+    </div>
+    <div id="side">
+        <h1>Side</h1>
+    </div>
+    <div id="bottom">
+        <h1>Bottom</h1>
+    </div>
+    <script src="src/js/iqons.js"></script>
+    <script>
+    function render(type) {
+        const count = Iqons.assetCounts[type];
+        const $el = document.getElementById(type);
+        for (var i = 0; i < count; i++) {
+            $el.appendChild(renderIqon(renderFns[type](i)))
+        }
+    }
+
+    const renderFns = {
+        face: index => Iqons._svgTemplate(0, 3, index, -1, -1, -1, 7),
+        top: index => Iqons._svgTemplate(0, 3, 15, index, -1, -1, 7),
+        side: index => Iqons._svgTemplate(0, 3, 15, -1, index, -1, 7),
+        bottom: index => Iqons._svgTemplate(0, 3, 15, -1, -1, index, 7),
+    }
+
+    function renderIqon(svg) {
+        const $iqon = document.createElement('div');
+        $iqon.innerHTML = svg;
+        $iqon.className = 'iqon'
+        return $iqon;
+    }
+
+    render('face')
+    render('top')
+    render('side')
+    render('bottom')
+    </script>
+</body>
+
+</html>

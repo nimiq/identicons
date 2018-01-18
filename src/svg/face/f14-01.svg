@@ -5,23 +5,23 @@
 	 width="160px" height="160px" viewBox="0 0 160 160" enable-background="new 0 0 160 160" xml:space="preserve">
 <g id="f14">
 	
-		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M81.586,78.809c0,0-4.98,4.453-5.816,5.634c-3.207,4.527,5.089,7.9,5.686,3.048C81.622,86.15,81.586,78.809,81.586,78.809z"/>
 	<g>
 		
-			<ellipse fill="#FFFFFF" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="88.377" cy="73.043" rx="4.406" ry="7.312"/>
+			<ellipse fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="88.377" cy="73.043" rx="4.406" ry="7.312"/>
 		
-			<ellipse fill="#FFFFFF" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="108.873" cy="73.043" rx="4.406" ry="7.312"/>
+			<ellipse fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="108.873" cy="73.043" rx="4.406" ry="7.312"/>
 	</g>
 	
-		<path fill="#010101" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M83.541,100.666c-0.082-0.395-0.125-0.797-0.125-1.203c0-5.204,6.897-9.428,15.396-9.428c8.496,0,15.394,4.224,15.394,9.428
 		c0,0.406-0.042,0.809-0.124,1.203c-0.966-4.637-7.439-8.225-15.27-8.225C90.979,92.441,84.507,96.029,83.541,100.666z"/>
 	
-		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M110.692,62.569l8.451,4.293c0,0,0.193-3.146-2.513-4.707C111.955,59.458,110.692,62.569,110.692,62.569z"/>
 	
-		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M86.565,62.569l-8.451,4.293c0,0-0.194-3.146,2.512-4.707C85.304,59.458,86.565,62.569,86.565,62.569z"/>
 </g>
 </svg>

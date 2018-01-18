@@ -3,15 +3,12 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="160px" height="160px" viewBox="0 0 160 160" enable-background="new 0 0 160 160" xml:space="preserve">
-<g id="f4">
-	<g>
-		
-			<ellipse fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="84.778" cy="73.043" rx="4.406" ry="7.312"/>
-		
-			<ellipse fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="97.655" cy="70.468" rx="5.246" ry="9.887"/>
-		
-			<ellipse fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="110.079" cy="73.043" rx="4.407" ry="7.312"/>
-	</g>
+<g id="one.-eye">
+	
+		<ellipse fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="98.298" cy="73.763" rx="8.378" ry="10.931"/>
+	
+		<path fill="none" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		M89.379,63.881c1.632-7.45,15.12-6.954,17.259,0"/>
 	
 		<path fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M114.081,90.035c0.082,0.395,0.124,0.795,0.124,1.203c0,5.202-6.897,9.428-15.394,9.428c-8.498,0-15.396-4.226-15.396-9.428

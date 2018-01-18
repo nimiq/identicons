@@ -6,21 +6,21 @@
 <g id="f11">
 	<g>
 		
-			<ellipse fill="#FFFFFF" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="88.377" cy="73.043" rx="4.406" ry="7.312"/>
+			<ellipse fill="#FFFFFF" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="88.377" cy="73.043" rx="4.406" ry="7.312"/>
 		
-			<ellipse fill="#FFFFFF" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="108.873" cy="73.043" rx="4.406" ry="7.312"/>
+			<ellipse fill="#FFFFFF" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="108.873" cy="73.043" rx="4.406" ry="7.312"/>
 	</g>
 	
-		<path fill="#1CAA4A" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="#11AA11" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M100.854,78.442c0,0,16.428,2.036,20.531,3.041c4.208,1.031,2.773,9.467-1.77,8.893c-3.496-0.441-19.074-5.311-19.074-5.311"/>
 	
-		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M110.692,62.569l8.451,4.293c0,0,0.193-3.146-2.513-4.707C111.955,59.458,110.692,62.569,110.692,62.569z"/>
 	
-		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M86.565,62.569l-8.451,4.293c0,0-0.194-3.146,2.512-4.707C85.304,59.458,86.565,62.569,86.565,62.569z"/>
 	
-		<path fill="#FFFFFF" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M95.658,95.12c2.601-0.8,8.772-1.32,8.772-1.32s-4.725-3.501-10.196-1.528c-4.111,1.482-5.406,6.32-5.406,6.32
 		S93.297,95.846,95.658,95.12z"/>
 </g>

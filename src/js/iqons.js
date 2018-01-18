@@ -4,7 +4,7 @@ class Iqons {
 
     static svg(text) {
         const hash = this._hash(text);
-        return this._svgTemplate(this.colors[hash[0]], this.bgColors[hash[2]], hash[3] + hash[4], hash[5] + hash[6], hash[7] + hash[8], hash[9] + hash[10], this.accentColors[hash[11]]);
+        return this._svgTemplate(hash[0], hash[2], hash[3] + hash[4], hash[5] + hash[6], hash[7] + hash[8], hash[9] + hash[10], hash[11]);
     }
 
     static render(text, $element) {
@@ -21,6 +21,9 @@ class Iqons {
     }
 
     static _$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor) {
+        color = this.colors[color];
+        backgroundColor = this.bgColors[backgroundColor]
+        accentColor = this.accentColors[accentColor]
         return `
             <g style="color:${color}; fill:${accentColor};">
                 <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
@@ -99,7 +102,7 @@ class Iqons {
     }
     static get assetCounts() {
         return {
-            'face': 24,
+            'face': 25,
             'side': 18,
             'top': 20,
             'bottom': 17

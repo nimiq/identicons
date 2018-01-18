@@ -5,18 +5,18 @@
 	 width="160px" height="160px" viewBox="0 0 160 160" enable-background="new 0 0 160 160" xml:space="preserve">
 <g id="f19">
 	
-		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M83.392,77.609c-0.429-1.239-0.676-2.685-0.676-4.229c0-4.577,2.165-8.293,4.831-8.293c2.667,0,4.832,3.716,4.832,8.293
 		c0,1.143-0.135,2.232-0.38,3.223c-0.842-2.432-2.389-4.064-4.155-4.064C85.843,72.539,84.125,74.631,83.392,77.609z"/>
 	
-		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="#FFFFFF" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M105.791,77.609c-0.429-1.239-0.675-2.685-0.675-4.229c0-4.577,2.165-8.293,4.83-8.293c2.666,0,4.832,3.716,4.832,8.293
 		c0,1.143-0.135,2.232-0.379,3.223c-0.844-2.432-2.39-4.064-4.156-4.064C108.243,72.539,106.524,74.631,105.791,77.609z"/>
 	
-		<path fill="#EE2424" fill-opacity="0.8941" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="#FF0700" fill-opacity="0.8941" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M83.119,92.16c0,0-7.408,6.959-1.041,11.47c5.083,3.601,9.76-5.292,9.76-5.292"/>
 	
-		<path fill="none" stroke="#010101" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+		<path fill="none" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
 		M83.144,89.188c1.588,5.229,9.604,10.92,16.744,10.752c6.588-0.154,11.851-4.875,14.248-10.752"/>
 </g>
 </svg>

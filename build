@@ -17,6 +17,7 @@ do
     sed -i '' 's/#1A1/currentColor/g' $file
     sed -i '' 's/#FE1/inherit/g' $file
     sed -i '' 's/#FE0/inherit/g' $file
+    sed -i '' 's/#FFED00/inherit/g' $file
 done
 echo "$2 : $index features"
 }
