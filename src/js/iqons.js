@@ -112,10 +112,10 @@ class Iqons {
     }
     static get assetCounts() {
         return {
-            'face': 24,
-            'side': 20,
-            'top': 20,
-            'bottom': 20,
+            'face': IqonsCatalog.face.length,
+            'side': IqonsCatalog.side.length,
+            'top': IqonsCatalog.top.length,
+            'bottom': IqonsCatalog.bottom.length,
             'gaze': 2
         }
     }

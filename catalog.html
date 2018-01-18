@@ -72,113 +72,9 @@ h2 {
     <div id="bottom">
         <h2>Bottom</h2>
     </div>
-    <script src="src/js/iqons.js"></script>
 </body>
-<script>
-const catalog = {
-    "top": {
-        "magic": 1,
-        "asian-hat": 2,
-        "egg": 3,
-        "drop": 4,
-        "police": 5,
-        "cowboy": 6,
-        "winter-hat": 7,
-        "halo": 8,
-        "chef": 9,
-        "knight": 10,
-        "indian": 11,
-        "afro": 12,
-        "cylinder": 13,
-        "candle": 14,
-        "caveman": 15,
-        "princess": 16,
-        "lady-hat": 17,
-        "crown": 18,
-        "elvis": 19,
-        "unicorn": 20,
-        "punk": 22, // missing
-        "doctor": 21, // missing
-        // mushroom
-    },
-    "face": {
-        "cat": 1,
-        "pig": 2,
-        "pinochio": 3,
-        "rofl": 4,
-        "dracula": 5,
-        "crying": 6,
-        "nerd": 7,
-        "sunglass": 8,
-        "stars": 9,
-        "kiss": 10,
-        "tongue": 11,
-        "pirate": 12,
-        "K.O.": 13,
-        "love": 14,
-        "evil": 15,
-        "normal": 16,
-        "clown": 17,
-        "three-eyes": 18,
-        "moustache": 19,
-        "panda": 20,
-        "parrot": 21,
-        "duck": 22,
-        "black-white": 23,
-        "money": 24,
-    },
-    "side": {
-        "music": 1,
-        "dog-ears": 2,
-        "cat-ears": 3,
-        "muscle": 4,
-        "phone": 5,
-        "bull": 6,
-        "large-ears": 7,
-        "antenna": 8,
-        "victory": 9,
-        "wings": 10,
-        "hungry": 11,
-        "arrow": 12,
-        "arrow": 13,
-        "plant": 14,
-        "tree": 15,
-        "tennis": 16,
-        "football": 17,
-        "bear": 18,
-        "ferry": 19,
-        "boxer":20,
-        "crab": 19
-        // microphone
-    },
-    "bottom": {
-        "fish": 1,
-        "wheels": 2,
-        "walking": 3,
-        "bug": 4,
-        "high-heels": 5,
-        "barefoot": 6,
-        "bird": 7,
-        "plant": 8,
-        "sitting": 9,
-        "skates": 10,
-        "kraken": 11,
-        "pirate": 12,
-        "ski": 13,
-        "soccer": 14,
-        "skateboard": 15,
-        "spring": 16,
-        "bow-tie": 17,
-        "balloon": 18,
-        "jump": 19,
-        "guitar":20
-        // rocket
-        // in an egg
-    }
-}
-
-// lightbulb
-</script>
+<script src="src/js/iqons-catalog.js"></script>
+<script src="src/js/iqons.js"></script>
 <script>
 function render(type) {
     const count = Iqons.assetCounts[type];
@@ -191,14 +87,17 @@ function render(type) {
 }
 
 function getName(type, index) {
-    return Object.keys(catalog[type])[index].replace(/-/, ' ');
+    let name = IqonsCatalog[type][index].replace(/-/, ' ');
+    if (name.indexOf('z_') > -1) name = '[' + name.replace('z_','') + ']';
+    if (name.indexOf('todo ') > -1) name = 'todo: ' + name.replace('todo ','');
+    return name;
 }
 
 const renderFns = {
     face: index => Iqons._svgTemplate(0, 3, index, -1, -1, -1, 7),
-    top: index => Iqons._svgTemplate(0, 3, 15, index, -1, -1, 7),
-    side: index => Iqons._svgTemplate(0, 3, 15, -1, index, -1, 7),
-    bottom: index => Iqons._svgTemplate(0, 3, 15, -1, -1, index, 7),
+    top: index => Iqons._svgTemplate(0, 3, 3, index, -1, -1, 7),
+    side: index => Iqons._svgTemplate(0, 3, 3, -1, index, -1, 7),
+    bottom: index => Iqons._svgTemplate(0, 3, 3, -1, -1, index, 7),
 }
 
 function renderIqon(svg, name) {
