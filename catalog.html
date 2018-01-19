@@ -80,7 +80,7 @@ function render(type) {
     const count = Iqons.assetCounts[type];
     const $el = document.getElementById(type);
     for (var i = 0; i < count; i++) {
-        const name = getName(type, i);
+        const name = (i + 1) + ' ' + getName(type, i);
         const $iqon = renderIqon(renderFns[type](i), name);
         $el.appendChild($iqon)
     }
@@ -88,8 +88,8 @@ function render(type) {
 
 function getName(type, index) {
     let name = IqonsCatalog[type][index].replace(/-/, ' ');
-    if (name.indexOf('z_') > -1) name = '[' + name.replace('z_','') + ']';
-    if (name.indexOf('todo ') > -1) name = 'todo: ' + name.replace('todo ','');
+    if (name.indexOf('z_todo ') > -1) name = 'todo: ' + name.replace('z_todo ', '');
+    if (name.indexOf('z_') > -1) name = '(' + name.replace('z_', '') + ')';
     return name;
 }
 
