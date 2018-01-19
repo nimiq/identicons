@@ -30,8 +30,8 @@ class Iqons {
                 <circle cx="80" cy="80" r="40" fill="${color}" stroke="black"></circle>
                 ${this._$use('face',faceNr)}
                 ${this._$use('top',topNr)}
-                ${this._$use('side',sidesNr)}
                 ${this._$use('bottom',bottomNr)}
+                ${this._$use('side',sidesNr)}
             </g>`
     }
 
