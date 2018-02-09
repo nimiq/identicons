@@ -50,7 +50,7 @@ class Iqons {
     }
 
     static _$use(part, index) {
-        return `<use width="160" height="160" xlink:href="${location.origin}/iqons/dist/iqons.min.svg#${part}-${this._assetIndex(index,part)}"/>`;
+        return `<use width="160" height="160" xlink:href="/library/iqons/dist/iqons.min.svg#${part}-${this._assetIndex(index,part)}"/>`;
     }
 
     static _$flip(gaze) {
