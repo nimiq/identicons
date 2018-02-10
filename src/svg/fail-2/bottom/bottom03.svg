@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 160 160" style="enable-background:new 0 0 160 160;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{opacity:0.1;}
+	.st2{fill:url(#SVGID_2_);}
+</style>
+<title>Artboard 42 copy 70</title>
+<radialGradient id="SVGID_1_" cx="280.6561" cy="34.85" r="11.03" gradientTransform="matrix(1.15 0 0 -1 -255.34 162)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFD22D"/>
+	<stop  offset="0.87" style="stop-color:#FCB22B"/>
+	<stop  offset="1" style="stop-color:#F28312"/>
+</radialGradient>
+<path class="st0" d="M59.4,113.3c0,0-3.7,24.7,12.4,27.7l3.8-22.9C70,116.8,64.7,115.2,59.4,113.3z"/>
+<g class="st1">
+	<path d="M60,128.5c0,0,3,11.5,11.7,12.5l3.8-22.9c0,0-1.5-0.3-4.1-1c-1.4,8.9-1.5,17.3-3.4,18.6S60,128.5,60,128.5z"/>
+</g>
+<radialGradient id="SVGID_2_" cx="3261.5205" cy="-285.2238" r="11.03" gradientTransform="matrix(-1.13 -0.21 0.2 -0.98 3819.8799 543.23)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFD22D"/>
+	<stop  offset="0.87" style="stop-color:#FCB22B"/>
+	<stop  offset="1" style="stop-color:#F28312"/>
+</radialGradient>
+<path class="st2" d="M95.1,116c0,0-1.1,25-17.5,24.9l0.8-23.2C84,117.4,89.6,116.9,95.1,116z"/>
+<g class="st1">
+	<path d="M95.1,116c0,0-1.1,25-17.5,24.9c5.4-2.9,10.3-7.9,12.1-24.2C89.7,116.8,93.2,116.3,95.1,116z"/>
+</g>
+</svg>

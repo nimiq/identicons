@@ -94,10 +94,10 @@ function getName(type, index) {
 }
 
 const renderFns = {
-    face: index => Iqons._svgTemplate(0, 3, index, -1, -1, -1, 7),
-    top: index => Iqons._svgTemplate(0, 3, 3, index, -1, -1, 7),
-    side: index => Iqons._svgTemplate(0, 3, 3, -1, index, -1, 7),
-    bottom: index => Iqons._svgTemplate(0, 3, 3, -1, -1, index, 7),
+    face: index => Iqons._svgTemplate(0, -1, index, -1, -1, -1, 7),
+    top: index => Iqons._svgTemplate(0, -1, 18, index, -1, -1, 7),
+    side: index => Iqons._svgTemplate(0, -1, 18, -1, index, -1, 7),
+    bottom: index => Iqons._svgTemplate(0, -1, 18, -1, -1, index, 7),
 }
 
 function renderIqon(svg, name) {

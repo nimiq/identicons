@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 160 160" style="enable-background:new 0 0 160 160;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FCB22B;}
+	.st1{opacity:5.000000e-02;}
+	.st2{opacity:0.2;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:url(#SVGID_1_);}
+	.st5{opacity:0.5;}
+	.st6{opacity:0.1;}
+</style>
+<title>Artboard 42 copy 133</title>
+<path class="st0" d="M43,65.5c-2.1-4-6.6-6.2-11-5.5c-8,1-10,4-12,9s7,17,7,17l6,6c1,1,0,7,4,9s13,0,13-4s-4-5-5-18l1-9L43,65.5z"/>
+<g class="st1">
+	<path d="M43,65.5c-2.1-4-6.6-6.2-11-5.5c13,4,14,32,13,19l1-9L43,65.5z"/>
+</g>
+<g class="st2">
+	<path class="st3" d="M32,60c-8,1-10,4-12,9s7,17,7,17l6,6c1,1,0,7,4,9c0-14-14-21-14-29S27.9,63.1,32,60z"/>
+</g>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="29.6072" y1="82.4678" x2="46.3333" y2="82.4678" gradientTransform="matrix(1 0 0 -1 0 162)">
+	<stop  offset="0" style="stop-color:#A66707"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<path class="st4" d="M45,73c-1-2-6-7-12-4s-3,10,1,14c2.3,2.3,4.8,4.5,7.4,6.5L45,91c0,0,3-1,0-5c-2.1-2.9-0.9-5.8,0.1-7.6
+	c0.3-0.5,0.6-1,0.8-1.5C46,76,46,75,45,73z"/>
+<g class="st2">
+	<path d="M45,73c2,1-6-7-12-4s-3,10,1,14c2.3,2.3,4.8,4.5,7.4,6.5L45,91C32,83.8,25.8,63.8,45,73z"/>
+</g>
+<g class="st5">
+	<path d="M40,74c-2,0-4,3-2,6s6,3,6,3s-1-0.9,0.5-3.5S42,74,40,74z"/>
+</g>
+<path class="st0" d="M115,60.1c0,0,14.3-7.4,19.7-1s-7.2,11.9-7.2,18.3s3.6,15-3.6,18.3s-6.8-0.7-6.8-0.7C116,95,123.7,76,115,60.1z
+	"/>
+<g class="st6">
+	<path d="M120,58.1c0,0,9-2.1,10,3.9s-4,6-5,11s1,13,0,18c-0.4,2.8-2.3,5.1-5,6c0,0,9.9,0.4,8.4-9.3s-3.2-11.4,1.7-16.5
+		C135,66,137,63,135,59S122.9,57.2,120,58.1z"/>
+</g>
+</svg>
