@@ -50,8 +50,7 @@ class Iqons {
     }
 
     static _$use(part, index) {
-        if(index<0) return;
-        return `<image x="0" y="0" width="160" height="160" xlink:href="${location.origin}/libraries/iqons/src/svg/fail-2/${part}/${part}${this._assetIndex(index,part)}.svg" />`;
+        return `<use width="160" height="160" xlink:href="/libraries/iqons/dist/iqons.min.svg#${part}-${this._assetIndex(index,part)}"/>`;
     }
 
     static _$flip(gaze) {
@@ -123,7 +122,6 @@ class Iqons {
 
     static _assetIndex(index, part) {
         index = (Number(index) % Iqons.assetCounts[part]) + 1;
-        index = index < 10 ? '0' + index : index;
         return index
     }
 

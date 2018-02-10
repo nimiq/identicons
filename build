@@ -32,7 +32,6 @@ do
     sed -i '' 's/#FE1/inherit/g' $file
     sed -i '' 's/#FE0/inherit/g' $file
     sed -i '' 's/#FFED00/inherit/g' $file
-    sed -i '' 's/#FDD835/inherit/g' $file
 done
 echo "$2 : $index features"
 filenames+="],"
@@ -40,20 +39,17 @@ echo $filenames >> $catalogfile
 }
 
 
-svgRoot="src/svg/fail-2"
-
 mkdir tmp/face
-./node_modules/svgo/bin/svgo -f "$svgRoot/face" -o tmp/face --config=config.yml
+./node_modules/svgo/bin/svgo -f src/svg/face -o tmp/face --config=config.yml
 
 mkdir tmp/side
-./node_modules/svgo/bin/svgo -f "$svgRoot/side" -o tmp/side --config=config.yml
+./node_modules/svgo/bin/svgo -f src/svg/side -o tmp/side --config=config.yml
 
 mkdir tmp/top
-./node_modules/svgo/bin/svgo -f "$svgRoot/top" -o tmp/top --config=config.yml
+./node_modules/svgo/bin/svgo -f src/svg/top -o tmp/top --config=config.yml
 
 mkdir tmp/bottom
-./node_modules/svgo/bin/svgo -f "$svgRoot/bottom" -o tmp/bottom --config=config.yml
-
+./node_modules/svgo/bin/svgo -f src/svg/bottom -o tmp/bottom --config=config.yml
 symbolize tmp/face/ "face"
 symbolize tmp/side/ "side"
 symbolize tmp/top/ "top"
