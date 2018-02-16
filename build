@@ -1,3 +1,5 @@
+#!/bin/sh
+
 catalogfile="src/js/iqons-catalog.js"
 
 rm $catalogfile
@@ -16,22 +18,22 @@ filenames="$foldername : ["
 for file in $folder*
 do
     index=$(($index+1))
-    
+
     filename=$(basename "$file")
     filename="${filename%.*}"
-    
+
     filenames+="'$filename',"
 
 
     assetname="$foldername"
     assetname+="-$index"
-    sed -i '' 's/svg xmlns="http:\/\/www.w3.org\/2000\/svg"/symbol id="'$assetname'"/g' $file
-    sed -i '' 's/\/svg/\/symbol/g' $file
-    sed -i '' 's/#11AA11/currentColor/g' $file
-    sed -i '' 's/#1A1/currentColor/g' $file
-    sed -i '' 's/#FE1/inherit/g' $file
-    sed -i '' 's/#FE0/inherit/g' $file
-    sed -i '' 's/#FFED00/inherit/g' $file
+    sed -i 's/svg xmlns="http:\/\/www.w3.org\/2000\/svg"/symbol id="'$assetname'"/g' $file
+    sed -i 's/\/svg/\/symbol/g' $file
+    sed -i 's/#11AA11/currentColor/g' $file
+    sed -i 's/#1A1/currentColor/g' $file
+    sed -i 's/#FE1/inherit/g' $file
+    sed -i 's/#FE0/inherit/g' $file
+    sed -i 's/#FFED00/inherit/g' $file
 done
 echo "$2 : $index features"
 filenames+="],"
@@ -50,15 +52,17 @@ mkdir tmp/top
 
 mkdir tmp/bottom
 ./node_modules/svgo/bin/svgo -f src/svg/bottom -o tmp/bottom --config=config.yml
+
 symbolize tmp/face/ "face"
 symbolize tmp/side/ "side"
 symbolize tmp/top/ "top"
 symbolize tmp/bottom/ "bottom"
+
 echo "}" >> $catalogfile
 
 
 echo '<svg xmlns="http://www.w3.org/2000/svg">' > dist/iqons.min.svg
-cat `find tmp -name '*.svg'` >> dist/iqons.min.svg
+for i in `find tmp -name '*.svg'` ; do cat $i ; echo "" ; done >> dist/iqons.min.svg
 echo '</svg>' >> dist/iqons.min.svg
 
 rm -rf tmp
