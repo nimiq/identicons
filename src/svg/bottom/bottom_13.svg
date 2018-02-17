@@ -34,9 +34,9 @@
      inkscape:window-height="976"
      id="namedview59"
      showgrid="false"
-     inkscape:zoom="2.95"
-     inkscape:cx="171.46941"
-     inkscape:cy="31.532222"
+     inkscape:zoom="8.34386"
+     inkscape:cx="82.547339"
+     inkscape:cy="52.139301"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -71,7 +71,8 @@
        id="stop10" /></linearGradient><path
      class="st0"
      d="M88.8,117.9L89,124c3.2,1.2,6.8,1.2,10,0l3.2-11.8C102.2,112.2,94.5,116.8,88.8,117.9z"
-     id="path13" /><linearGradient
+     id="path13"
+     style="fill:#99671d;fill-opacity:1" /><linearGradient
      id="SVGID_2_"
      gradientUnits="userSpaceOnUse"
      x1="90.55"
@@ -93,7 +94,8 @@
        id="stop21" /></linearGradient><path
      class="st1"
      d="M91,124.6c0,0-1.1,12.4,0,14.4s4.4,3,4.4,0s1.6-14.4,1.6-14.4c-1,0.1-2,0.2-3,0.2C93,124.8,92,124.8,91,124.6z"
-     id="path24" /><g
+     id="path24"
+     style="fill:#f5f5f5;fill-opacity:1" /><g
      class="st2"
      id="g28"><path
        d="M91,139c1.1,2,4.4,3,4.4,0s1.6-14.4,1.6-14.4l-3,0.2C94,124.8,94,140,91,139z"
@@ -133,4 +135,12 @@
      d="M54.5,132h13c0.3,0,0.5,0.2,0.5,0.5l0,0c0,0.3-0.2,0.5-0.5,0.5h-13c-0.3,0-0.5-0.2-0.5-0.5l0,0C54,132.2,54.2,132,54.5,132z  "
      id="path54" /><path
      d="M59.5,135h9c0.3,0,0.5,0.2,0.5,0.5l0,0c0,0.3-0.2,0.5-0.5,0.5h-9c-0.3,0-0.5-0.2-0.5-0.5l0,0C59,135.2,59.2,135,59.5,135z"
-     id="path56" /></svg>
+     id="path56" /><g
+     transform="translate(4.096085,-11.457796)"
+     class="st2"
+     id="g28-3"
+     style="opacity:0.1"><path
+       inkscape:connector-curvature="0"
+       d="m 90.606959,136.15012 c 1.828438,-0.14107 2.447583,-0.0671 4.313647,-0.65569 0.973912,-3.95836 3.183309,-11.83663 3.183309,-11.83663 l -4.2773,2.40362 c 0,0 -0.708086,10.22031 -3.219656,10.0887 z"
+       id="path26-6"
+       sodipodi:nodetypes="ccccc" /></g></svg>
