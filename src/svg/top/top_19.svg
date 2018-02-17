@@ -35,8 +35,8 @@
      id="namedview24"
      showgrid="false"
      inkscape:zoom="5.6568542"
-     inkscape:cx="111.56191"
-     inkscape:cy="97.78612"
+     inkscape:cx="30.072061"
+     inkscape:cy="133.86215"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -48,16 +48,19 @@
 	.st2{fill:#FFFFFF;}
 </style><title
      id="title4">Artboard 42 copy 185</title><path
-     d="M90.4,18.7c4.6,0.3,9.7,1.7,14.7,5.3h7.9c0,0-19.1-14.5-38.1-2.6c0,0,0.6-0.3,1.7-0.7  c-6.4,3.2-12.2,10.4-15.7,24.5c0,0,23.5-7.7,33.8,11.8h4.8L113,24.3h-7.9C105.1,24.3,98.6,19.9,90.4,18.7z"
+     d="M 105.1,24.3 H 113 C 113,24.3 94.213286,9.8378286 75.040625,21.55625 69.230823,25.107229 63.350143,35.742567 60.9,45.2 c 0,0 23.5,-7.7 33.8,11.8 h 4.8 L 113,24.3 Z"
      id="path10"
-     style="" /><g
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccsccccc" /><g
      class="st0"
      id="g14"
      style="opacity:0.5;fill:#ffffff;fill-opacity:1"><path
        class="st2"
-       d="M113,24c0,0-19.1-14.4-38.1-2.6c0,0,15.9-7.6,30.1,2.6H113z"
+       d="m 113,24.3 c 0,0 -20.196812,-15.6486044 -39.594559,-1.550507 0,0 11.492496,-10.327571 31.694559,1.550507 z"
        id="path12"
-       style="fill:#ffffff;fill-opacity:1" /></g><g
+       style="fill:#ffffff;fill-opacity:1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" /></g><g
      class="st0"
      id="g8"
      style="fill:#010107;fill-opacity:1"><polygon
