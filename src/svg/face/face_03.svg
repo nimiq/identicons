@@ -1,33 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 160 160" style="enable-background:new 0 0 160 160;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 160 160"
+   style="enable-background:new 0 0 160 160;"
+   xml:space="preserve"
+   sodipodi:docname="face_03.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
+     id="metadata44"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs42" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="976"
+     id="namedview40"
+     showgrid="false"
+     inkscape:zoom="11.8"
+     inkscape:cx="75.118937"
+     inkscape:cy="80.969058"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style2">
 	.st0{fill:#FFFFFF;}
 	.st1{opacity:0.1;}
 	.st2{fill:url(#SVGID_1_);}
 	.st3{fill:#42210B;}
-</style>
-<title>Artboard 42 copy 228</title>
-<path class="st0" d="M72.4,70.5c0,0-5,2.3-4.5,5.4s4.5,2.3,4.5-0.4S73.8,71,72.4,70.5z"/>
-<g class="st1">
-	<path d="M72.5,71c-1.2,1.1-1.8,2.8-1.7,4.4c0.4,2.6,1.7,1.8,1.7-0.4S73.6,71.3,72.5,71z"/>
-</g>
-<path class="st0" d="M111,66.8c0,0,3.2-0.9,4.3,0.7s-1.2,2.9-2.3,1.6S110.5,67.5,111,66.8z"/>
-<g class="st1">
-	<path d="M111.1,67c1,0.1,1.9,0.6,2.5,1.4c0.8,1.3,0,1.5-0.9,0.5S110.8,67.6,111.1,67z"/>
-</g>
-<path class="st0" d="M70.5,67.2c0,0-3.4-0.1-4,1.8s1.9,2.5,2.6,1S71.1,67.8,70.5,67.2z"/>
-<g class="st1">
-	<path d="M70.5,67.5c-1,0.3-1.8,1-2.1,2c-0.5,1.5,0.4,1.4,1,0.2S71,68,70.5,67.5z"/>
-</g>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="92.7627" y1="60.93" x2="92.7627" y2="80.3821" gradientTransform="matrix(1 0 0 -1 0 162)">
-	<stop  offset="0" style="stop-color:#A66707"/>
-	<stop  offset="1" style="stop-color:#000000"/>
-</linearGradient>
-<path class="st2" d="M109.9,101.1H75.5c0,0,1.7-19.4,18.6-19.4c4.4-0.2,8.8,1.6,11.8,4.8C111.2,92.2,109.9,101.1,109.9,101.1z"/>
-<circle class="st3" cx="78.8" cy="67.7" r="4.8"/>
-<circle class="st3" cx="106.1" cy="67.7" r="4.4"/>
-<path d="M105.3,58.5c2.9-0.3,5.8,4.6,8.6,6.9c0,0-3.7-7.5-4.4-8.6S105.3,58.5,105.3,58.5z"/>
-<path d="M80.7,59.2c-2.6-1.2-7,2.3-10.4,3.6c0,0,6-5.8,7.1-6.6S80.7,59.2,80.7,59.2z"/>
-</svg>
+</style><title
+     id="title4">Artboard 42 copy 228</title><path
+     class="st0"
+     d="M72.4,70.5c0,0-5,2.3-4.5,5.4s4.5,2.3,4.5-0.4S73.8,71,72.4,70.5z"
+     id="path6" /><g
+     class="st1"
+     id="g10"><path
+       d="M72.5,71c-1.2,1.1-1.8,2.8-1.7,4.4c0.4,2.6,1.7,1.8,1.7-0.4S73.6,71.3,72.5,71z"
+       id="path8" /></g><path
+     class="st0"
+     d="M111,66.8c0,0,3.2-0.9,4.3,0.7s-1.2,2.9-2.3,1.6S110.5,67.5,111,66.8z"
+     id="path12" /><g
+     class="st1"
+     id="g16"><path
+       d="M111.1,67c1,0.1,1.9,0.6,2.5,1.4c0.8,1.3,0,1.5-0.9,0.5S110.8,67.6,111.1,67z"
+       id="path14" /></g><path
+     class="st0"
+     d="M70.5,67.2c0,0-3.4-0.1-4,1.8s1.9,2.5,2.6,1S71.1,67.8,70.5,67.2z"
+     id="path18" /><g
+     class="st1"
+     id="g22"><path
+       d="M70.5,67.5c-1,0.3-1.8,1-2.1,2c-0.5,1.5,0.4,1.4,1,0.2S71,68,70.5,67.5z"
+       id="path20" /></g><linearGradient
+     id="SVGID_1_"
+     gradientUnits="userSpaceOnUse"
+     x1="92.7627"
+     y1="60.93"
+     x2="92.7627"
+     y2="80.3821"
+     gradientTransform="matrix(1 0 0 -1 0 162)"><stop
+       offset="0"
+       style="stop-color:#A66707"
+       id="stop24" /><stop
+       offset="1"
+       style="stop-color:#000000"
+       id="stop26" /></linearGradient><path
+     class="st2"
+     d="M109.9,101.1H75.5c0,0,1.7-19.4,18.6-19.4c4.4-0.2,8.8,1.6,11.8,4.8C111.2,92.2,109.9,101.1,109.9,101.1z"
+     id="path29"
+     style="fill:#010101;fill-opacity:1;opacity:0.6" /><circle
+     class="st3"
+     cx="78.8"
+     cy="67.7"
+     r="4.8"
+     id="circle31"
+     style="opacity:0.6;fill:#010101;fill-opacity:1" /><path
+     d="M105.3,58.5c2.9-0.3,5.8,4.6,8.6,6.9c0,0-3.7-7.5-4.4-8.6S105.3,58.5,105.3,58.5z"
+     id="path35" /><circle
+     class="st3"
+     cx="106.1"
+     cy="67.7"
+     r="4.4"
+     id="circle33"
+     style="opacity:0.6;fill:#010101;fill-opacity:1" /><path
+     d="M80.7,59.2c-2.6-1.2-7,2.3-10.4,3.6c0,0,6-5.8,7.1-6.6S80.7,59.2,80.7,59.2z"
+     id="path37" /></svg>

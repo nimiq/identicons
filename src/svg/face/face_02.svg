@@ -39,7 +39,7 @@
      id="namedview88"
      showgrid="false"
      inkscape:zoom="11.8"
-     inkscape:cx="72.255692"
+     inkscape:cx="93.442133"
      inkscape:cy="78.239929"
      inkscape:window-x="0"
      inkscape:window-y="27"
@@ -213,39 +213,18 @@
   <path
      class="cls-8"
      d="M77,75s0-12,6-12,6,11.59,6,11.59S84,63,77,75Z"
-     id="path59" />
+     id="path59"
+     style="fill:#010101;fill-opacity:1;opacity:0.6" />
   <path
      class="cls-9"
      d="M101,74.5s0-11,5.5-11S112,74.12,112,74.12,107.42,63.5,101,74.5Z"
-     id="path61" />
+     id="path61"
+     style="fill:#010101;fill-opacity:1;opacity:0.6" />
   <path
      class="cls-10"
      d="M106.7,100.09a15.08,15.08,0,0,1-11.14,5h0l-.22,0-.21,0h0a15.08,15.08,0,0,1-11.14-5c-3-3.33-4.9-8.6-4.9-11s4.46,1.42,16,1.42h.46c7.89,0,12.78-2.53,13.65-3s2.39-.65,2.39,1.6S109.74,96.76,106.7,100.09Z"
-     id="path63" />
-  <g
-     class="cls-11"
-     clip-path="url(#clip-path-2)"
-     id="g71">
-    <rect
-       class="cls-3"
-       x="-487.11"
-       y="-1324.07"
-       width="1006.19"
-       height="1831.22"
-       id="rect65" />
-    <g
-       class="cls-12"
-       clip-path="url(#clip-path-3)"
-       id="g69">
-      <rect
-         class="cls-13"
-         x="76.55"
-         y="81.57"
-         width="37.54"
-         height="36.02"
-         id="rect67" />
-    </g>
-  </g>
+     id="path63"
+     style="fill:#010101;fill-opacity:1;opacity:0.6" />
   <circle
      cx="99.02"
      cy="79.75"

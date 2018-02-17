@@ -1,20 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 160 160" style="enable-background:new 0 0 160 160;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 160 160"
+   style="enable-background:new 0 0 160 160;"
+   xml:space="preserve"
+   sodipodi:docname="face_08.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
+     id="metadata22"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs20" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="976"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="8.34386"
+     inkscape:cx="109.26905"
+     inkscape:cy="73.996882"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style2">
 	.st0{fill:#FC0D0A;}
 	.st1{fill:url(#SVGID_1_);}
-</style>
-<title>Artboard 42 copy 241</title>
-<path class="st0" d="M111.4,68.3c0.6,2.7-0.6,5.3-2.5,5.7s-4-1.5-4.6-4.2s0.6-5.3,2.5-5.7c0.7-0.1,7.9,0.3,7.9,0.3
-	S111.1,66.9,111.4,68.3z"/>
-<path class="st0" d="M80.7,66.9c-0.6,3.1,0.7,5.9,2.8,6.3s4.4-1.7,5.1-4.7s-0.6-5.9-2.8-6.3c-0.6-0.1-10.1-0.1-10.6,0.1
-	C74.3,62.6,82,66,80.7,66.9z"/>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="95.2352" y1="65" x2="95.2352" y2="80.37" gradientTransform="matrix(1 0 0 -1 0 162)">
-	<stop  offset="0" style="stop-color:#A66707"/>
-	<stop  offset="1" style="stop-color:#000000"/>
-</linearGradient>
-<path class="st1" d="M111.9,97c-7.7-10.3-21.2-9.6-33.4,0c0,0,1.7-15.4,18-15.4c5.3,0,8.9,1.6,11.4,3.8C113.1,90,111.9,97,111.9,97z
-	"/>
-</svg>
+</style><title
+     id="title4">Artboard 42 copy 241</title><path
+     class="st0"
+     d="M111.4,68.3c0.6,2.7-0.6,5.3-2.5,5.7s-4-1.5-4.6-4.2s0.6-5.3,2.5-5.7c0.7-0.1,7.9,0.3,7.9,0.3  S111.1,66.9,111.4,68.3z"
+     id="path6" /><path
+     class="st0"
+     d="M80.7,66.9c-0.6,3.1,0.7,5.9,2.8,6.3s4.4-1.7,5.1-4.7s-0.6-5.9-2.8-6.3c-0.6-0.1-10.1-0.1-10.6,0.1  C74.3,62.6,82,66,80.7,66.9z"
+     id="path8" /><linearGradient
+     id="SVGID_1_"
+     gradientUnits="userSpaceOnUse"
+     x1="95.2352"
+     y1="65"
+     x2="95.2352"
+     y2="80.37"
+     gradientTransform="matrix(1 0 0 -1 0 162)"><stop
+       offset="0"
+       style="stop-color:#A66707"
+       id="stop10" /><stop
+       offset="1"
+       style="stop-color:#000000"
+       id="stop12" /></linearGradient><path
+     class="st1"
+     d="m 78.619668,81.6 c 7.7,10.3 21.2,9.6 33.400002,0 0,0 -1.7,15.4 -18.000002,15.4 -5.3,0 -8.9,-1.6 -11.4,-3.8 -5.2,-4.6 -4,-11.6 -4,-11.6 z"
+     id="path15"
+     style="opacity:0.6;fill:#010101;fill-opacity:1"
+     inkscape:connector-curvature="0" /></svg>
