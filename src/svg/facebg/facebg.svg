@@ -38,9 +38,9 @@
      inkscape:window-height="976"
      id="namedview90"
      showgrid="false"
-     inkscape:zoom="1.475"
-     inkscape:cx="-4.7457627"
-     inkscape:cy="80"
+     inkscape:zoom="4.17193"
+     inkscape:cx="16.976779"
+     inkscape:cy="63.684497"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -176,10 +176,12 @@
      id="title41">Artboard 42 copy 226</title>
   <g
      class="cls-7"
-     id="g47">
+     id="g47"
+     style="opacity:0.1;fill:#010101;fill-opacity:1">
     <path
        d="M119.21,80a39.46,39.46,0,0,1-67.13,28.13c10.36,2.33,36,3,49.82-14.28,10.39-12.47,8.31-33.23,4.16-43.26A39.35,39.35,0,0,1,119.21,80Z"
-       id="path45" />
+       id="path45"
+       style="fill:#010101;fill-opacity:1" />
   </g>
   <path
      class="cls-9"
