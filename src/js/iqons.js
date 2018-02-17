@@ -27,7 +27,8 @@ class Iqons {
         return `
             <g style="color:${color}; fill:${accentColor};">
                 <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
-                <circle cx="80" cy="80" r="40" fill="${color}" stroke="black"></circle>
+                <circle cx="80" cy="80" r="40" fill="${color}"></circle>
+                <use width="160" height="160" xlink:href="/libraries/iqons/dist/iqons.min.svg#facebg"/>
                 ${this._$use('face',faceNr)}
                 ${this._$use('top',topNr)}
                 ${this._$use('bottom',bottomNr)}
@@ -50,7 +51,7 @@ class Iqons {
     }
 
     static _$use(part, index) {
-        return `<use width="160" height="160" xlink:href="/libraries/iqons/dist/iqons.min.svg#${part}-${this._assetIndex(index,part)}"/>`;
+        return `<use width="160" height="160" xlink:href="/libraries/iqons/dist/iqons.min.svg#${part}_${this._assetIndex(index,part)}"/>`;
     }
 
     static _$flip(gaze) {
@@ -93,7 +94,26 @@ class Iqons {
             /* Orange */
             '#FF9E80', // deep-orange-a100
             '#FFE57F' // amber-a100
-        ]
+        ];
+        return [
+            /* Red  */
+            '#c62828', // red-a800
+            '#ec407a', // pink-400
+            '#6a1b9a', // purple-a900
+
+            /* Blue */
+            '#3d5afe', // indigo-a400
+            '#00b0ff', // light-blue-a400
+            '#00e5ff', // cyan-a400
+
+            /* Green */
+            '#1DE9B6', // teal-a400
+            '#00C853', // green-a700
+
+            /* Orange */
+            '#dd2c00', // deep-orange-a700
+            '#ff6f00' // amber-900
+        ];
     }
 
     static get accentColors() {
@@ -110,6 +130,7 @@ class Iqons {
             '#795548' // brown-500
         ]
     }
+
     static get assetCounts() {
         return {
             'face': IqonsCatalog.face.length,
@@ -122,6 +143,7 @@ class Iqons {
 
     static _assetIndex(index, part) {
         index = (Number(index) % Iqons.assetCounts[part]) + 1;
+        if (index < 10) index = '0' + index;
         return index
     }
 
