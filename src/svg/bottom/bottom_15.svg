@@ -46,7 +46,6 @@
 	.st0{fill:#FFFFFF;}
 	.st1{fill:#490B37;}
 	.st2{fill:#02AABC;}
-	.st3{fill:#FC039D;}
 	.st4{opacity:0.1;enable-background:new    ;}
 	.st5{fill:#FF4545;}
 	.st6{opacity:0.15;}
@@ -95,7 +94,6 @@
      cy="136.3"
      r="6.1"
      id="circle22" /><circle
-     class="st3"
      cx="96.6"
      cy="136.3"
      r="3.4"
@@ -116,7 +114,6 @@
      cy="133.4"
      r="6.1"
      id="circle32" /><circle
-     class="st3"
      cx="49"
      cy="133.4"
      r="3.4"
