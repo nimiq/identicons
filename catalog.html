@@ -13,7 +13,7 @@ body {
     padding-top: 48px;
     min-height: 100vh;
     color: white;
-    font-family: system-ui;
+    font-family: system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -88,17 +88,17 @@ function render(type) {
 }
 
 function getName(type, index) {
-    let name = IqonsCatalog[type][index].replace(/-/, ' ');
+    let name = IqonsCatalog[type][index].replace(/_/, '-');
     if (name.indexOf('z_todo ') > -1) name = 'todo: ' + name.replace('z_todo ', '');
     if (name.indexOf('z_') > -1) name = '(' + name.replace('z_', '') + ')';
     return name;
 }
 
 const renderFns = {
-    face: index => Iqons._svgTemplate(0, 3, index, -1, -1, -1, 7),
-    top: index => Iqons._svgTemplate(0, 3, 3, index, -1, -1, 7),
-    side: index => Iqons._svgTemplate(0, 3, 3, -1, index, -1, 7),
-    bottom: index => Iqons._svgTemplate(0, 3, 3, -1, -1, index, 7),
+    face: index => Iqons._svgTemplate(0, 3, index, -1, -1, -1, 6),
+    top: index => Iqons._svgTemplate(0, 3, -1, index, -1, -1, 6),
+    side: index => Iqons._svgTemplate(0, 3, -1, -1, index, -1, 6),
+    bottom: index => Iqons._svgTemplate(0, 3, -1, -1, -1, index, 6),
 }
 
 function renderIqon(svg, name) {
