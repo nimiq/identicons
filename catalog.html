@@ -69,8 +69,10 @@ h2 {
         <h2>Bottom</h2>
     </div>
 </body>
-<script src="dist/iqons.min.js"></script>
-<script>
+<script src="./src/js/iqons-catalog.js"></script>
+<script type="module">
+import Iqons from './dist/iqons.min.js';
+
 function render(type) {
     const count = Iqons.assetCounts[type];
     const $el = document.getElementById(type);

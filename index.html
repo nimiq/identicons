@@ -146,8 +146,9 @@
         <div class="iqons small"></div>
         <div class="iqons small"></div>
     </div>
-    <script src="dist/iqons.min.js"></script>
-    <script type="text/javascript">
+    <script type="module">
+    import Iqons from './dist/iqons.min.js';
+
     const now = Date.now()
     document.querySelectorAll('.iqons').forEach((e, i) => Iqons.render(now + 'identicon' + i, e))
     </script>
