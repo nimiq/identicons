@@ -11,9 +11,12 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-svgmin": "tr33m4n/gulp-svgmin#upgrade-svgo",
     "gulp-svgstore": "^6.1.1",
-    "svgo": "^1.0.3"
+    "gulp-uglify": "^3.0.0",
+    "uglify-es": "^3.3.9"
   }
 }
