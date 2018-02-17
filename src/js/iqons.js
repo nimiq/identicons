@@ -38,10 +38,10 @@ export default class Iqons {
                 <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
                 <circle cx="80" cy="80" r="40" fill="${color}"></circle>
                 <g opacity=".1" fill="#010101"><path d="M119.21,80a39.46,39.46,0,0,1-67.13,28.13c10.36,2.33,36,3,49.82-14.28,10.39-12.47,8.31-33.23,4.16-43.26A39.35,39.35,0,0,1,119.21,80Z"/></g>
-                ${this._$use('face',faceNr)}
                 ${this._$use('top',topNr)}
                 ${this._$use('bottom',bottomNr)}
                 ${this._$use('side',sidesNr)}
+                ${this._$use('face',faceNr)}
             </g>`
     }
 
