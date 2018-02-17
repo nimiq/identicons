@@ -22,7 +22,7 @@ gulp.task('svgstore', function () {
                         }
                     },
                     {
-                        mergePaths: false
+                        mergePaths: true
                     },
                     {
                         cleanupIDs: {
