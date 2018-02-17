@@ -21,13 +21,21 @@ class Iqons {
     }
 
     static _$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor, gaze) {
-        color = this.colors[color];
-        backgroundColor = this.bgColors[backgroundColor];
-        accentColor = this.accentColors[accentColor];
+        // color = this.colors[color];
+        // backgroundColor = this.bgColors[backgroundColor];
+        // accentColor = this.accentColors[accentColor];
+
+        backgroundColor = this.colors[backgroundColor];
+        var bodyColor = this.colors[color];
+        if (bodyColor === backgroundColor) {
+            if (color + 1 > 8) color = 0;
+            bodyColor = this.colors[color + 1];
+        }
+        accentColor = this.colors[accentColor];
         return `
-            <g style="color:${color}; fill:${accentColor};">
+            <g style="color:${bodyColor}; fill:${accentColor};">
                 <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
-                <circle cx="80" cy="80" r="40" fill="${color}"></circle>
+                <circle cx="80" cy="80" r="40" fill="${bodyColor}"></circle>
                 <use width="160" height="160" xlink:href="/libraries/iqons/dist/iqons.min.svg#facebg"/>
                 ${this._$use('face',faceNr)}
                 ${this._$use('top',topNr)}
@@ -71,7 +79,7 @@ class Iqons {
             '#009688', // teal-500
             '#EC407A', // pink-400
             '#8bc34a', // light-green-500
-            '#795548' // brown-500
+            // '#795548' // brown-500
         ]
     }
 
