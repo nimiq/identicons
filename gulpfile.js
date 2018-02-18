@@ -53,6 +53,7 @@ gulp.task('prepare-svg', function () {
                         $(el).remove();
                     }
                 });
+                $('[fill="#0f0"]').attr('fill', 'currentColor');
             },
             parserOptions: {
                 xmlMode: true
