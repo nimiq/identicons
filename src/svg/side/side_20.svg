@@ -37,9 +37,9 @@
      inkscape:window-height="976"
      id="namedview38"
      showgrid="false"
-     inkscape:zoom="2.95"
-     inkscape:cx="-15.812647"
-     inkscape:cy="115.87627"
+     inkscape:zoom="2.085965"
+     inkscape:cx="-66.318384"
+     inkscape:cy="97.785308"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -53,44 +53,54 @@
      id="title15">Artboard 42 copy 210</title>
   <path
      class="cls-1"
-     d="M46.46,73.93a6.81,6.81,0,0,1-5.46-3C38,66.08,25,60,20,60s3,8.51,3,8.51,0,1.21,2,2.43,4,1.22,2,1.22-3,0-2,2.43S29,77,29,83.1,19,96.47,21,97.68s7-1.21,11-4.86,8-13.37,14-12.15C51,80,49.3,74.19,46.46,73.93Z"
-     id="path17" />
+     d="M 40.46,73.93 A 6.81,6.81 0 0 1 35,70.93 C 32,66.08 19,60 14,60 c -5,0 3,8.51 3,8.51 0,0 0,1.21 2,2.43 2,1.22 4,1.22 2,1.22 -2,0 -3,0 -2,2.43 1,2.43 4,2.41 4,8.51 0,6.1 -10,13.37 -8,14.58 2,1.21 7,-1.21 11,-4.86 4,-3.65 8,-13.37 14,-12.15 5,-0.67 3.3,-6.48 0.46,-6.74 z"
+     id="path17"
+     inkscape:connector-curvature="0"
+     style="fill:#000000;fill-opacity:1" />
   <g
      class="cls-2"
-     id="g21">
+     id="g21"
+     transform="translate(-6)"
+     style="opacity:0.1;fill:#010101;fill-opacity:1">
     <path
-       d="M34,84.1C31,91,19,96.47,21,97.68s7-1.21,11-4.86,8-13.37,14-12.15c3.34-.45,3.69-3.19,2.71-5a2,2,0,0,0-1.87-1.07C49,79,36,78,34,84.1Z"
-       id="path19" />
+       d="M 34,84.1 C 31,91 19,96.47 21,97.68 c 2,1.21 7,-1.21 11,-4.86 4,-3.65 8,-13.37 14,-12.15 3.34,-0.45 3.69,-3.19 2.71,-5 A 2,2 0 0 0 46.84,74.6 C 49,79 36,78 34,84.1 Z"
+       id="path19"
+       inkscape:connector-curvature="0"
+       style="fill:#010101;fill-opacity:1" />
   </g>
   <path
-     d="m 28,66 c 0,0 5,0 10,5 5,5 2,6 2,6 0,0 -7,2 -8,7 -1,5 3,-14 -4,-18 z"
+     d="m 22,66 c 0,0 5,0 10,5 5,5 2,6 2,6 0,0 -7,2 -8,7 -1,5 3,-14 -4,-18 z"
      id="path23"
-     style="fill-opacity:0.09607843"
+     style="opacity:0.1;fill:#010101;fill-opacity:1"
      inkscape:connector-curvature="0" />
   <path
      class="cls-1"
      d="M53.36,81.57s19.2,4.68,15.58,6.19-20.66,6.53-29.12,1.57S38.59,92,53.36,81.57Z"
-     id="path25" />
+     id="path25"
+     style="fill:#000000;fill-opacity:1" />
   <path
      d="m 53.62,81.5 11.89,3.36 c -7.42,2.23 -16,3 -25.34,2.9 0,0 7.91,-2.35 13.45,-6.26 z"
      id="path27"
-     style="fill-opacity:0.11372549"
+     style="fill-opacity:1;fill:#010101;opacity:0.1"
      inkscape:connector-curvature="0" />
   <path
      class="cls-1"
      d="M119.39,80.38c-.48,4.17-1.11,8-2.32,10.45,0,0,16.66-3.87,20.81-8.46C145,74.54,140.46,84.37,119.39,80.38Z"
-     id="path29" />
+     id="path29"
+     style="fill:#000000;fill-opacity:1" />
   <path
      class="cls-5"
      d="m 119.07,80.42 -0.8,6 c 0,0 12.17,-3.12 18.51,-5.41 0,-0.01 -9.78,0.9 -17.71,-0.59 z"
      id="path31"
-     style="fill-opacity:0.09607843"
+     style="fill-opacity:1;fill:#010101;opacity:0.1"
      inkscape:connector-curvature="0" />
   <g
      class="cls-2"
-     id="g35">
+     id="g35"
+     style="fill:#010101;fill-opacity:1">
     <path
        d="M65.6,85.13s4.7,2.06,3.34,2.63c-3.62,1.52-20.66,6.53-29.12,1.57-1.52-.89-3.09-1.63-3.09-1.63C44.11,91.83,69.8,86.19,65.6,85.13Z"
-       id="path33" />
+       id="path33"
+       style="fill:#010101;fill-opacity:1" />
   </g>
 </svg>

@@ -149,6 +149,8 @@
     <script type="module">
     import Iqons from './dist/iqons.min.js';
 
+    window.Iqons = Iqons;
+
     const now = Date.now()
     document.querySelectorAll('.iqons').forEach((e, i) => Iqons.render(now + 'identicon' + i, e))
     </script>

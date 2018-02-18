@@ -1,22 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 160 160" style="enable-background:new 0 0 160 160;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 160 160"
+   style="enable-background:new 0 0 160 160;"
+   xml:space="preserve"
+   sodipodi:docname="bottom_04.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
+     id="metadata25"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs23" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="976"
+     id="namedview21"
+     showgrid="false"
+     inkscape:zoom="8"
+     inkscape:cx="70.955253"
+     inkscape:cy="41.706262"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style2">
 	.st0{fill:#930378;}
 	.st1{fill:#48006A;}
 	.st2{fill:#AC0082;}
-</style>
-<title>Artboard 42 copy 212</title>
-<path class="st0" d="M86.8,118.7l21.2-9.7c5.8,10.7,5,19.9,0,28.1l-21.2-10.8C87.7,125.2,88.7,121.1,86.8,118.7z"/>
-<path class="st1" d="M97.9,125.9l-7.1-1.6c0,0-1.2-0.1-1.1-0.8l0,0c0.1-0.7,1.3-0.5,1.3-0.5l7.2,0.2c0.7,0.1,1.2,0.8,1.1,1.5l0,0
-	C99.2,125.4,98.6,125.9,97.9,125.9C97.9,125.9,97.9,125.9,97.9,125.9z"/>
-<path class="st1" d="M98.2,120l-7.1,1.4c0,0-1.1,0.4-1.3-0.3l0,0c-0.2-0.7,1-1,1-1l6.8-2.7c0.6-0.2,1.3,0.2,1.4,0.9c0,0,0,0.1,0,0.1
-	l0,0C99.3,119.1,98.9,119.7,98.2,120z"/>
-<path class="st2" d="M79.1,117.7l-26-12c-5.5,9.6-5.5,21.2,0,34.6l26-13.3C77.9,125.7,76.6,120.7,79.1,117.7z"/>
-<ellipse class="st2" cx="83.9" cy="122.1" rx="6.7" ry="6.7"/>
-<path class="st1" d="M69.2,125.9l9.3-1.6c0,0,1.6-0.1,1.5-0.8l0,0c-0.1-0.7-1.7-0.5-1.7-0.5l-9.4,0.2c-0.8,0-1.4,0.7-1.4,1.5
-	c0,0,0,0,0,0l0,0C67.7,125.5,68.4,126,69.2,125.9z"/>
-<path class="st1" d="M68.8,120l9.3,1.4c0,0,1.5,0.4,1.7-0.3l0,0c0.2-0.7-1.3-1-1.3-1l-8.9-2.7c-0.8-0.2-1.6,0.2-1.9,1l0,0
-	C67.5,119.1,68,119.8,68.8,120C68.8,120,68.8,120,68.8,120z"/>
-</svg>
+</style><title
+     id="title4">Artboard 42 copy 212</title><path
+     inkscape:connector-curvature="0"
+     class="st0"
+     d="M 86.8,118.7 108,109 c 5.8,10.7 5,19.9 0,28.1 L 86.8,126.3 c 0.9,-1.1 1.9,-5.2 0,-7.6 z"
+     id="path6-6"
+     style="fill:#000000;fill-opacity:1" /><path
+     class="st0"
+     d="M86.8,118.7l21.2-9.7c5.8,10.7,5,19.9,0,28.1l-21.2-10.8C87.7,125.2,88.7,121.1,86.8,118.7z"
+     id="path6"
+     style="fill:#000000;fill-opacity:1;opacity:0.15" /><path
+     class="st1"
+     d="M97.9,125.9l-7.1-1.6c0,0-1.2-0.1-1.1-0.8l0,0c0.1-0.7,1.3-0.5,1.3-0.5l7.2,0.2c0.7,0.1,1.2,0.8,1.1,1.5l0,0  C99.2,125.4,98.6,125.9,97.9,125.9C97.9,125.9,97.9,125.9,97.9,125.9z"
+     id="path8"
+     style="fill:#010101;fill-opacity:1;opacity:0.5" /><path
+     class="st1"
+     d="M98.2,120l-7.1,1.4c0,0-1.1,0.4-1.3-0.3l0,0c-0.2-0.7,1-1,1-1l6.8-2.7c0.6-0.2,1.3,0.2,1.4,0.9c0,0,0,0.1,0,0.1  l0,0C99.3,119.1,98.9,119.7,98.2,120z"
+     id="path10"
+     style="fill:#010101;fill-opacity:1;opacity:0.5" /><path
+     class="st2"
+     d="m 79.1,117.7 -26,-12 c -5.5,9.6 -5.5,21.2 0,34.6 L 79.248437,126.92578 C 78.048438,125.62578 75.428854,121.53969 79.1,117.7 Z"
+     id="path12"
+     style="fill:#000000;fill-opacity:1"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccc" /><path
+     class="st2"
+     d="m 79.1,117.7 -26,-12 c -5.5,9.6 -5.5,21.2 0,34.6 L 79.248437,126.92578 C 78.048438,125.62578 75.428854,121.53969 79.1,117.7 Z"
+     id="path12-3"
+     style="fill:#ffffff;fill-opacity:1;opacity:0.15"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccc" /><ellipse
+     class="st2"
+     cx="83.9"
+     cy="122.1"
+     rx="6.7"
+     ry="6.7"
+     id="ellipse14"
+     style="fill:#000000;fill-opacity:1" /><path
+     class="st1"
+     d="m 66.754781,127.04204 9.158661,-2.27353 c 0,0 1.588457,-0.21635 1.437708,-0.90719 v 0 c -0.15075,-0.69085 -1.73192,-0.37477 -1.73192,-0.37477 l -9.360427,0.88453 c -0.797871,0.0583 -1.345261,0.80017 -1.286958,1.59805 0,0 0,0 0,0 v 0 c 0.257773,0.78329 0.992351,1.23094 1.782936,1.07291 z"
+     id="path16"
+     style="opacity:0.5;fill:#010101;fill-opacity:1"
+     inkscape:connector-curvature="0" /><path
+     class="st1"
+     d="m 66.3,120.0625 9.3,1.4 c 0,0 1.5,0.4 1.7,-0.3 v 0 c 0.2,-0.7 -1.3,-1 -1.3,-1 l -8.9,-2.7 c -0.8,-0.2 -1.6,0.2 -1.9,1 v 0 c -0.2,0.7 0.3,1.4 1.1,1.6 0,0 0,0 0,0 z"
+     id="path18"
+     style="opacity:0.5;fill:#010101;fill-opacity:1"
+     inkscape:connector-curvature="0" /></svg>

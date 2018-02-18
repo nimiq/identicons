@@ -1,18 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 160 160" style="enable-background:new 0 0 160 160;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 160 160"
+   style="enable-background:new 0 0 160 160;"
+   xml:space="preserve"
+   sodipodi:docname="side_09.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
+     id="metadata19"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs17" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="976"
+     id="namedview15"
+     showgrid="false"
+     inkscape:zoom="8.34386"
+     inkscape:cx="64.48897"
+     inkscape:cy="66.6147"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style2">
 	.st0{fill:#39B54A;}
 	.st1{fill:#009245;}
-</style>
-<title>Artboard 42 copy 201</title>
-<path class="st0" d="M52.5,103.1c0,0,0.9,0.1,1.9-1.6s0.5-5.3-2.1-6.5s-3.3-3.9-4.8-6.7s-7.4-7.8-19-9.7s-12.9-6.5-13.7-7.5
-	s-2.5,7.9,1.4,15.4S26.7,100,36,97.2s12.4,2,12.4,2S50.7,102.9,52.5,103.1z"/>
-<path class="st1" d="M52.5,103.1c0,0,0.9,0.1,1.9-1.6s0.5-5.3-2.1-6.5s-3.3-3.9-4.8-6.7s-7.4-7.8-19-9.7S15,69.3,14.8,71.1
-	C16.1,87.4,44.4,82.6,52.5,103.1z"/>
-<path class="st0" d="M119.5,82c3.2-1,6.5-1.6,9.9-1.8c12-1,13.8-5.4,14.7-6.3s1.9,8-2.6,15.1s-11.9,12.5-21.2,9
-	c-1.4-0.5-2.8-0.9-4.3-1.1C118.8,90,119.7,85.6,119.5,82z"/>
-<path class="st1" d="M119.2,82.4c3.6-1.2,7.3-1.9,11-2.2c12-1,14.7-8.1,14.7-6.3c-1.8,10.5-14.9,11.1-26.4,16
-	C119.7,85.6,119.7,84.7,119.2,82.4z"/>
-</svg>
+</style><title
+     id="title4">Artboard 42 copy 201</title><path
+     class="st0"
+     d="M52.5,103.1c0,0,0.9,0.1,1.9-1.6s0.5-5.3-2.1-6.5s-3.3-3.9-4.8-6.7s-7.4-7.8-19-9.7s-12.9-6.5-13.7-7.5  s-2.5,7.9,1.4,15.4S26.7,100,36,97.2s12.4,2,12.4,2S50.7,102.9,52.5,103.1z"
+     id="path6"
+     style="fill:#000000;fill-opacity:1" /><path
+     class="st1"
+     d="M52.5,103.1c0,0,0.9,0.1,1.9-1.6s0.5-5.3-2.1-6.5s-3.3-3.9-4.8-6.7s-7.4-7.8-19-9.7S15,69.3,14.8,71.1  C16.1,87.4,44.4,82.6,52.5,103.1z"
+     id="path8"
+     style="fill:#010101;fill-opacity:1;opacity:0.15" /><path
+     class="st0"
+     d="M119.5,82c3.2-1,6.5-1.6,9.9-1.8c12-1,13.8-5.4,14.7-6.3s1.9,8-2.6,15.1s-11.9,12.5-21.2,9  c-1.4-0.5-2.8-0.9-4.3-1.1C118.8,90,119.7,85.6,119.5,82z"
+     id="path10"
+     style="fill:#000000;fill-opacity:1" /><path
+     class="st1"
+     d="M119.2,82.4c3.6-1.2,7.3-1.9,11-2.2c12-1,14.7-8.1,14.7-6.3c-1.8,10.5-14.9,11.1-26.4,16  C119.7,85.6,119.7,84.7,119.2,82.4z"
+     id="path12"
+     style="fill:#010101;fill-opacity:1;opacity:0.15" /></svg>

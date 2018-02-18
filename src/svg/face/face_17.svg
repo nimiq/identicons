@@ -60,7 +60,7 @@
      id="namedview148"
      showgrid="false"
      inkscape:zoom="5.9"
-     inkscape:cx="67.89789"
+     inkscape:cx="36.372466"
      inkscape:cy="72.078824"
      inkscape:window-x="0"
      inkscape:window-y="27"
@@ -88,7 +88,8 @@
      d="M117.2,66c0,0-35.8-11.5-73.2-2.5"
      id="path6" /><path
      d="M101.5,63.4c0,0,0.5,19.6,7,20.6c4.5,1.1,6.5-1.7,7-4.6s0.4-11.4-1.8-14.3L101,62L101.5,63.4z"
-     id="path8" /><ellipse
+     id="path8"
+     style="fill:#010101;fill-opacity:1" /><ellipse
      transform="matrix(0.9985 -5.495018e-02 5.495018e-02 0.9985 -3.8666 4.798)"
      class="st1"
      cx="85.3"

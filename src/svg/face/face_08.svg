@@ -35,7 +35,7 @@
      id="namedview18"
      showgrid="false"
      inkscape:zoom="8.34386"
-     inkscape:cx="109.26905"
+     inkscape:cx="86.977209"
      inkscape:cy="73.996882"
      inkscape:window-x="0"
      inkscape:window-y="27"
@@ -49,10 +49,12 @@
      id="title4">Artboard 42 copy 241</title><path
      class="st0"
      d="M111.4,68.3c0.6,2.7-0.6,5.3-2.5,5.7s-4-1.5-4.6-4.2s0.6-5.3,2.5-5.7c0.7-0.1,7.9,0.3,7.9,0.3  S111.1,66.9,111.4,68.3z"
-     id="path6" /><path
+     id="path6"
+     style="fill:#000000;fill-opacity:1" /><path
      class="st0"
      d="M80.7,66.9c-0.6,3.1,0.7,5.9,2.8,6.3s4.4-1.7,5.1-4.7s-0.6-5.9-2.8-6.3c-0.6-0.1-10.1-0.1-10.6,0.1  C74.3,62.6,82,66,80.7,66.9z"
-     id="path8" /><linearGradient
+     id="path8"
+     style="fill:#000000;fill-opacity:1" /><linearGradient
      id="SVGID_1_"
      gradientUnits="userSpaceOnUse"
      x1="95.2352"
