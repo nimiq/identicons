@@ -38,8 +38,8 @@
      id="namedview38"
      showgrid="false"
      inkscape:zoom="5.9"
-     inkscape:cx="72.485443"
-     inkscape:cy="77.929464"
+     inkscape:cx="54.58416"
+     inkscape:cy="78.191497"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -71,7 +71,7 @@
   <path
      d="m 22,66 c 0,0 5,0 10,5 5,5 2,6 2,6 0,0 -7,2 -8,7 -1,5 3,-14 -4,-18 z"
      id="path23"
-     style="opacity:0.1;fill:#010101;fill-opacity:1"
+     style="opacity:1;fill:#000000;fill-opacity:1"
      inkscape:connector-curvature="0" />
   <path
      class="cls-1"
@@ -81,7 +81,7 @@
   <path
      d="m 53.62,81.5 11.89,3.36 c -7.42,2.23 -16,3 -25.34,2.9 0,0 7.91,-2.35 13.45,-6.26 z"
      id="path27"
-     style="fill-opacity:1;fill:#010101;opacity:0.1"
+     style="fill-opacity:1;fill:#000000;opacity:1"
      inkscape:connector-curvature="0" />
   <path
      class="cls-1"
@@ -92,7 +92,7 @@
      class="cls-5"
      d="m 119.07,80.42 -0.8,6 c 0,0 12.17,-3.12 18.51,-5.41 0,-0.01 -9.78,0.9 -17.71,-0.59 z"
      id="path31"
-     style="fill-opacity:1;fill:#010101;opacity:0.1"
+     style="fill-opacity:1;fill:#000000;opacity:1"
      inkscape:connector-curvature="0" />
   <g
      class="cls-2"

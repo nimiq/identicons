@@ -34,9 +34,9 @@
      inkscape:window-height="976"
      id="namedview13"
      showgrid="false"
-     inkscape:zoom="4.17193"
-     inkscape:cx="10.728508"
-     inkscape:cy="44.070719"
+     inkscape:zoom="11.8"
+     inkscape:cx="59.951729"
+     inkscape:cy="41.371097"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -48,9 +48,16 @@
 </style><title
      id="title4">Artboard 42 copy 224</title><path
      class="st0"
-     d="M61,114.7c6.6,6.9,13.7,13.4,28,14.8c-7,2.5-9.4,7.7-11,13.5c0,0,15.4-3.3,17-7.7c0,0,6,6.8,18,5.8  c-2.2-5.8-9-12.2-18-13.5c-2.7,0-4.2-6.8,3-12.6C76,123.7,61,114.7,61,114.7z"
+     d="m 61,114.7 c 6.6,6.9 16.636291,13.13034 26.561817,16.02845 C 80.561817,133.22845 79.6,137.2 78,143 c 0,0 15.4,-3.3 17,-7.7 0,0 6,6.8 18,5.8 -2.2,-5.8 -9,-12.2 -18,-13.5 -2.7,0 -4.2,-6.8 3,-12.6 -22,8.7 -37,-0.3 -37,-0.3 z"
      id="path6"
-     style="fill:#00ff00;fill-opacity:1" /><g
+     style="fill:#00ff00;fill-opacity:1"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccccccc" /><path
+     style="fill:#000000;fill-opacity:1"
+     d="M 87.561817,130.72845 C 80.999917,132.8497 79.330341,137.37977 78,143 c 0,0 15.4,-3.29922 17,-7.69922 0,0 6,6.79883 18,5.79883 -2.2,-5.8 -9,-12.2 -18,-13.5 -0.06763,0.43737 -0.630106,0.92793 -0.552457,2.24453 -1.647634,-0.34631 -4.326956,0.0571 -6.885726,0.88431 z"
+     id="path6-3"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="scccccs" /><g
      class="st1"
      id="g10"
      style="fill:#010101;fill-opacity:1"><path
