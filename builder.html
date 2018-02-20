@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nimiq Iqon Builder</title>
+
+    <style type="text/css">
+        html,
+        body {
+            background: linear-gradient(#536DFE, #b453fe);
+            text-align: center;
+            min-height: 100vh;
+            color: white;
+            font-family: system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            padding: 32px;
+            max-width: 960px;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 54px;
+        }
+
+        h2 {
+            font-weight: 300;
+            font-size: 40px;
+            margin-top: 64px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        #settings {
+            text-align: left;
+            margin-bottom: 40px;
+            overflow: auto;
+        }
+
+        #settings > div {
+            width: 50%;
+        }
+
+        .colors {
+            overflow: auto;
+        }
+
+        .colors div {
+            float: left;
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+
+        .feature {
+            width: 50%;
+        }
+
+        select {
+            font-size: inherit;
+            padding: 5px 10px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .iqon {
+            display: inline-block;
+            margin: 16px 8px;
+        }
+
+        .iqon {
+            width: 320px;
+            height: 320px;
+        }
+
+        .iqon.smaller {
+            width: 160px;
+            height: 160px;
+            margin-left: -30px;
+        }
+
+        .iqon.small {
+            width: 80px;
+            height: 80px;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nimiq Iqon Builder</h1>
+
+    <div id="settings">
+        <div class="float-left">
+            <label>Background:</label>
+            <div class="colors background"></div>
+
+            <label>Body:</label>
+            <div class="colors body"></div>
+
+            <label>Accent:</label>
+            <div class="colors accent"></div>
+        </div>
+        <div class="float-left">
+            <div class="feature float-left">
+                <label>Top:</label>
+                <select top></select>
+            </div>
+            <div class="feature float-left">
+                <label>Face:</label>
+                <select face></select>
+            </div>
+            <div class="feature float-left">
+                <label>Side</label>
+                <select side></select>
+            </div>
+            <div class="feature float-left">
+                <label>Bottom</label>
+                <select bottom></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="iqon"></div>
+    <div class="iqon smaller"></div>
+    <div class="iqon small"></div>
+
+    <script src="src/js/iqons-catalog.js"></script>
+    <script type="module">
+        import Iqons from './dist/iqons.min.js';
+        Iqons._$use = Iqons._$useForImage;
+        Iqons._includeLib().then($lib => {
+            Iqons.$lib = $lib;
+            window.Iqons = Iqons;
+
+            createColorPickers();
+            createFeatureSelects();
+            try {
+                if(!location.hash) throw('break');
+                window.options = JSON.parse(decodeURIComponent('{' + location.hash.slice(1) + '}'));
+                ['top', 'face', 'side', 'bottom'].map(key => {
+                    document.querySelector(`select[${key}]`).value = window.options[key];
+                });
+            }
+            catch(e) {
+                window.options = {
+                    backgroundColor: 0,
+                    bodyColor: 0,
+                    accentColor: 0,
+                    top: 0,
+                    face: 0,
+                    side: 0,
+                    bottom: 0
+                };
+            }
+            render();
+        });
+    </script>
+    <script>
+        const iqons = document.querySelectorAll('.iqon');
+
+        function createColorPickers() {
+            const html = Iqons.colors.map((color, index) => {
+                return `<div onclick="updateOption('color', ${index})" style="background: ${color};"></div>`;
+            }).join('');
+
+            document.querySelector('.colors.background').innerHTML = html.replace(/color/g, 'backgroundColor');
+            document.querySelector('.colors.body').innerHTML = html.replace(/color/g, 'bodyColor');
+            document.querySelector('.colors.accent').innerHTML = html.replace(/color/g, 'accentColor');
+        }
+
+        function createFeatureSelects() {
+            Object.keys(IqonsCatalog).map(key => {
+                const html = IqonsCatalog[key].map((name, index) => {
+                    return `<option value="${index}">${name}</option>`;
+                }).join('');
+
+                document.querySelector(`select[${key}]`).setAttribute('onchange', `updateOption('${key}', this.value)`);
+                document.querySelector(`select[${key}]`).innerHTML = html;
+            });
+        }
+
+        function updateOption(key, value) {
+            options[key] = value;
+            location.hash = encodeURIComponent(JSON.stringify(options).replace(/({|})/g, ''));
+            render();
+        }
+
+        function render() {
+            const svg = Iqons._svgTemplate(options.bodyColor, options.backgroundColor, options.face, options.top, options.side, options.bottom, options.accentColor, 0);
+            const dataUrl = `data:image/svg+xml;base64,${btoa(svg)}`;
+
+            iqons.forEach($iqon => {
+                const $img = document.createElement('img');
+                $img.src = dataUrl;
+                if($iqon.firstChild) $iqon.removeChild($iqon.firstChild);
+                $iqon.appendChild($img);
+            });
+        }
+    </script>
+</body>
+</html>

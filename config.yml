@@ -1,8 +1,0 @@
-plugins:
- - inlineStyles:
-    onlyMatchedOnce: false
- - removeAttrs:
-    attrs: ['data.*', 'viewBox']
- - mergePaths: true
- - cleanupIDs:
-    prefix: 'nimiq-'
