@@ -89,6 +89,7 @@ export default class Iqons {
 
     static _$use(part, index) {
         return `<use width="160" height="160" xlink:href="/libraries/iqons/dist/iqons.min.svg#${part}_${this._assetIndex(index, part)}"/>`;
+        /* @asset(/libraries/iqons/dist/iqons.min.svg) */
     }
 
     static _loadImage(dataUrl) {

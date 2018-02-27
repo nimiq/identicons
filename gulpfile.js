@@ -69,7 +69,10 @@ gulp.task('prepare-js', function () {
         .pipe(uglify({
             warnings: true,
             compress: {},
-            mangle: true
+            mangle: true,
+            output: {
+                comments: /@asset/
+            }
         }))
         .pipe(concat('iqons.min.js'))
         .pipe(gulp.dest('dist'));
