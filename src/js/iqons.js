@@ -44,7 +44,7 @@ export default class Iqons {
             if (++accentColor > 9) accentColor = 0;
 
         color = this.colors[color];
-        backgroundColor = this.colors[backgroundColor];
+        backgroundColor = this.backgroundColors[backgroundColor];
         accentColor = this.colors[accentColor];
         return `
             <g style="color:${color}; fill:${accentColor};">
@@ -125,6 +125,21 @@ export default class Iqons {
         const doFlip = this._assetIndex(gaze, 'gaze') - 1;
         if (!doFlip) return '';
         // return 'transform-origin="center center" transform="scale(-1,1)"'
+    }
+
+    static get backgroundColors() {
+        return [
+            '#ffa726', // orange-400
+            '#f44336', // red-500
+            '#ffeb3b', // yellow-500
+            '#5c6bc0', // indigo-400
+            '#4fc3f7', // light-blue-300
+            '#ab47bc', // purple-400
+            '#4db6ac', // teal-300
+            '#f8bbd0', // pink-100
+            '#9ccc65', // light-green-400
+            '#bcaaa4'  // brown-200
+        ]
     }
 
     static get colors() {
