@@ -73,12 +73,12 @@ h2 {
 <script type="module">
 import Iqons from './dist/iqons.min.js';
 
-function render(type) {
+async function render(type) {
     const count = Iqons.assetCounts[type];
     const $el = document.getElementById(type);
     for (var i = 0; i < count; i++) {
         const name = (i + 1) + ' ' + getName(type, i);
-        const $iqon = renderIqon(renderFns[type](i), name);
+        const $iqon = renderIqon(await renderFns[type](i), name);
         $el.appendChild($iqon)
     }
 }
@@ -91,10 +91,10 @@ function getName(type, index) {
 }
 
 const renderFns = {
-    face: index => Iqons._svgTemplate(0, 3, index, -1, -1, -1, 6),
-    top: index => Iqons._svgTemplate(0, 3, -1, index, -1, -1, 6),
-    side: index => Iqons._svgTemplate(0, 3, -1, -1, index, -1, 6),
-    bottom: index => Iqons._svgTemplate(0, 3, -1, -1, -1, index, 6),
+    face: async index => await Iqons._svgTemplate(0, 3, index, -1, -1, -1, 6),
+    top: async index => await Iqons._svgTemplate(0, 3, -1, index, -1, -1, 6),
+    side: async index => await Iqons._svgTemplate(0, 3, -1, -1, index, -1, 6),
+    bottom: async index => await Iqons._svgTemplate(0, 3, -1, -1, -1, index, 6),
 }
 
 function renderIqon(svg, name) {
