@@ -21,11 +21,6 @@
         /*filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));*/
     }
 
-    .iqons svg {
-        width: 100%;
-        height: 100%;
-    }
-
     #iqons {
         width: 256px;
         height: 256px;
@@ -61,7 +56,7 @@
     <div class="container">
         <div>
             <div class="iqons" id="iqons"></div>
-            <input onkeyup="document.querySelectorAll('.iqons').forEach((e, i) => Iqons.render(this.value+i, e))" placeholder="iqons a Text" autofocus="true">
+            <input id="text-input" placeholder="iqons a Text" autofocus="true">
         </div>
         <div class="iqons"></div>
         <div class="iqons"></div>
@@ -151,8 +146,21 @@
 
     window.Iqons = Iqons;
 
-    const now = Date.now()
-    document.querySelectorAll('.iqons').forEach((e, i) => Iqons.render(now + 'identicon' + i, e))
+
+    function renderIdenticons(text) {
+        document.querySelectorAll('.iqons:not(.small)').forEach((e, i) => Iqons.render(text + i, e));
+
+        // for testing render the small iqons as image
+        document.querySelectorAll('.iqons.small').forEach((e, i) => Iqons.image(text + i)
+            .then($img => {
+                e.textContent = ''; // clear old content
+                e.appendChild($img);
+            }));
+    }
+
+    renderIdenticons('' + Date.now());
+
+    document.querySelector('#text-input').addEventListener('input', e => renderIdenticons(event.target.value));
     </script>
 </body>
 

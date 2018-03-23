@@ -4,34 +4,52 @@ export default class Iqons {
 
     /* Public API */
 
-    static svg(text) {
+    static async svg(text, inline = false) {
         const hash = this._hash(text);
-        return this._svgTemplate(hash[0], hash[2], hash[3] + hash[4], hash[5] + hash[6], hash[7] + hash[8], hash[9] + hash[10], hash[11], hash[12]);
+        return this._svgTemplate(hash[0], hash[2], hash[3] + hash[4], hash[5] + hash[6], hash[7] + hash[8], hash[9] + hash[10], hash[11], hash[12], inline);
     }
 
-    static render(text, $element) {
-        $element.innerHTML = this.svg(text);
+    static async render(text, $element) {
+        $element.innerHTML = await this.svg(text);
     }
 
-    static toDataUrl(text) {
-        return `data:image/svg+xml;base64,${btoa(this.svg(text))}`;
+    static async toDataUrl(text) {
+        return `data:image/svg+xml;base64,${btoa(await this.svg(text, true))}`;
+    }
+
+    static placeholder() {
+        const content = `
+            <rect fill="white" x="0" y="0" width="160" height="160"></rect>
+            <circle cx="80" cy="80" r="40" fill="white"></circle>
+            <g opacity=".1" fill="#010101"><path d="M119.21,80a39.46,39.46,0,0,1-67.13,28.13c10.36,2.33,36,3,49.82-14.28,10.39-12.47,8.31-33.23,4.16-43.26A39.35,39.35,0,0,1,119.21,80Z"/></g>`;
+        return this._$svg(content);
+    }
+
+    static renderPlaceholder($element) {
+        $element.innerHTML = this.placeholder();
+    }
+
+    static placeholderToDataUrl() {
+        return `data:image/svg+xml;base64,${btoa(this.placeholder())}`;
     }
 
     static async image(text) {
-        const originalUseFn = this._$use;
-        this._$use = this._$useForImage;
-        this.$lib = await this._includeLib();
-        const dataUrl = this.toDataUrl(text);
-        this._$use = originalUseFn;
-        return this._loadImage(dataUrl);
+        const dataUrl = await this.toDataUrl(text);
+        const image = await this._loadImage(dataUrl);
+        image.style.width = '100%';
+        image.style.height = '100%';
+        return image;
     }
 
     /* Private API */
-    static _svgTemplate(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor, gaze) {
-        return this._$svg(this._$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor), gaze);
+    static async _svgTemplate(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor, gaze, inline) {
+        return this._$svg(
+            await this._$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor, inline),
+            gaze
+        );
     }
 
-    static _$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor, gaze) {
+    static async _$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor, inline) {
 
         color = parseInt(color);
         backgroundColor = parseInt(backgroundColor);
@@ -51,11 +69,11 @@ export default class Iqons {
                 <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
                 <circle cx="80" cy="80" r="40" fill="${color}"></circle>
                 <g opacity=".1" fill="#010101"><path d="M119.21,80a39.46,39.46,0,0,1-67.13,28.13c10.36,2.33,36,3,49.82-14.28,10.39-12.47,8.31-33.23,4.16-43.26A39.35,39.35,0,0,1,119.21,80Z"/></g>
-                ${this._$use('top',topNr)}
-                ${this._$use('side',sidesNr)}
-                ${this._$use('face',faceNr)}
-                ${this._$use('bottom',bottomNr)}
-            </g>`
+                ${await this._generatePart('top',topNr,inline)}
+                ${await this._generatePart('side',sidesNr,inline)}
+                ${await this._generatePart('face',faceNr,inline)}
+                ${await this._generatePart('bottom',bottomNr,inline)}
+            </g>`;
     }
 
     static _$svg(content, gaze) {
@@ -75,7 +93,7 @@ export default class Iqons {
 
         const random = Random.getRandomId();
         return `
-            <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" >
+            <svg viewBox="0 0 160 160" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" >
                 <defs>
                     <clipPath id="hexagon-clip-${ random }" transform="scale(0.5) translate(0, 16)">
                         <path d="M251.6 17.34l63.53 110.03c5.72 9.9 5.72 22.1 0 32L251.6 269.4c-5.7 9.9-16.27 16-27.7 16H96.83c-11.43 0-22-6.1-27.7-16L5.6 159.37c-5.7-9.9-5.7-22.1 0-32L69.14 17.34c5.72-9.9 16.28-16 27.7-16H223.9c11.43 0 22 6.1 27.7 16z"/>
@@ -87,12 +105,19 @@ export default class Iqons {
                         ${ content }
                     </g>
                 </g>
-            </svg>`
+            </svg>`;
     }
 
-    static _$use(part, index) {
-        return `<use width="160" height="160" xlink:href="/libraries/iqons/dist/iqons.min.svg#${part}_${this._assetIndex(index, part)}"/>`;
+    static async _generatePart(part, index, inline = false) {
         /* @asset(/libraries/iqons/dist/iqons.min.svg) */
+        if (!inline) {
+            return `<use width="160" height="160" xlink:href="/libraries/iqons/dist/iqons.min.svg#${part}_${this._assetIndex(index, part)}"/>`;
+        } else {
+            const assets = await this._getAssets();
+            const selector = '#'+part + '_' + this._assetIndex(index, part);
+            const $part = assets.querySelector(selector);
+            return $part.innerHTML;
+        }
     }
 
     static _loadImage(dataUrl) {
@@ -103,21 +128,16 @@ export default class Iqons {
         });
     }
 
-    static async _includeLib() {
-        const lib = await this._fetchLib();
-        const $lib = document.createElement('x-lib');
-        $lib.innerHTML = lib;
-        return $lib;
-    }
-
-    static _fetchLib() {
-        return fetch('/libraries/iqons/dist/iqons.min.svg').then(response => response.text());
-    }
-
-    static _$useForImage(part, index) {
-        const selector = '#'+part + '_' + this._assetIndex(index, part);
-        const $part = this.$lib.querySelector(selector);
-        return $part.innerHTML;
+    static async _getAssets() {
+        if (this._assets) return this._assets;
+        this._assets = fetch('/libraries/iqons/dist/iqons.min.svg')
+            .then(response => response.text())
+            .then(assetsText => {
+                const assets = document.createElement('x-assets');
+                assets.innerHTML = assetsText;
+                return assets;
+            });
+        return this._assets;
     }
 
     static _$flip(gaze) {
