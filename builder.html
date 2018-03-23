@@ -147,8 +147,7 @@
     <script src="src/js/iqons-catalog.js"></script>
     <script type="module">
         import Iqons from './dist/iqons.min.js';
-        Iqons._$use = Iqons._$useForImage;
-        Iqons._includeLib().then($lib => {
+        Iqons._getAssets().then($lib => {
             Iqons.$lib = $lib;
             window.Iqons = Iqons;
 
@@ -205,8 +204,8 @@
             render();
         }
 
-        function render() {
-            const svg = Iqons._svgTemplate(options.bodyColor, options.backgroundColor, options.face, options.top, options.side, options.bottom, options.accentColor, 0);
+        async function render() {
+            const svg = await Iqons._svgTemplate(options.bodyColor, options.backgroundColor, options.face, options.top, options.side, options.bottom, options.accentColor, 0, true);
             const dataUrl = `data:image/svg+xml;base64,${btoa(svg)}`;
 
             iqons.forEach($iqon => {

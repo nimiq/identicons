@@ -148,7 +148,7 @@
 
 
     function renderIdenticons(text) {
-        document.querySelectorAll('.iqons:not(.small)').forEach((e, i) => Iqons.render(text + i, e));
+        document.querySelectorAll('.iqons:not(.small)').forEach((e, i) => Iqons.render(text + (i === 0 ? '' : i), e));
 
         // for testing render the small iqons as image
         document.querySelectorAll('.iqons.small').forEach((e, i) => Iqons.image(text + i)
