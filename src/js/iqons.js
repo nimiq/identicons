@@ -1,4 +1,5 @@
 import Random from '/libraries/nimiq-utils/random.js'
+import IqonsCatalog from './iqons-catalog.js';
 
 export default class Iqons {
 
@@ -14,7 +15,8 @@ export default class Iqons {
     }
 
     static async toDataUrl(text) {
-        return `data:image/svg+xml;base64,${btoa(await this.svg(text, true))}`;
+        const base64string = btoa(await this.svg(text, true));
+        return `data:image/svg+xml;base64, ${base64string}`;
     }
 
     static placeholder(color='#bbb', strokeWidth=1) {
@@ -68,7 +70,7 @@ export default class Iqons {
         backgroundColor = this.colors[backgroundColor];
         accentColor = this.colors[accentColor];
         return `
-            <g style="color:${color}; fill:${accentColor};">
+            <g color="${color}" fill="${accentColor}">
                 <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
                 <circle cx="80" cy="80" r="40" fill="${color}"></circle>
                 <g opacity=".1" fill="#010101"><path d="M119.21,80a39.46,39.46,0,0,1-67.13,28.13c10.36,2.33,36,3,49.82-14.28,10.39-12.47,8.31-33.23,4.16-43.26A39.35,39.35,0,0,1,119.21,80Z"/></g>
@@ -104,7 +106,7 @@ export default class Iqons {
                 </defs>
                 <path fill="white" stroke="#bbbbbb" transform="translate(0, 8) scale(0.5)" d="M251.6 17.34l63.53 110.03c5.72 9.9 5.72 22.1 0 32L251.6 269.4c-5.7 9.9-16.27 16-27.7 16H96.83c-11.43 0-22-6.1-27.7-16L5.6 159.37c-5.7-9.9-5.7-22.1 0-32L69.14 17.34c5.72-9.9 16.28-16 27.7-16H223.9c11.43 0 22 6.1 27.7 16z"/>
                 <g transform="scale(0.9) translate(9, 8)">
-                    <g ${ this._$flip(gaze) } clip-path="url(#hexagon-clip-${ random })">
+                    <g clip-path="url(#hexagon-clip-${ random })">
                         ${ content }
                     </g>
                 </g>
@@ -144,12 +146,11 @@ export default class Iqons {
         return this._assets;
     }
 
-    static _$flip(gaze) {
-        return '';
+    /*static _$flip(gaze) {
         const doFlip = this._assetIndex(gaze, 'gaze') - 1;
         if (!doFlip) return '';
         // return 'transform-origin="center center" transform="scale(-1,1)"'
-    }
+    }*/
 
     static get colors() {
         return [

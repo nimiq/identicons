@@ -1,0 +1,44 @@
+html,
+body {
+    background: linear-gradient(#536DFE, #b453fe);
+    text-align: center;
+    padding-top: 48px;
+    min-height: 100vh;
+}
+
+.iqons {
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    margin: 8px;
+    /*filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));*/
+}
+
+#iqons {
+    width: 256px;
+    height: 256px;
+    margin: 0 auto;
+    display: block;
+    background-position: 0px 16px;
+    padding: 16px;
+}
+
+.small {
+    padding: 4px;
+    width: 80px;
+    height: 80px;
+    background-position: 0px 4px;
+}
+
+input {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    font-family: Arial;
+    padding: 16px;
+    margin: 24px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}

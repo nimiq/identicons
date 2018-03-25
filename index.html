@@ -4,52 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>iqons.svg</title>
-    <style type="text/css">
-    html,
-    body {
-        background: linear-gradient(#536DFE, #b453fe);
-        text-align: center;
-        padding-top: 48px;
-        min-height: 100vh;
-    }
-
-    .iqons {
-        width: 160px;
-        height: 160px;
-        display: inline-block;
-        margin: 8px;
-        /*filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));*/
-    }
-
-    #iqons {
-        width: 256px;
-        height: 256px;
-        margin: 0 auto;
-        display: block;
-        background-position: 0px 16px;
-        padding: 16px;
-    }
-
-    .small {
-        padding: 4px;
-        width: 80px;
-        height: 80px;
-        background-position: 0px 4px;
-    }
-
-    input {
-        background: none;
-        outline: none;
-        border: none;
-        color: white;
-        font-size: 40px;
-        font-family: Arial;
-        padding: 16px;
-        margin: 24px;
-        text-align: center;
-        border-bottom: 1px solid white;
-    }
-    </style>
+    <link href="./demo.css" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' 'unsafe-eval' https://cdn.nimiq-network.com/;
+          img-src http: https: blob: data:; worker-src 'self' blob:; style-src 'self';">
 </head>
 
 <body>
@@ -141,27 +99,7 @@
         <div class="iqons small"></div>
         <div class="iqons small"></div>
     </div>
-    <script type="module">
-    import Iqons from './dist/iqons.min.js';
-
-    window.Iqons = Iqons;
-
-
-    function renderIdenticons(text) {
-        document.querySelectorAll('.iqons:not(.small)').forEach((e, i) => Iqons.render(text + (i === 0 ? '' : i), e));
-
-        // for testing render the small iqons as image
-        document.querySelectorAll('.iqons.small').forEach((e, i) => Iqons.image(text + i)
-            .then($img => {
-                e.textContent = ''; // clear old content
-                e.appendChild($img);
-            }));
-    }
-
-    renderIdenticons('' + Date.now());
-
-    document.querySelector('#text-input').addEventListener('input', e => renderIdenticons(event.target.value));
-    </script>
+    <script type="module" src="demo.js"></script>
 </body>
 
 </html>
