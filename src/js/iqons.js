@@ -1,5 +1,5 @@
 import Random from '/libraries/nimiq-utils/random.js'
-import IqonsCatalog from './iqons-catalog.js';
+import IqonsCatalog from '/libraries/iqons/src/js/iqons-catalog.js';
 
 export default class Iqons {
 

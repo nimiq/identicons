@@ -65,7 +65,7 @@ gulp.task('prepare-svg', function () {
 
 gulp.task('prepare-js', function () {
     return gulp
-        .src(['src/js/iqons-catalog.js', 'src/js/iqons.js'])
+        .src(['src/js/iqons.js'])
         .pipe(uglify({
             warnings: true,
             compress: {},
