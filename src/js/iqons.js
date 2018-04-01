@@ -67,8 +67,8 @@ export default class Iqons {
             if (++accentColor > 9) accentColor = 0;
 
         color = this.colors[color];
-        backgroundColor = this.colors[backgroundColor];
-        accentColor = this.colors[accentColor];
+        backgroundColor = this.bgColors[backgroundColor];
+        accentColor = this.accentColors[accentColor];
         return `
             <g color="${color}" fill="${accentColor}">
                 <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
@@ -154,16 +154,53 @@ export default class Iqons {
 
     static get colors() {
         return [
-            '#fb8c00', // orange-600
-            '#d32f2f', // red-700
-            '#fbc02d', // yellow-700
-            '#3949ab', // indigo-600
+            '#ff9800', // orange-500
+            '#E53935', // red-600
+            '#FDD835', // yellow-600
+            '#3f51b5', // indigo-500
             '#03a9f4', // light-blue-500
-            '#8e24aa', // purple-600
+            '#9c27b0', // purple-500
             '#009688', // teal-500
-            '#f06292', // pink-300
-            '#7cb342', // light-green-600
-            '#795548'  // brown-400
+            '#EC407A', // pink-400
+            '#8bc34a', // light-green-500
+            '#795548' // brown-500
+        ]
+    }
+
+    static get bgColors() {
+        return [
+            /* Red  */
+            '#FF8A80', // red-a100
+            '#F48FB1', // pink-200
+            '#ea80fc', // purple-a100
+
+            /* Blue */
+            '#8c9eff', // indigo-a100
+            '#80d8ff', // light-blue-a100
+            '#CFD8DC', // blue-grey-100
+
+            /* Green */
+            '#1DE9B6', // teal-a400
+            '#00C853', // green-a-700
+
+            /* Orange */
+            '#FF9E80', // deep-orange-a100
+            '#FFE57F' // amber-a100
+        ]
+    }
+
+    static get accentColors() {
+        return [
+            '#ff9800', // orange-500
+            '#E53935', // red-600
+            '#FDD835', // yellow-600
+            '#3f51b5', // indigo-500
+            '#03a9f4', // light-blue-500
+            '#9c27b0', // purple-500
+            '#009688', // teal-500
+            '#EC407A', // pink-400
+            '#8bc34a', // light-green-500
+            '#795548' // brown-500
         ]
     }
 
