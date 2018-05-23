@@ -80,7 +80,7 @@ export default class Iqons {
 </g>`;
     }
 
-    static _$svg(content, gaze) {
+    static _$svg(content, gaze) { // eslint-disable-line no-unused-vars
         /** Add this to <defs> for blur:
         <filter id="gaussian-blur" >
           <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blurOut" />
@@ -123,9 +123,9 @@ export default class Iqons {
     }
 
     static _loadImage(dataUrl) {
-        return new Promise((resolve, err) => {
+        return new Promise((resolve, err) => { // eslint-disable-line no-unused-vars
             const img = document.createElement('img');
-            img.addEventListener('load', e => resolve(img), { once: true });
+            img.addEventListener('load', e => resolve(img), { once: true }); // eslint-disable-line no-unused-vars
             img.src = dataUrl;
         });
     }
