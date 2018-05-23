@@ -144,9 +144,11 @@
     <div class="iqon smaller"></div>
     <div class="iqon small"></div>
 
-    <script src="src/js/iqons-catalog.js"></script>
     <script type="module">
-        import Iqons from './dist/iqons.min.js';
+        import Iqons from './src/js/iqons.js';
+        import { IqonsCatalog } from './src/js/iqons-catalog.js';
+        window.IqonsCatalog = IqonsCatalog;
+
         Iqons._getAssets().then($lib => {
             Iqons.$lib = $lib;
             window.Iqons = Iqons;

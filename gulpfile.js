@@ -8,6 +8,7 @@ var uglify_es = require('uglify-es');
 var composer = require('gulp-uglify/composer');
 var uglify = composer(uglify_es, console);
 var concat = require('gulp-concat');
+var remove_code = require('gulp-remove-code');
 
 gulp.task('prepare-svg', function () {
     return gulp
@@ -65,7 +66,8 @@ gulp.task('prepare-svg', function () {
 
 gulp.task('prepare-js', function () {
     return gulp
-        .src(['src/js/iqons.js'])
+        .src(['src/js/iqons-catalog.js', 'src/js/iqons.js'])
+        .pipe(remove_code({ production: true }))
         .pipe(uglify({
             warnings: true,
             compress: {},

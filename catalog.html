@@ -69,9 +69,9 @@ h2 {
         <h2>Bottom</h2>
     </div>
 </body>
-<script src="./src/js/iqons-catalog.js"></script>
 <script type="module">
-import Iqons from './dist/iqons.min.js';
+import Iqons from './src/js/iqons.js';
+import { IqonsCatalog } from './src/js/iqons-catalog.js';
 
 async function render(type) {
     const count = Iqons.assetCounts[type];

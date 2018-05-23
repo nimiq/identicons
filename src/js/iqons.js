@@ -1,5 +1,6 @@
-import Random from '/libraries/secure-utils/random/random.js'
-import IqonsCatalog from '/libraries/iqons/src/js/iqons-catalog.js';
+// removeIf(production)
+import { IqonsCatalog } from './iqons-catalog.js';
+// endRemoveIf(production)
 
 export default class Iqons {
 
@@ -20,14 +21,13 @@ export default class Iqons {
     }
 
     static placeholder(color='#bbb', strokeWidth=1) {
-        return `
-            <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" >
-                <path fill="none" stroke="${color}" stroke-width="${2 * strokeWidth}" transform="translate(0, 8) scale(0.5)" d="M251.6 17.34l63.53 110.03c5.72 9.9 5.72 22.1 0 32L251.6 269.4c-5.7 9.9-16.27 16-27.7 16H96.83c-11.43 0-22-6.1-27.7-16L5.6 159.37c-5.7-9.9-5.7-22.1 0-32L69.14 17.34c5.72-9.9 16.28-16 27.7-16H223.9c11.43 0 22 6.1 27.7 16z"/>
-                <g transform="scale(0.9) translate(9, 8)">
-                    <circle cx="80" cy="80" r="40" fill="none" stroke="${color}" stroke-width="${strokeWidth}" opacity=".9"></circle>
-                    <g opacity=".1" fill="#010101"><path d="M119.21,80a39.46,39.46,0,0,1-67.13,28.13c10.36,2.33,36,3,49.82-14.28,10.39-12.47,8.31-33.23,4.16-43.26A39.35,39.35,0,0,1,119.21,80Z"/></g>\`
-                </g>
-            </svg>`;
+        return `<svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" >
+    <path fill="none" stroke="${color}" stroke-width="${2 * strokeWidth}" transform="translate(0, 8) scale(0.5)" d="M251.6 17.34l63.53 110.03c5.72 9.9 5.72 22.1 0 32L251.6 269.4c-5.7 9.9-16.27 16-27.7 16H96.83c-11.43 0-22-6.1-27.7-16L5.6 159.37c-5.7-9.9-5.7-22.1 0-32L69.14 17.34c5.72-9.9 16.28-16 27.7-16H223.9c11.43 0 22 6.1 27.7 16z"/>
+    <g transform="scale(0.9) translate(9, 8)">
+        <circle cx="80" cy="80" r="40" fill="none" stroke="${color}" stroke-width="${strokeWidth}" opacity=".9"></circle>
+        <g opacity=".1" fill="#010101"><path d="M119.21,80a39.46,39.46,0,0,1-67.13,28.13c10.36,2.33,36,3,49.82-14.28,10.39-12.47,8.31-33.23,4.16-43.26A39.35,39.35,0,0,1,119.21,80Z"/></g>\`
+    </g>
+</svg>`;
     }
 
     static renderPlaceholder($element, color=null, strokeWidth=null) {
@@ -69,16 +69,15 @@ export default class Iqons {
         color = this.colors[color];
         backgroundColor = this.colors[backgroundColor];
         accentColor = this.colors[accentColor];
-        return `
-            <g color="${color}" fill="${accentColor}">
-                <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
-                <circle cx="80" cy="80" r="40" fill="${color}"></circle>
-                <g opacity=".1" fill="#010101"><path d="M119.21,80a39.46,39.46,0,0,1-67.13,28.13c10.36,2.33,36,3,49.82-14.28,10.39-12.47,8.31-33.23,4.16-43.26A39.35,39.35,0,0,1,119.21,80Z"/></g>
-                ${await this._generatePart('top',topNr,inline)}
-                ${await this._generatePart('side',sidesNr,inline)}
-                ${await this._generatePart('face',faceNr,inline)}
-                ${await this._generatePart('bottom',bottomNr,inline)}
-            </g>`;
+        return `<g color="${color}" fill="${accentColor}">
+    <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
+    <circle cx="80" cy="80" r="40" fill="${color}"></circle>
+    <g opacity=".1" fill="#010101"><path d="M119.21,80a39.46,39.46,0,0,1-67.13,28.13c10.36,2.33,36,3,49.82-14.28,10.39-12.47,8.31-33.23,4.16-43.26A39.35,39.35,0,0,1,119.21,80Z"/></g>
+    ${await this._generatePart('top',topNr,inline)}
+    ${await this._generatePart('side',sidesNr,inline)}
+    ${await this._generatePart('face',faceNr,inline)}
+    ${await this._generatePart('bottom',bottomNr,inline)}
+</g>`;
     }
 
     static _$svg(content, gaze) {
@@ -96,27 +95,25 @@ export default class Iqons {
         filter="url(#gaussian-blur)"
         */
 
-        const random = Random.getRandomId();
-        return `
-            <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" >
-                <defs>
-                    <clipPath id="hexagon-clip-${ random }" transform="scale(0.5) translate(0, 16)">
-                        <path d="M251.6 17.34l63.53 110.03c5.72 9.9 5.72 22.1 0 32L251.6 269.4c-5.7 9.9-16.27 16-27.7 16H96.83c-11.43 0-22-6.1-27.7-16L5.6 159.37c-5.7-9.9-5.7-22.1 0-32L69.14 17.34c5.72-9.9 16.28-16 27.7-16H223.9c11.43 0 22 6.1 27.7 16z"/>
-                    </clipPath>
-                </defs>
-                <path fill="white" stroke="#bbbbbb" transform="translate(0, 8) scale(0.5)" d="M251.6 17.34l63.53 110.03c5.72 9.9 5.72 22.1 0 32L251.6 269.4c-5.7 9.9-16.27 16-27.7 16H96.83c-11.43 0-22-6.1-27.7-16L5.6 159.37c-5.7-9.9-5.7-22.1 0-32L69.14 17.34c5.72-9.9 16.28-16 27.7-16H223.9c11.43 0 22 6.1 27.7 16z"/>
-                <g transform="scale(0.9) translate(9, 8)">
-                    <g clip-path="url(#hexagon-clip-${ random })">
-                        ${ content }
-                    </g>
-                </g>
-            </svg>`;
+        const randomId = this._getRandomId();
+        return `<svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" >
+    <defs>
+        <clipPath id="hexagon-clip-${ randomId }" transform="scale(0.5) translate(0, 16)">
+            <path d="M251.6 17.34l63.53 110.03c5.72 9.9 5.72 22.1 0 32L251.6 269.4c-5.7 9.9-16.27 16-27.7 16H96.83c-11.43 0-22-6.1-27.7-16L5.6 159.37c-5.7-9.9-5.7-22.1 0-32L69.14 17.34c5.72-9.9 16.28-16 27.7-16H223.9c11.43 0 22 6.1 27.7 16z"/>
+        </clipPath>
+    </defs>
+    <path fill="white" stroke="#bbbbbb" transform="translate(0, 8) scale(0.5)" d="M251.6 17.34l63.53 110.03c5.72 9.9 5.72 22.1 0 32L251.6 269.4c-5.7 9.9-16.27 16-27.7 16H96.83c-11.43 0-22-6.1-27.7-16L5.6 159.37c-5.7-9.9-5.7-22.1 0-32L69.14 17.34c5.72-9.9 16.28-16 27.7-16H223.9c11.43 0 22 6.1 27.7 16z"/>
+    <g transform="scale(0.9) translate(9, 8)">
+        <g clip-path="url(#hexagon-clip-${ randomId })">
+            ${ content }
+        </g>
+    </g>
+</svg>`;
     }
 
     static async _generatePart(part, index, inline = false) {
-        /* @asset(/libraries/iqons/dist/iqons.min.svg) */
         if (!inline) {
-            return `<use width="160" height="160" xlink:href="/libraries/iqons/dist/iqons.min.svg#${part}_${this._assetIndex(index, part)}"/>`;
+            return `<use width="160" height="160" xlink:href="${this.svgPath}#${part}_${this._assetIndex(index, part)}"/>`;
         } else {
             const assets = await this._getAssets();
             const selector = '#'+part + '_' + this._assetIndex(index, part);
@@ -135,7 +132,7 @@ export default class Iqons {
 
     static async _getAssets() {
         if (this._assets) return this._assets;
-        this._assets = fetch('/libraries/iqons/dist/iqons.min.svg')
+        this._assets = fetch(this.svgPath)
             .then(response => response.text())
             .then(assetsText => {
                 const assets = document.createElement('x-assets');
@@ -178,7 +175,7 @@ export default class Iqons {
     }
 
     static _assetIndex(index, part) {
-        index = (Number(index) % Iqons.assetCounts[part]) + 1;
+        index = (Number(index) % this.assetCounts[part]) + 1;
         if (index < 10) index = '0' + index;
         return index
     }
@@ -201,4 +198,13 @@ export default class Iqons {
         }
         return a_n;
     }
+
+    static _getRandomId() {
+        let array = new Uint32Array(1);
+        crypto.getRandomValues(array);
+        return array[0];
+    }
 }
+
+/* @asset(/libraries/iqons/dist/iqons.min.svg) */
+Iqons.svgPath = '/libraries/iqons/dist/iqons.min.svg';
