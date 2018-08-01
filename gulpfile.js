@@ -80,4 +80,4 @@ gulp.task('prepare-js', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['prepare-svg', 'prepare-js']);
+gulp.task('default', gulp.parallel('prepare-svg', 'prepare-js'));
