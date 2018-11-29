@@ -1,8 +1,9 @@
 {
   "name": "@nimiq/iqons",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "Nimiq Identiqons",
+  "main": "dist/iqons.min.js",
+  "files": ["dist"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp"
