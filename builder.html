@@ -5,14 +5,34 @@
 
     <title>Nimiq Iqon Builder</title>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,700">
     <style type="text/css">
         html,
         body {
-            background: linear-gradient(#536DFE, #b453fe);
+            /* Nimiq color palette */
+            --nimiq-blue:       #1F2348; /* rgb(31, 35, 72) */
+            --nimiq-light-blue: #0582CA; /* rgb(5, 130, 202) */
+            --nimiq-gold:       #E9B213; /* rgb(233, 178, 19) */
+            --nimiq-green:      #21BCA5; /* rgb(33, 188, 165) */
+            --nimiq-orange:     #FC8702; /* rgb(252, 135, 2) */
+            --nimiq-red:        #D94432; /* rgb(216, 65, 51) */
+            --nimiq-gray:       #F4F4F5;
+            --nimiq-light-gray: #FAFAFA;
+
+            /* Background gradients */
+            --nimiq-blue-bg:       radial-gradient(circle at bottom right, #260133, var(--nimiq-blue));
+            --nimiq-light-blue-bg: radial-gradient(circle at bottom right, #265DD7, var(--nimiq-light-blue));
+            --nimiq-gold-bg:       radial-gradient(circle at bottom right, #EC991C, var(--nimiq-gold));
+            --nimiq-green-bg:      radial-gradient(circle at bottom right, #41A38E, var(--nimiq-green));
+            --nimiq-orange-bg:     radial-gradient(circle at bottom right, #FD6216, var(--nimiq-orange));
+            --nimiq-red-bg:        radial-gradient(circle at bottom right, #CC3047, var(--nimiq-red));
+            --nimiq-gray-bg:       radial-gradient(circle at bottom right, #F4F4F4, var(--nimiq-gray));
+
+            background: var(--nimiq-gray);
+            background-image: var(--nimiq-gray-bg);
             text-align: center;
-            min-height: 100vh;
-            color: white;
-            font-family: system-ui, sans-serif;
+            color: var(--nimiq-blue);
+            font-family: 'Muli', system-ui, sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
@@ -26,19 +46,15 @@
         }
 
         h1 {
-            font-weight: 300;
-            font-size: 54px;
-        }
-
-        h2 {
-            font-weight: 300;
-            font-size: 40px;
-            margin-top: 64px;
+            font-weight: 700;
+            font-size: 32px;
+            margin-bottom: 32px;
         }
 
         label {
             display: block;
-            margin-top: 15px;
+            margin-top: 16px;
+            margin-bottom: 4px;
         }
 
         .float-left {
@@ -51,8 +67,12 @@
             overflow: auto;
         }
 
-        #settings > div {
-            width: 50%;
+        #settings > div:first-child {
+            width: 60%;
+        }
+
+        #settings > div:last-child {
+            width: 40%;
         }
 
         .colors {
@@ -63,9 +83,9 @@
             float: left;
             width: 32px;
             height: 32px;
-            margin-right: 10px;
+            margin-right: 4px;
             border-radius: 50%;
-            border: 2px solid white;
+            border: 4px solid var(--nimiq-light-gray);
             cursor: pointer;
         }
 
@@ -84,13 +104,11 @@
         }
 
         .iqon {
-            display: inline-block;
-            margin: 16px 8px;
-        }
-
-        .iqon {
             width: 320px;
             height: 320px;
+            max-width: 100%;
+            display: inline-block;
+            margin: 16px 0;
         }
 
         .iqon.smaller {
@@ -104,6 +122,17 @@
             height: 80px;
             margin-left: -10px;
         }
+
+        @media (max-width: 800px) {
+            body {
+                padding: 16px;
+            }
+
+            #settings > div {
+                float: none;
+                width: 100% !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -111,22 +140,22 @@
 
     <div id="settings">
         <div class="float-left">
-            <label>Background:</label>
+            <label>Background</label>
             <div class="colors background"></div>
 
-            <label>Body:</label>
+            <label>Body</label>
             <div class="colors body"></div>
 
-            <label>Accent:</label>
+            <label>Accent</label>
             <div class="colors accent"></div>
         </div>
         <div class="float-left">
             <div class="feature float-left">
-                <label>Top:</label>
+                <label>Top</label>
                 <select top></select>
             </div>
             <div class="feature float-left">
-                <label>Face:</label>
+                <label>Face</label>
                 <select face></select>
             </div>
             <div class="feature float-left">
