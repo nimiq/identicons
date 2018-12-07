@@ -179,6 +179,101 @@
     <script>
         const iqons = document.querySelectorAll('.iqon');
 
+        const LABELS = {
+            top: [
+                'Hair',
+                'Antenna',
+                'Leaf',
+                'Chinese',
+                'Bone',
+                'Chef',
+                'Cowboy',
+                'Top hat',
+                'Doctor',
+                'Drop',
+                'Elvis',
+                'Angel',
+                'Native',
+                'King',
+                'Wizard',
+                'Mushroom',
+                'Police',
+                'Princess',
+                'Mohawk',
+                'Unicorn',
+                'Winter hat',
+            ],
+            face: [
+                'Cat',
+                'Clown',
+                'Sad',
+                'Wink',
+                'Dollar',
+                'Vampire',
+                'Duck',
+                'Evil',
+                'Hearts',
+                'Dead',
+                'Beard',
+                'Glasses',
+                'Cyclops',
+                'Panda',
+                'Parrot',
+                'Pig',
+                'Pirate',
+                'Happy',
+                'Stars',
+                'Sunglasses',
+                'Tongue',
+            ],
+            side: [
+                'Antennae',
+                'Arrow',
+                'Beer',
+                'Gloves',
+                'Horns',
+                'Spock',
+                'Crab claw',
+                'Wand',
+                'Leafs',
+                'Football',
+                'Knife & Fork',
+                'Ears',
+                'Muscles',
+                'Phone',
+                'Peace!',
+                'Racket',
+                'Twigs',
+                'Wings',
+                'Headset',
+                'Fins',
+                'Teapot',
+            ],
+            bottom: [
+                'Balloon',
+                'Feet',
+                'Bird',
+                'Fly',
+                'Spider',
+                'Whale',
+                'Leafs',
+                'Guitar',
+                'Highheels',
+                'Shadown',
+                'Octopus',
+                'Lightbulb',
+                'Wood leg',
+                'Shoes',
+                'Skateboard',
+                'Skates',
+                'Skis',
+                'Soccer',
+                'Spring',
+                'Walking',
+                'Wheels',
+            ]
+        }
+
         function createColorPickers() {
             const html = Iqons.colors.map((color, index) => {
                 return `<div onclick="updateOption('color', ${index})" style="background: ${color};"></div>`;
@@ -192,7 +287,7 @@
         function createFeatureSelects() {
             Object.keys(IqonsCatalog).map(key => {
                 const html = IqonsCatalog[key].map((name, index) => {
-                    return `<option value="${index}">${name}</option>`;
+                    return `<option value="${index}">${LABELS[key][index]}</option>`;
                 }).join('');
 
                 document.querySelector(`select[${key}]`).setAttribute('onchange', `updateOption('${key}', this.value)`);
