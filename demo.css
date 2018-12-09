@@ -1,9 +1,9 @@
 html,
 body {
-    background: linear-gradient(#536DFE, #b453fe);
+    background: #f4f4f4;
     text-align: center;
     padding-top: 48px;
-    min-height: 100vh;
+    font-family: system-ui, sans-serif;
 }
 
 .iqons {
@@ -34,11 +34,9 @@ input {
     background: none;
     outline: none;
     border: none;
-    color: white;
     font-size: 40px;
-    font-family: Arial;
+    font-family: inherit;
     padding: 16px;
     margin: 24px;
     text-align: center;
-    border-bottom: 1px solid white;
 }
