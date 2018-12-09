@@ -128,16 +128,13 @@ export default class Iqons {
     }
 
     static async _getAssets() {
-        if (this._assets) return this._assets;
-        this._assets = fetch(this.svgPath)
+        return this._assetsPromise || (this._assetsPromise = fetch(self.NIMIQ_IQONS_SVG_PATH || Iqons.svgPath)
             .then(response => response.text())
             .then(assetsText => {
-                const assets = document.createElement('x-assets');
-                assets.innerHTML = assetsText;
-                this._assets = assets;
-                return assets;
-            });
-        return this._assets;
+                const parser = new DOMParser();
+                return parser.parseFromString(assetsText, 'image/svg+xml');
+            })
+        );
     }
 
     /*static _$flip(gaze) {
