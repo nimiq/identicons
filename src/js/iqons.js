@@ -67,7 +67,7 @@ export default class Iqons {
             if (++accentColor > 9) accentColor = 0;
 
         color = this.colors[color];
-        backgroundColor = this.colors[backgroundColor];
+        backgroundColor = this.backgroundColors[backgroundColor];
         accentColor = this.colors[accentColor];
         return `<g color="${color}" fill="${accentColor}">
             <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
@@ -145,17 +145,32 @@ export default class Iqons {
 
     static get colors() {
         return [
-            '#fb8c00', // orange-600
-            '#d32f2f', // red-700
-            '#fbc02d', // yellow-700
-            '#3949ab', // indigo-600
-            '#03a9f4', // light-blue-500
-            '#8e24aa', // purple-600
-            '#009688', // teal-500
-            '#f06292', // pink-300
-            '#7cb342', // light-green-600
-            '#795548'  // brown-400
-        ]
+            '#FC8702', // orange-600
+            '#D94432', // red-700
+            '#E9B213', // yellow-700
+            '#1A5493', // indigo-600
+            '#0582CA', // light-blue-500
+            '#5961A8', // purple-600
+            '#21bca5', // teal-500
+            '#FA7268', // pink-300
+            '#88B04B', // light-green-600
+            '#795548', // brown-400
+        ];
+    }
+
+    static get backgroundColors() {
+        return [
+            '#FC8702', // orange-600
+            '#D94432', // red-700
+            '#E9B213', // yellow-700
+            '#1F2348', // indigo-600
+            '#0582CA', // light-blue-500
+            '#5F4B8B', // purple-600
+            '#21bca5', // teal-500
+            '#FA7268', // pink-300
+            '#88B04B', // light-green-600
+            '#795548', // brown-400
+        ];
     }
 
     static get assetCounts() {
