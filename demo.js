@@ -1,7 +1,8 @@
+window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
+
 import Iqons from './src/js/iqons.js';
 
 window.Iqons = Iqons;
-
 
 function renderIdenticons(text) {
     document.querySelectorAll('.iqons:not(.small)').forEach((e, i) => Iqons.render(text + (i === 0 ? '' : i), e));

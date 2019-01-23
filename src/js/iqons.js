@@ -110,7 +110,7 @@ export default class Iqons {
 
     static async _generatePart(part, index, inline = false) {
         if (!inline) {
-            return `<use width="160" height="160" xlink:href="${this.svgPath}#${part}_${this._assetIndex(index, part)}"/>`;
+            return `<use width="160" height="160" xlink:href="${self.NIMIQ_IQONS_SVG_PATH || this.svgPath}#${part}_${this._assetIndex(index, part)}"/>`;
         } else {
             const assets = await this._getAssets();
             const selector = '#' + part + '_' + this._assetIndex(index, part);

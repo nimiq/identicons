@@ -173,6 +173,8 @@
     <div class="iqon small"></div>
 
     <script type="module">
+        window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
+
         import Iqons from './src/js/iqons.js';
         import { IqonsCatalog } from './src/js/iqons-catalog.js';
         window.IqonsCatalog = IqonsCatalog;
