@@ -90,8 +90,8 @@ ${ content }
 
     static async _generatePart(part, index) {
         const assets = await this._getAssets();
-        const selector = '#' + part + '_' + this._assetIndex(index, part);
-        const $part = assets.querySelector(selector);
+        const selector = part + '_' + this._assetIndex(index, part);
+        const $part = assets.getElementById(selector);
         if (!$part) return ''; // Required for catalog.html and as a safeguard
         return $part.innerHTML;
     }
@@ -110,6 +110,11 @@ ${ content }
             if (typeof IqonsAssets !== 'undefined') assetsText = IqonsAssets; // Check for inlined assets
             else assetsText = await fetch(self.NIMIQ_IQONS_SVG_PATH || Iqons.svgPath)
                 .then(response => response.text());
+
+            if (typeof module !== 'undefined' && module.exports) {
+                // Is running in NodeJS
+                self.DOMParser = require('xmldom').DOMParser;
+            }
 
             const parser = new DOMParser();
             resolve(parser.parseFromString(assetsText, 'image/svg+xml'));
