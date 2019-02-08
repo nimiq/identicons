@@ -119,7 +119,7 @@ ${ content }
     }
 
     static _btoa(text) {
-        if (typeof module !== 'undefined' && module.exports) global.btoa = require('btoa');
+        if (typeof module !== 'undefined' && module.exports) return new Buffer(text).toString('base64');
         return btoa(text);
     }
 
@@ -188,9 +188,7 @@ ${ content }
     }
 
     static _getRandomId() {
-        let array = new Uint32Array(1);
-        crypto.getRandomValues(array);
-        return array[0];
+        return Math.floor(Math.random() * 256);
     }
 }
 
