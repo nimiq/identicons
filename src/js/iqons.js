@@ -111,7 +111,7 @@ ${ content }
             else assetsText = await fetch(self.NIMIQ_IQONS_SVG_PATH || Iqons.svgPath)
                 .then(response => response.text());
 
-            if (typeof module !== 'undefined' && module.exports) self.DOMParser = require('xmldom').DOMParser;
+            if (typeof module !== 'undefined' && module.exports) global.DOMParser = require('xmldom').DOMParser;
 
             const parser = new DOMParser();
             resolve(parser.parseFromString(assetsText, 'image/svg+xml'));
@@ -119,7 +119,7 @@ ${ content }
     }
 
     static _btoa(text) {
-        if (typeof module !== 'undefined' && module.exports) self.btoa = require('btoa');
+        if (typeof module !== 'undefined' && module.exports) global.btoa = require('btoa');
         return btoa(text);
     }
 
