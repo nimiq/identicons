@@ -48,6 +48,8 @@ gulp.task('prepare-svg', function () {
                 $('linearGradient').remove();
                 $('radialGradient').remove();
                 $('style').remove();
+                $('defs').remove();
+                $('clipPath').remove();
                 $('path').each(function(i, el) {
                     var fillAttr = $(el).attr('fill');
                     if (fillAttr && fillAttr.indexOf('url(#linear-gradient') === 0) {
@@ -55,6 +57,7 @@ gulp.task('prepare-svg', function () {
                     }
                 });
                 $('[fill="#0f0"]').attr('fill', 'currentColor');
+                $('#g92-5').remove(); // Empty <g>
             },
             parserOptions: {
                 xmlMode: true
