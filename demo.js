@@ -1,6 +1,7 @@
 window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
 
 import Iqons from './src/js/iqons.js';
+// import Iqons from './dist/iqons.bundle.min.js';
 
 window.Iqons = Iqons;
 

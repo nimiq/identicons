@@ -111,7 +111,7 @@ ${ content }
             else assetsText = await fetch(self.NIMIQ_IQONS_SVG_PATH || Iqons.svgPath)
                 .then(response => response.text());
 
-            if (typeof module !== 'undefined' && module.exports) global.DOMParser = require('xmldom').DOMParser;
+            if (typeof module !== 'undefined' && module.exports) global.DOMParser = require('dom-parser');
 
             const parser = new DOMParser();
             resolve(parser.parseFromString(assetsText, 'image/svg+xml'));
