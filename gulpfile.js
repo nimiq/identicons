@@ -83,4 +83,11 @@ gulp.task('prepare-js', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', gulp.parallel('prepare-svg', 'prepare-js'));
+gulp.task('prepare-bundle', function () {
+    return gulp
+        .src(['src/js/svg.prefix.js', 'dist/iqons.min.svg', 'src/js/svg.suffix.js', 'dist/iqons.min.js'])
+        .pipe(concat('iqons.bundle.min.js'))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', gulp.series('prepare-svg', 'prepare-js', 'prepare-bundle'));
