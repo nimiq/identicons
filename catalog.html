@@ -5,35 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title></title>
 </head>
+<link href="./demo.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,700">
 <style type="text/css">
-html,
-body {
-    background: linear-gradient(#536DFE, #b453fe);
-    text-align: center;
-    padding-top: 48px;
-    min-height: 100vh;
-    color: white;
-    font-family: system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-}
-
 body {
     padding: 32px;
     max-width: 960px;
     margin: 0 auto;
-    font-size: 13px;
+    font-family: 'Muli', system-ui, sans-serif;
 }
 
 h1 {
-    font-weight: 300;
-    font-size: 54px;
+    font-weight: 400;
+    font-size: 48px;
 }
 
 h2 {
-    font-weight: 300;
-    font-size: 40px;
+    font-size: 32px;
     margin-top: 64px;
 }
 
@@ -50,36 +38,35 @@ h2 {
     /*filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));*/
     margin-bottom: 0;
 }
-
-.iqon span {}
 </style>
 
 <body>
-    <h1>Nimiq Iqons</h1>
+    <h1>Nimiq Iqons Catalog</h1>
     <div id="top">
-        <h2>Top</h2>
+        <h2>Tops</h2>
     </div>
     <div id="face">
-        <h2>Face</h2>
+        <h2>Faces</h2>
     </div>
     <div id="side">
-        <h2>Side</h2>
+        <h2>Sides</h2>
     </div>
     <div id="bottom">
-        <h2>Bottom</h2>
+        <h2>Bottoms</h2>
     </div>
 </body>
 <script type="module">
 window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
 
 import Iqons from './src/js/iqons.js';
+// import Iqons from './dist/iqons.bundle.min.js';
 import { IqonsCatalog } from './src/js/iqons-catalog.js';
 
 async function render(type) {
     const count = Iqons.assetCounts[type];
     const $el = document.getElementById(type);
     for (var i = 0; i < count; i++) {
-        const name = (i + 1) + ' ' + getName(type, i);
+        const name = getName(type, i);
         const $iqon = renderIqon(await renderFns[type](i), name);
         $el.appendChild($iqon)
     }
