@@ -9,6 +9,7 @@ var composer = require('gulp-uglify/composer');
 var uglify = composer(uglify_es, console);
 var concat = require('gulp-concat');
 var remove_code = require('gulp-remove-code');
+var babel = require('gulp-babel');
 
 gulp.task('prepare-svg', function () {
     return gulp
@@ -90,4 +91,15 @@ gulp.task('prepare-bundle', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', gulp.series('prepare-svg', 'prepare-js', 'prepare-bundle'));
+gulp.task('commonjs-bundle', function () {
+    return gulp
+        .src('dist/iqons.bundle.min.js')
+        .pipe(babel({
+            plugins: ["@babel/plugin-transform-modules-commonjs"],
+        }))
+        // .pipe(uglify())
+        .pipe(rename('iqons.bundle.cjs.js'))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', gulp.series('prepare-svg', 'prepare-js', 'prepare-bundle', 'commonjs-bundle'));
