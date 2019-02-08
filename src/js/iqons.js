@@ -16,7 +16,7 @@ export default class Iqons {
     }
 
     static async toDataUrl(text) {
-        const base64string = btoa(await this.svg(text, true)); // .replace(/#/g, '%23')
+        const base64string = this._btoa(await this.svg(text, true)); // .replace(/#/g, '%23')
         return `data:image/svg+xml;base64,${base64string}`;
     }
 
@@ -34,7 +34,7 @@ export default class Iqons {
     }
 
     static placeholderToDataUrl(color, strokeWidth) {
-        return `data:image/svg+xml;base64,${btoa(this.placeholder(color, strokeWidth))}`;
+        return `data:image/svg+xml;base64,${this._btoa(this.placeholder(color, strokeWidth))}`;
     }
 
     static async image(text) {
@@ -111,14 +111,16 @@ ${ content }
             else assetsText = await fetch(self.NIMIQ_IQONS_SVG_PATH || Iqons.svgPath)
                 .then(response => response.text());
 
-            if (typeof module !== 'undefined' && module.exports) {
-                // Is running in NodeJS
-                self.DOMParser = require('xmldom').DOMParser;
-            }
+            if (typeof module !== 'undefined' && module.exports) self.DOMParser = require('xmldom').DOMParser;
 
             const parser = new DOMParser();
             resolve(parser.parseFromString(assetsText, 'image/svg+xml'));
         }));
+    }
+
+    static _btoa(text) {
+        if (typeof module !== 'undefined' && module.exports) self.btoa = require('btoa');
+        return btoa(text);
     }
 
     static get colors() {

@@ -4,7 +4,9 @@
   "description": "Nimiq Identiqons",
   "main": "dist/iqons.bundle.min.js",
   "browser": "dist/iqons.min.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp"
@@ -12,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "btoa": "^1.2.1",
     "xmldom": "^0.1.27"
   },
   "devDependencies": {
