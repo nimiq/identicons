@@ -2,7 +2,8 @@
   "name": "@nimiq/iqons",
   "version": "1.2.0-beta.4",
   "description": "Nimiq Identiqons",
-  "main": "dist/iqons.bundle.min.js",
+  "main": "dist/iqons.bundle.cjs.js",
+  "module": "dist/iqons.bundle.min.js",
   "browser": "dist/iqons.min.js",
   "files": [
     "dist"
@@ -17,7 +18,10 @@
     "dom-parser": "^0.1.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-cheerio": "^0.6.3",
     "gulp-concat": "^2.6.1",
     "gulp-remove-code": "^3.0.2",
