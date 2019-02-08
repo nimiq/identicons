@@ -105,13 +105,15 @@ ${ content }
     }
 
     static async _getAssets() {
-        return this._assetsPromise || (this._assetsPromise = fetch(self.NIMIQ_IQONS_SVG_PATH || Iqons.svgPath)
-            .then(response => response.text())
-            .then(assetsText => {
-                const parser = new DOMParser();
-                return parser.parseFromString(assetsText, 'image/svg+xml');
-            })
-        );
+        return this._assetsPromise || (this._assetsPromise = new Promise(async function (resolve) {
+            let assetsText;
+            if (typeof IqonsAssets !== 'undefined') assetsText = IqonsAssets; // Check for inlined assets
+            else assetsText = await fetch(self.NIMIQ_IQONS_SVG_PATH || Iqons.svgPath)
+                .then(response => response.text());
+
+            const parser = new DOMParser();
+            resolve(parser.parseFromString(assetsText, 'image/svg+xml'));
+        }));
     }
 
     static get colors() {
