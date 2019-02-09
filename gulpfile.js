@@ -46,11 +46,19 @@ gulp.task('prepare-svg', function () {
         // Remove unused tags
         .pipe(cheerio({
             run: function ($, file) {
+                /**
+                 * We currently remove all gradients in the source SVG files, to keep the Iqons in flat style.
+                 * Therefore, we can also remove all clip paths from the combined SVG file, because they are only
+                 * used by gradients. #g92-5 is the last remaining element that uses the clip-path attribute, but
+                 * is empty without the gradients anyway, so can be removed.
+                 */
                 $('linearGradient').remove();
                 $('radialGradient').remove();
-                $('style').remove();
                 $('defs').remove();
                 $('clipPath').remove();
+                $('#g92-5').remove();
+
+                $('style').remove();
                 $('path').each(function(i, el) {
                     var fillAttr = $(el).attr('fill');
                     if (fillAttr && fillAttr.indexOf('url(#linear-gradient') === 0) {
@@ -58,7 +66,6 @@ gulp.task('prepare-svg', function () {
                     }
                 });
                 $('[fill="#0f0"]').attr('fill', 'currentColor');
-                $('#g92-5').remove(); // Empty <g>
             },
             parserOptions: {
                 xmlMode: true
