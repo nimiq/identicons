@@ -47,8 +47,13 @@ For NodeJS a CommonJS module is provided,
 which can simply be installed and used by doing:
 
 1. `npm install --save @nimiq/iqons` or `yarn add @nimiq/iqons`
-2. `const Iqons = require('@nimiq/iqons')`
+2. `const Iqons = require('@nimiq/iqons').default` (the `.default` is important!)
 3. See how to use it under [Usage](#usage)
+
+> If you are using a version of NodeJS with `import` enabled, or are using an
+> ES6 loader such as [`esm`](https://www.npmjs.com/package/esm) or
+> [`babel-register`](https://www.npmjs.com/package/babel-register), you can just
+> do `import Iqons from '@nimiq/iqons'` for step 2.
 
 ## Usage
 
