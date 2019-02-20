@@ -169,20 +169,22 @@ ${ content }
     }
 
     static _hash(text) {
-        const hash = ('' + text
+        const fullHash = ('' + text
                 .split('')
                 .map(c => Number(c.charCodeAt(0)) + 3)
                 .reduce((a, e) => a * (1 - a) * this.__chaosHash(e), 0.5))
             .split('')
-            .reduce((a, e) => e + a, '')
-            .substr(4, 17)
-            .replace('.', '0'); // A dot cannot be parsed into an int
+            .reduce((a, e) => e + a, '');
+
+        const hash = fullHash
+            .replace('.', fullHash[5]) // Replace the dot as it cannot be parsed to int
+            .substr(4, 17);
 
         // A small percentage of returned values are actually too short,
         // leading to an invalid bottom index and feature color. Adding
-        // zeros creates a bottom feature and feature color where no
+        // padding creates a bottom feature and accent color where no
         // existed previously, thus it's not a disrupting change.
-        return Iqons._padEnd(hash, 13, '0');
+        return Iqons._padEnd(hash, 13, fullHash[5]);
     }
 
     static __chaosHash(number) {
