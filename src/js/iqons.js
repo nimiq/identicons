@@ -205,7 +205,7 @@ ${ content }
         if (!!String.prototype.padEnd) return string.padEnd(maxLength, fillString);
         else {
             while (string.length < maxLength) string += fillString;
-            return string;
+            return string.substr(0, maxLength);
         }
     }
 }
