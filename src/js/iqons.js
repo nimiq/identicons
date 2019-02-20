@@ -169,13 +169,20 @@ ${ content }
     }
 
     static _hash(text) {
-        return ('' + text
+        const hash = ('' + text
                 .split('')
                 .map(c => Number(c.charCodeAt(0)) + 3)
                 .reduce((a, e) => a * (1 - a) * this.__chaosHash(e), 0.5))
             .split('')
             .reduce((a, e) => e + a, '')
-            .substr(4, 17);
+            .substr(4, 17)
+            .replace('.', '0'); // A dot cannot be parsed into an int
+
+        // A small percentage of returned values are actually too short,
+        // leading to an invalid bottom index and feature color. Adding
+        // zeros creates a bottom feature and feature color where no
+        // existed previously, thus it's not a disrupting change.
+        return Iqons._padEnd(hash, 13, '0');
     }
 
     static __chaosHash(number) {
@@ -189,6 +196,15 @@ ${ content }
 
     static _getRandomId() {
         return Math.floor(Math.random() * 256);
+    }
+
+    // Polyfill
+    static _padEnd(string, maxLength, fillString) {
+        if (!!String.prototype.padEnd) return string.padEnd(maxLength, fillString);
+        else {
+            while (string.length < maxLength) string += fillString;
+            return string;
+        }
     }
 }
 
