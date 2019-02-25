@@ -180,6 +180,9 @@ ${ content }
             .replace('.', fullHash[5]) // Replace the dot as it cannot be parsed to int
             .substr(4, 17);
 
+        // The index 5 of `fullHash` is currently unused (index 1 of `hash`,
+        // after cutting off the first 4 elements). Iqons.svg() is not using it.
+
         // A small percentage of returned values are actually too short,
         // leading to an invalid bottom index and feature color. Adding
         // padding creates a bottom feature and accent color where no
@@ -205,7 +208,7 @@ ${ content }
         if (!!String.prototype.padEnd) return string.padEnd(maxLength, fillString);
         else {
             while (string.length < maxLength) string += fillString;
-            return string.substr(0, maxLength);
+            return string.substring(0, Math.max(string.length, maxLength));
         }
     }
 }
