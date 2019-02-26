@@ -122,6 +122,20 @@
             margin-left: -10px;
         }
 
+        .words {
+            font-size: 16px;
+            width: 148px;
+            height: 40px;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        .words-text {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
         @media (max-width: 800px) {
             body {
                 padding: 16px;
@@ -168,6 +182,10 @@
         </div>
     </div>
 
+    <div class="words float-left">
+        <div class="words-text" id="words"></div>
+    </div>
+
     <div class="iqon"></div>
     <div class="iqon smaller"></div>
     <div class="iqon small"></div>
@@ -177,10 +195,17 @@
 
         import Iqons from './src/js/iqons.js';
         import { IqonsCatalog } from './src/js/iqons-catalog.js';
+        import { colors, hashToIndices } from './src/js/colors.js';
+        import { wordsByEntropy } from './src/js/words.js';
+        import { WordsDimension } from './src/js/words-dimension.js';
         window.IqonsCatalog = IqonsCatalog;
 
         Iqons._getAssets().then($lib => {
             Iqons.$lib = $lib;
+            Iqons.colors = colors;
+            Iqons.wordsByEntropy = wordsByEntropy;
+            window.hashToIndices = hashToIndices;
+            window.WordsDimension = WordsDimension;
             window.Iqons = Iqons;
 
             createColorPickers();
@@ -208,101 +233,7 @@
     </script>
     <script>
         const iqons = document.querySelectorAll('.iqon');
-
-        const LABELS = {
-            top: [
-                'Hair',
-                'Antenna',
-                'Leaf',
-                'Chinese',
-                'Bone',
-                'Chef',
-                'Cowboy',
-                'Top hat',
-                'Doctor',
-                'Drop',
-                'Elvis',
-                'Angel',
-                'Native',
-                'King',
-                'Wizard',
-                'Mushroom',
-                'Police',
-                'Princess',
-                'Mohawk',
-                'Unicorn',
-                'Winter hat',
-            ],
-            face: [
-                'Cat',
-                'Clown',
-                'Sad',
-                'Wink',
-                'Dollar',
-                'Vampire',
-                'Duck',
-                'Evil',
-                'Hearts',
-                'Dead',
-                'Beard',
-                'Glasses',
-                'Cyclops',
-                'Panda',
-                'Parrot',
-                'Pig',
-                'Pirate',
-                'Happy',
-                'Stars',
-                'Sunglasses',
-                'Tongue',
-            ],
-            side: [
-                'Antennae',
-                'Arrow',
-                'Beer',
-                'Gloves',
-                'Horns',
-                'Spock',
-                'Crab claw',
-                'Wand',
-                'Leafs',
-                'Football',
-                'Knife & Fork',
-                'Ears',
-                'Muscles',
-                'Phone',
-                'Peace!',
-                'Racket',
-                'Twigs',
-                'Wings',
-                'Headset',
-                'Fins',
-                'Teapot',
-            ],
-            bottom: [
-                'Balloon',
-                'Feet',
-                'Bird',
-                'Fly',
-                'Spider',
-                'Whale',
-                'Leafs',
-                'Guitar',
-                'Highheels',
-                'Shadown',
-                'Octopus',
-                'Lightbulb',
-                'Wood leg',
-                'Shoes',
-                'Skateboard',
-                'Skates',
-                'Skis',
-                'Soccer',
-                'Spring',
-                'Walking',
-                'Wheels',
-            ]
-        }
+        const $words = document.getElementById('words');
 
         function createColorPickers() {
             const html = Iqons.colors.map((color, index) => {
@@ -315,14 +246,14 @@
         }
 
         function createFeatureSelects() {
-            Object.keys(IqonsCatalog).map(key => {
-                const html = IqonsCatalog[key].map((name, index) => {
-                    return `<option value="${index}">${LABELS[key][index]}</option>`;
+            for (const cat of ['face', 'side', 'top', 'bottom']) {
+                const html = IqonsCatalog[cat].map((name, index) => {
+                    return `<option value="${index}">${IqonsCatalog[cat][index][IqonsCatalog.NOUN0]}</option>`;
                 }).join('');
 
-                document.querySelector(`select[${key}]`).setAttribute('onchange', `updateOption('${key}', this.value)`);
-                document.querySelector(`select[${key}]`).innerHTML = html;
-            });
+                document.querySelector(`select[${cat}]`).setAttribute('onchange', `updateOption('${cat}', this.value)`);
+                document.querySelector(`select[${cat}]`).innerHTML = html;
+            }
         }
 
         function updateOption(key, value) {
@@ -332,6 +263,14 @@
         }
 
         async function render() {
+            // The user selects features and 3 colors.
+            // We have to reuse the colors for the indices.
+            const featureSelectors = `${options.accentColor}0`; // gaze is hardcoded to 0
+            const wordsVariation   = `${options.bodyColor}${options.backgroundColor}`;
+
+            const text = Iqons.wordsByEntropy(options.face, options.top, options.side, options.bottom, featureSelectors, wordsVariation);
+            $words.textContent = text[1];
+
             const svg = await Iqons._svgTemplate(options.bodyColor, options.backgroundColor, options.face, options.top, options.side, options.bottom, options.accentColor, 0, true);
             const dataUrl = `data:image/svg+xml;base64,${btoa(svg)}`;
 

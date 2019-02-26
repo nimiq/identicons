@@ -1,5 +1,6 @@
 // removeIf(production)
 import { IqonsCatalog } from './iqons-catalog.js';
+import { hashToRGB } from './colors.js';
 // endRemoveIf(production)
 
 export default class Iqons {
@@ -8,7 +9,16 @@ export default class Iqons {
 
     static async svg(text) {
         const hash = this._hash(text);
-        return this._svgTemplate(hash[0], hash[2], hash[3] + hash[4], hash[5] + hash[6], hash[7] + hash[8], hash[9] + hash[10], hash[11], hash[12]);
+        return this._svgTemplate(
+            hash[0], // color
+            hash[2], // backgroundColor
+            hash[3] + hash[4],  // face
+            hash[5] + hash[6],  // top
+            hash[7] + hash[8],  // side
+            hash[9] + hash[10], // bottom
+            hash[11], // accentColor
+            hash[12]  // gaze (unused)
+        );
     }
 
     static async render(text, $element) {
@@ -52,10 +62,7 @@ export default class Iqons {
     }
 
     static async _$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor) {
-
-        color = parseInt(color);
-        backgroundColor = parseInt(backgroundColor);
-        accentColor = parseInt(accentColor);
+        const colors = hashToRGB(color, backgroundColor, accentColor);
 
         if (color === backgroundColor)
             if (++color > 9) color = 0;
@@ -63,9 +70,9 @@ export default class Iqons {
         while (accentColor === color || accentColor === backgroundColor)
             if (++accentColor > 9) accentColor = 0;
 
-        color = this.colors[color];
-        backgroundColor = this.backgroundColors[backgroundColor];
-        accentColor = this.colors[accentColor];
+        color = colors.main;
+        backgroundColor = colors.background;
+        accentColor = colors.accent;
         return `<g color="${color}" fill="${accentColor}">
 <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
 <circle cx="80" cy="80" r="40" fill="${color}"></circle>
@@ -121,36 +128,6 @@ ${ content }
     static _btoa(text) {
         if (typeof module !== 'undefined' && module.exports) return new Buffer(text).toString('base64');
         return btoa(text);
-    }
-
-    static get colors() {
-        return [
-            '#FC8702', // orange-600
-            '#D94432', // red-700
-            '#E9B213', // yellow-700
-            '#1A5493', // indigo-600
-            '#0582CA', // light-blue-500
-            '#5961A8', // purple-600
-            '#21bca5', // teal-500
-            '#FA7268', // pink-300
-            '#88B04B', // light-green-600
-            '#795548', // brown-400
-        ];
-    }
-
-    static get backgroundColors() {
-        return [
-            '#FC8702', // orange-600
-            '#D94432', // red-700
-            '#E9B213', // yellow-700
-            '#1F2348', // indigo-600
-            '#0582CA', // light-blue-500
-            '#5F4B8B', // purple-600
-            '#21bca5', // teal-500
-            '#FA7268', // pink-300
-            '#88B04B', // light-green-600
-            '#795548', // brown-400
-        ];
     }
 
     static get assetCounts() {
