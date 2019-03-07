@@ -75,14 +75,12 @@ gulp.task('prepare-svg', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('prepare-js', function () {
+gulp.task('prepare-iqons-js', function () {
     return gulp
         .src([
             'src/js/iqons.js',
+            'src/js/hash.js',
             'src/js/colors.js',
-            'src/js/words.js',
-            'src/js/words-catalog.js',
-            'src/js/words-dimensions.js',
         ])
         .pipe(remove_code({ production: true }))
         .pipe(uglify({
@@ -94,6 +92,28 @@ gulp.task('prepare-js', function () {
             }
         }))
         .pipe(concat('iqons.min.js'))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('prepare-name-js', function () {
+    return gulp
+        .src([
+            'src/js/name.js',
+            'src/js/hash.js',
+            'src/js/colors.js',
+            'src/js/word-catalog.js',
+            'src/js/word-dimensions.js',
+        ])
+        .pipe(remove_code({ production: true }))
+        .pipe(uglify({
+            warnings: true,
+            compress: {},
+            mangle: true,
+            output: {
+                comments: /@asset/
+            }
+        }))
+        .pipe(concat('iqons-name.min.js'))
         .pipe(gulp.dest('dist'));
 });
 
@@ -115,4 +135,4 @@ gulp.task('commonjs-bundle', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', gulp.series('prepare-svg', 'prepare-js', 'prepare-bundle', 'commonjs-bundle'));
+gulp.task('default', gulp.series('prepare-svg', 'prepare-iqons-js', 'prepare-name-js', 'prepare-bundle', 'commonjs-bundle'));
