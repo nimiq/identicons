@@ -1,4 +1,5 @@
 // removeIf(production)
+import { hashToIndices } from './colors.js';
 import { WordsCatalog } from './words-catalog.js';
 import { WordsDimensions } from './words-dimensions.js';
 // endRemoveIf(production)
