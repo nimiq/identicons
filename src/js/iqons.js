@@ -16,7 +16,6 @@ export default class Iqons {
             hash[7] + hash[8],  // side
             hash[9] + hash[10], // bottom
             hash[11], // accentColor
-            hash[12]  // gaze (unused)
         );
     }
 
@@ -62,12 +61,6 @@ export default class Iqons {
 
     static async _$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor) {
         const colors = hashToRGB(color, backgroundColor, accentColor);
-
-        if (color === backgroundColor)
-            if (++color > 9) color = 0;
-
-        while (accentColor === color || accentColor === backgroundColor)
-            if (++accentColor > 9) accentColor = 0;
 
         color = colors.main;
         backgroundColor = colors.background;
