@@ -59,11 +59,11 @@ h2 {
 window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
 
 import Iqons from './src/js/iqons.js';
-// import Iqons from './dist/iqons.bundle.min.js';
-import { IqonsCatalog } from './src/js/iqons-catalog.js';
+import { WordCatalog } from './src/js/word-catalog.js';
+// import Iqons, { WordCatalog } from './dist/iqons.bundle.min.js';
 
 async function render(type) {
-    const count = Iqons.assetCounts[type];
+    const count = Iqons.ASSET_COUNTS[type];
     const $el = document.getElementById(type);
     for (var i = 0; i < count; i++) {
         const name = getName(type, i);
@@ -73,7 +73,7 @@ async function render(type) {
 }
 
 function getName(type, index) {
-    let name = IqonsCatalog[type][index].replace(/_/, '-');
+    let name = WordCatalog[type][index][WordCatalog.NOUN0].replace(/_/, '-');
     if (name.indexOf('z_todo ') > -1) name = 'todo: ' + name.replace('z_todo ', '');
     if (name.indexOf('z_') > -1) name = '(' + name.replace('z_', '') + ')';
     return name;

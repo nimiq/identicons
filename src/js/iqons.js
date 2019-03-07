@@ -1,5 +1,6 @@
 // removeIf(production)
-import { IqonsCatalog } from './iqons-catalog.js';
+import { makeHash } from './hash.js';
+import { hashToRGB } from './colors.js';
 // endRemoveIf(production)
 
 export default class Iqons {
@@ -7,8 +8,16 @@ export default class Iqons {
     /* Public API */
 
     static async svg(text) {
-        const hash = this._hash(text);
-        return this._svgTemplate(hash[0], hash[2], hash[3] + hash[4], hash[5] + hash[6], hash[7] + hash[8], hash[9] + hash[10], hash[11], hash[12]);
+        const hash = makeHash(text);
+        return this._svgTemplate(
+            hash[0], // color
+            hash[2], // backgroundColor
+            hash[3] + hash[4],  // face
+            hash[5] + hash[6],  // top
+            hash[7] + hash[8],  // side
+            hash[9] + hash[10], // bottom
+            hash[11], // accentColor
+        );
     }
 
     static async render(text, $element) {
@@ -52,20 +61,11 @@ export default class Iqons {
     }
 
     static async _$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor) {
+        const colors = hashToRGB(color, backgroundColor, accentColor);
 
-        color = parseInt(color);
-        backgroundColor = parseInt(backgroundColor);
-        accentColor = parseInt(accentColor);
-
-        if (color === backgroundColor)
-            if (++color > 9) color = 0;
-
-        while (accentColor === color || accentColor === backgroundColor)
-            if (++accentColor > 9) accentColor = 0;
-
-        color = this.colors[color];
-        backgroundColor = this.backgroundColors[backgroundColor];
-        accentColor = this.colors[accentColor];
+        color = colors.main;
+        backgroundColor = colors.background;
+        accentColor = colors.accent;
         return `<g color="${color}" fill="${accentColor}">
 <rect fill="${backgroundColor}" x="0" y="0" width="160" height="160"></rect>
 <circle cx="80" cy="80" r="40" fill="${color}"></circle>
@@ -123,95 +123,23 @@ ${ content }
         return btoa(text);
     }
 
-    static get colors() {
-        return [
-            '#FC8702', // orange-600
-            '#D94432', // red-700
-            '#E9B213', // yellow-700
-            '#1A5493', // indigo-600
-            '#0582CA', // light-blue-500
-            '#5961A8', // purple-600
-            '#21bca5', // teal-500
-            '#FA7268', // pink-300
-            '#88B04B', // light-green-600
-            '#795548', // brown-400
-        ];
-    }
-
-    static get backgroundColors() {
-        return [
-            '#FC8702', // orange-600
-            '#D94432', // red-700
-            '#E9B213', // yellow-700
-            '#1F2348', // indigo-600
-            '#0582CA', // light-blue-500
-            '#5F4B8B', // purple-600
-            '#21bca5', // teal-500
-            '#FA7268', // pink-300
-            '#88B04B', // light-green-600
-            '#795548', // brown-400
-        ];
-    }
-
-    static get assetCounts() {
-        return {
-            'face': IqonsCatalog.face.length,
-            'side': IqonsCatalog.side.length,
-            'top': IqonsCatalog.top.length,
-            'bottom': IqonsCatalog.bottom.length,
-        }
-    }
-
     static _assetIndex(index, part) {
-        index = (Number(index) % this.assetCounts[part]) + 1;
+        index = (Number(index) % Iqons.ASSET_COUNTS[part]) + 1;
         if (index < 10) index = '0' + index;
         return index
-    }
-
-    static _hash(text) {
-        const fullHash = ('' + text
-                .split('')
-                .map(c => Number(c.charCodeAt(0)) + 3)
-                .reduce((a, e) => a * (1 - a) * this.__chaosHash(e), 0.5))
-            .split('')
-            .reduce((a, e) => e + a, '');
-
-        const hash = fullHash
-            .replace('.', fullHash[5]) // Replace the dot as it cannot be parsed to int
-            .substr(4, 17);
-
-        // The index 5 of `fullHash` is currently unused (index 1 of `hash`,
-        // after cutting off the first 4 elements). Iqons.svg() is not using it.
-
-        // A small percentage of returned values are actually too short,
-        // leading to an invalid bottom index and feature color. Adding
-        // padding creates a bottom feature and accent color where no
-        // existed previously, thus it's not a disrupting change.
-        return Iqons._padEnd(hash, 13, fullHash[5]);
-    }
-
-    static __chaosHash(number) {
-        const k = 3.569956786876;
-        let a_n = 1 / number;
-        for (let i = 0; i < 100; i++) {
-            a_n = (1 - a_n) * a_n * k;
-        }
-        return a_n;
     }
 
     static _getRandomId() {
         return Math.floor(Math.random() * 256);
     }
-
-    // Polyfill
-    static _padEnd(string, maxLength, fillString) {
-        if (!!String.prototype.padEnd) return string.padEnd(maxLength, fillString);
-        else {
-            while (string.length < maxLength) string += fillString;
-            return string.substring(0, Math.max(string.length, maxLength));
-        }
-    }
 }
 
 /* @asset(/libraries/iqons/dist/iqons.min.svg) */
 Iqons.svgPath = '/libraries/iqons/dist/iqons.min.svg';
+
+Iqons.ASSET_COUNTS = {
+    'top': 21,
+    'side': 21,
+    'face': 21,
+    'bottom': 21
+};

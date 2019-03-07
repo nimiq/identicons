@@ -1,7 +1,7 @@
 window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
 
 import Iqons from './src/js/iqons.js';
-// import Iqons from './dist/iqons.bundle.min.js';
+import { name } from './src/js/name.js';
 
 window.Iqons = Iqons;
 
@@ -16,6 +16,15 @@ function renderIdenticons(text) {
         }));
 }
 
-renderIdenticons('' + Date.now());
+function renderWords(text) {
+    document.getElementById('words-text').innerText = text ? name(text)[1] : '';
+}
 
-document.querySelector('#text-input').addEventListener('input', event => renderIdenticons(event.target.value));
+const firstText = '' + Date.now();
+renderIdenticons(firstText);
+renderWords(firstText);
+
+document.querySelector('#text-input').addEventListener('input', event => {
+    renderIdenticons(event.target.value);
+    renderWords(event.target.value);
+});
