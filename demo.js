@@ -1,6 +1,7 @@
 window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
 
-import Iqons, { words } from './dist/iqons.bundle.min.js';
+import Iqons from './src/js/iqons.js';
+import { words } from './src/js/words.js';
 
 window.Iqons = Iqons;
 
