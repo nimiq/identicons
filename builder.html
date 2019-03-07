@@ -264,7 +264,7 @@
             const featureSelectors = `${options.accentColor}0`; // gaze is hardcoded to 0
             const wordsVariation   = `${options.bodyColor}${options.backgroundColor}`;
 
-            const text = Iqons.wordsByEntropy(options.face, options.top, options.side, options.bottom, featureSelectors, wordsVariation);
+            const text = Iqons.wordsByEntropy(options.face, options.top, options.side, options.bottom, featureSelectors, wordsVariation, options.bodyColor, options.backgroundColor);
             $words.textContent = text[1];
 
             const svg = await Iqons._svgTemplate(options.bodyColor, options.backgroundColor, options.face, options.top, options.side, options.bottom, options.accentColor, 0, true);
