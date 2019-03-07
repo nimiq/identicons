@@ -1,5 +1,5 @@
 export function hashToRGB(main, background, accent) {
-    return entropyToRGB(hashToIndices(main, background, accent));
+    return indicesToRGB(hashToIndices(main, background, accent));
 }
 
 export function hashToIndices(main, background, accent) {
@@ -20,11 +20,11 @@ export function hashToIndices(main, background, accent) {
     };
 }
 
-export function entropyToRGB(entropy) {
+export function indicesToRGB(indices) {
     return {
-        main: colors[entropy.main],
-        background: backgroundColors[entropy.background],
-        accent: colors[entropy.accent]
+        main: colors[indices.main],
+        background: backgroundColors[indices.background],
+        accent: colors[indices.accent]
     };
 }
 
