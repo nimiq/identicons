@@ -1,4 +1,4 @@
-export const IqonsCatalog = {
+export const WordsCatalog = {
 color: [
     "Orange",
     "Red",
@@ -106,12 +106,12 @@ bottom : [
 ],
 };
 
-IqonsCatalog.ADJECTIVE0 = 0;
-IqonsCatalog.ADJECTIVE1 = 1;
-IqonsCatalog.ADJECTIVE2 = 2;
-IqonsCatalog.VERB0      = 3;
-IqonsCatalog.VERB1      = 4;
-IqonsCatalog.VERB2      = 5;
-IqonsCatalog.NOUN0      = 6;
-IqonsCatalog.NOUN1      = 7;
-IqonsCatalog.NOUN2      = 8;
+WordsCatalog.ADJECTIVE0 = 0;
+WordsCatalog.ADJECTIVE1 = 1;
+WordsCatalog.ADJECTIVE2 = 2;
+WordsCatalog.VERB0      = 3;
+WordsCatalog.VERB1      = 4;
+WordsCatalog.VERB2      = 5;
+WordsCatalog.NOUN0      = 6;
+WordsCatalog.NOUN1      = 7;
+WordsCatalog.NOUN2      = 8;

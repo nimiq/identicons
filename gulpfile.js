@@ -80,8 +80,8 @@ gulp.task('prepare-js', function () {
         .src([
             'src/js/iqons.js',
             'src/js/colors.js',
-            'src/js/iqons-catalog.js',
             'src/js/words.js',
+            'src/js/words-catalog.js',
             'src/js/words-dimension.js'
         ])
         .pipe(remove_code({ production: true }))

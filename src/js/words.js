@@ -1,3 +1,7 @@
+// removeIf(production)
+import { WordsCatalog } from './words-catalog.js';
+// endRemoveIf(production)
+
 // Generate a word description of the Nimiqon
 // Returns: [oneLineString, twoLineString]
 export function words(text) {
@@ -59,10 +63,10 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
     // Each feature has a list of 21 word families.
     // We select the same word families as shown in the identicon.
     const wordLists = [
-        IqonsCatalog["face"  ][faceNr   % 21],
-        IqonsCatalog["top"   ][topNr    % 21],
-        IqonsCatalog["side"  ][sidesNr  % 21],
-        IqonsCatalog["bottom"][bottomNr % 21]
+        WordsCatalog["face"  ][faceNr   % 21],
+        WordsCatalog["top"   ][topNr    % 21],
+        WordsCatalog["side"  ][sidesNr  % 21],
+        WordsCatalog["bottom"][bottomNr % 21]
     ];
 
     // We have four features, but we want only three words to describe them.
@@ -80,7 +84,7 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
     //   features[0]: 3 adjectives or color
     const useColor = _idx0 == 4;
     if (useColor) {
-        features.push(IqonsCatalog.color[mainColor]);
+        features.push(WordsCatalog.color[mainColor]);
     } else {
         features.push(_adjectives(wordLists[_idx0]));
         wordLists.splice(_idx0, 1);
