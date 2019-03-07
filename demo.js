@@ -25,7 +25,7 @@ const firstText = '' + Date.now();
 renderIdenticons(firstText);
 renderWords(firstText);
 
-document.querySelector('#text-input').addEventListener('input', event => renderIdenticons(event.target.value));		 document.querySelector('#text-input').addEventListener('input', event => {
+document.querySelector('#text-input').addEventListener('input', event => {
     renderIdenticons(event.target.value);
     renderWords(event.target.value);
 });
