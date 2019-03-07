@@ -1,5 +1,4 @@
 // removeIf(production)
-import { IqonsCatalog } from './iqons-catalog.js';
 import { hashToRGB } from './colors.js';
 // endRemoveIf(production)
 
@@ -130,17 +129,8 @@ ${ content }
         return btoa(text);
     }
 
-    static get assetCounts() {
-        return {
-            'face': IqonsCatalog.face.length,
-            'side': IqonsCatalog.side.length,
-            'top': IqonsCatalog.top.length,
-            'bottom': IqonsCatalog.bottom.length,
-        }
-    }
-
     static _assetIndex(index, part) {
-        index = (Number(index) % this.assetCounts[part]) + 1;
+        index = (Number(index) % Iqons.ASSET_COUNTS[part]) + 1;
         if (index < 10) index = '0' + index;
         return index
     }
@@ -192,3 +182,10 @@ ${ content }
 
 /* @asset(/libraries/iqons/dist/iqons.min.svg) */
 Iqons.svgPath = '/libraries/iqons/dist/iqons.min.svg';
+
+Iqons.ASSET_COUNTS = {
+    'top': 21,
+    'side': 21,
+    'face': 21,
+    'bottom': 21
+};
