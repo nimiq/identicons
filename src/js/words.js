@@ -1,5 +1,6 @@
 // removeIf(production)
 import { WordsCatalog } from './words-catalog.js';
+import { WordsDimensions } from './words-dimensions.js';
 // endRemoveIf(production)
 
 // Generate a word description of the Nimiqon
@@ -106,7 +107,7 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
             combinations.push([features[0][i], features[1][j], features[2][k]]);
     }
 
-    const dim = WordsDimension;
+    const dim = WordsDimensions;
 
     // Clean out illegal combinations
     //   (string[3])[<=27]

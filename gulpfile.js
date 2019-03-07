@@ -82,7 +82,7 @@ gulp.task('prepare-js', function () {
             'src/js/colors.js',
             'src/js/words.js',
             'src/js/words-catalog.js',
-            'src/js/words-dimension.js'
+            'src/js/words-dimensions.js',
         ])
         .pipe(remove_code({ production: true }))
         .pipe(uglify({

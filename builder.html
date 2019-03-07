@@ -197,7 +197,7 @@
         import { WordsCatalog } from './src/js/words-catalog.js';
         import { colors, hashToIndices } from './src/js/colors.js';
         import { wordsByEntropy } from './src/js/words.js';
-        import { WordsDimension } from './src/js/words-dimension.js';
+        // import { WordsDimensions } from './src/js/words-dimensions.js';
         window.WordsCatalog = WordsCatalog;
 
         Iqons._getAssets().then($lib => {
@@ -205,7 +205,7 @@
             Iqons.colors = colors;
             Iqons.wordsByEntropy = wordsByEntropy;
             window.hashToIndices = hashToIndices;
-            window.WordsDimension = WordsDimension;
+            // window.WordsDimensions = WordsDimensions;
             window.Iqons = Iqons;
 
             createColorPickers();
