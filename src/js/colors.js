@@ -20,7 +20,7 @@ export function hashToIndices(main, background, accent) {
     };
 }
 
-export function indicesToRGB(indices) {
+function indicesToRGB(indices) {
     return {
         main: colors[indices.main],
         background: backgroundColors[indices.background],
