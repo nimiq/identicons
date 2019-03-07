@@ -1,4 +1,5 @@
 // removeIf(production)
+import { makeHash } from './hash.js';
 import { hashToIndices } from './colors.js';
 import { WordsCatalog } from './words-catalog.js';
 import { WordsDimensions } from './words-dimensions.js';
@@ -7,8 +8,8 @@ import { WordsDimensions } from './words-dimensions.js';
 // Generate a word description of the Nimiqon
 // Returns: [oneLineString, twoLineString]
 export function words(text) {
-    const hash1 = Iqons._hash(text);
-    const hash2 = Iqons._hash(hash1);
+    const hash1 = makeHash(text);
+    const hash2 = makeHash(hash1);
 
     return wordsByEntropy(
         hash1[3]  + hash1[4],  // face
