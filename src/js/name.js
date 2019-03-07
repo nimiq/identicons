@@ -1,13 +1,13 @@
 // removeIf(production)
 import { makeHash } from './hash.js';
 import { hashToIndices } from './colors.js';
-import { WordsCatalog } from './words-catalog.js';
-import { WordsDimensions } from './words-dimensions.js';
+import { WordCatalog } from './word-catalog.js';
+import { WordDimensions } from './word-dimensions.js';
 // endRemoveIf(production)
 
 // Generate a word description of the Nimiqon
 // Returns: [oneLineString, twoLineString]
-export function words(text) {
+export function name(text) {
     const hash1 = makeHash(text);
     const hash2 = makeHash(hash1);
 
@@ -20,7 +20,6 @@ export function words(text) {
         hash2[1]  + hash2[2],  // entropy 2
         hash1[0], // color
         hash1[2], // backgroundColor
-        hash1[11] // accentColor
     );
 }
 
@@ -29,11 +28,11 @@ export function words(text) {
 //  - featureSelectors decides which feature (face, top, side, bottom) is included as which word type
 //  - wordsVariation   decides which variation of the max 27 legal tuples is chosen
 // Returns: [oneLineString, twoLineString] by calling _wordRound until it succeeds
-export function wordsByEntropy(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVariation, color, bgColor, accentColor) {
+export function wordsByEntropy(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVariation, color, bgColor) {
     featureSelectors = Number(featureSelectors);
     wordsVariation   = Number(wordsVariation);
 
-    const colorIndices = hashToIndices(color, bgColor, accentColor);
+    const colorIndices = hashToIndices(color, bgColor, 0);
     const mainColor = colorIndices.main;
 
     let i;
@@ -66,10 +65,10 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
     // Each feature has a list of 21 word families.
     // We select the same word families as shown in the identicon.
     const wordLists = [
-        WordsCatalog["face"  ][faceNr   % 21],
-        WordsCatalog["top"   ][topNr    % 21],
-        WordsCatalog["side"  ][sidesNr  % 21],
-        WordsCatalog["bottom"][bottomNr % 21]
+        WordCatalog["face"  ][faceNr   % 21],
+        WordCatalog["top"   ][topNr    % 21],
+        WordCatalog["side"  ][sidesNr  % 21],
+        WordCatalog["bottom"][bottomNr % 21]
     ];
 
     // We have four features, but we want only three words to describe them.
@@ -87,7 +86,7 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
     //   features[0]: 3 adjectives or color
     const useColor = _idx0 == 4;
     if (useColor) {
-        features.push(WordsCatalog.color[mainColor]);
+        features.push(WordCatalog.color[mainColor]);
     } else {
         features.push(_adjectives(wordLists[_idx0]));
         wordLists.splice(_idx0, 1);
@@ -109,7 +108,7 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
             combinations.push([features[0][i], features[1][j], features[2][k]]);
     }
 
-    const dim = WordsDimensions;
+    const dim = WordDimensions;
 
     // Clean out illegal combinations
     //   (string[3])[<=27]

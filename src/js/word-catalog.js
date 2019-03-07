@@ -1,4 +1,4 @@
-export const WordsCatalog = {
+export const WordCatalog = {
 color: [
     'Orange',
     'Red',
@@ -106,12 +106,12 @@ bottom : [
 ],
 };
 
-WordsCatalog.ADJECTIVE0 = 0;
-WordsCatalog.ADJECTIVE1 = 1;
-WordsCatalog.ADJECTIVE2 = 2;
-WordsCatalog.VERB0      = 3;
-WordsCatalog.VERB1      = 4;
-WordsCatalog.VERB2      = 5;
-WordsCatalog.NOUN0      = 6;
-WordsCatalog.NOUN1      = 7;
-WordsCatalog.NOUN2      = 8;
+WordCatalog.ADJECTIVE0 = 0;
+WordCatalog.ADJECTIVE1 = 1;
+WordCatalog.ADJECTIVE2 = 2;
+WordCatalog.VERB0      = 3;
+WordCatalog.VERB1      = 4;
+WordCatalog.VERB2      = 5;
+WordCatalog.NOUN0      = 6;
+WordCatalog.NOUN1      = 7;
+WordCatalog.NOUN2      = 8;

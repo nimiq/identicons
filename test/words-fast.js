@@ -1,4 +1,4 @@
-const { words, chaosHash } = require('../');
+const { name, chaosHash } = require('../');
 const EventEmitter = require('events');
 const crypto = require('crypto');
 
@@ -100,7 +100,7 @@ async function iterate() {
     for (const preImage of iterString(totalIterations)) {
         let res;
         try {
-            res = words(preImage);
+            res = name(preImage);
         } catch(e) {
             const hash = chaosHash(preImage);
             console.error(TAG, `EXCEPTION for pre-image ${preImage}`);

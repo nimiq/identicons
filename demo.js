@@ -1,7 +1,7 @@
 window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
 
 import Iqons from './src/js/iqons.js';
-import { words } from './src/js/words.js';
+import { name } from './src/js/name.js';
 
 window.Iqons = Iqons;
 
@@ -17,7 +17,7 @@ function renderIdenticons(text) {
 }
 
 function renderWords(text) {
-    document.getElementById('words-text').innerText = text ? words(text)[1] : '';
+    document.getElementById('words-text').innerText = text ? name(text)[1] : '';
 }
 
 const firstText = '' + Date.now();

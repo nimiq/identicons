@@ -194,10 +194,10 @@
         window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
 
         import Iqons from './src/js/iqons.js';
-        import { WordsCatalog } from './src/js/words-catalog.js';
+        import { WordCatalog } from './src/js/word-catalog.js';
         import { colors } from './src/js/colors.js';
-        import { wordsByEntropy } from './src/js/words.js';
-        window.WordsCatalog = WordsCatalog;
+        import { wordsByEntropy } from './src/js/name.js';
+        window.WordCatalog = WordCatalog;
 
         Iqons._getAssets().then(() => {
             Iqons.colors = colors;
@@ -243,8 +243,8 @@
 
         function createFeatureSelects() {
             for (const cat of ['face', 'side', 'top', 'bottom']) {
-                const html = WordsCatalog[cat].map((name, index) => {
-                    return `<option value="${index}">${WordsCatalog[cat][index][WordsCatalog.NOUN0]}</option>`;
+                const html = WordCatalog[cat].map((name, index) => {
+                    return `<option value="${index}">${WordCatalog[cat][index][WordCatalog.NOUN0]}</option>`;
                 }).join('');
 
                 document.querySelector(`select[${cat}]`).setAttribute('onchange', `updateOption('${cat}', this.value)`);
