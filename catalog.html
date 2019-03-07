@@ -63,7 +63,7 @@ import { WordsCatalog } from './src/js/words-catalog.js';
 // import Iqons, { WordsCatalog } from './dist/iqons.bundle.min.js';
 
 async function render(type) {
-    const count = Iqons.assetCounts[type];
+    const count = Iqons.ASSET_COUNTS[type];
     const $el = document.getElementById(type);
     for (var i = 0; i < count; i++) {
         const name = getName(type, i);
