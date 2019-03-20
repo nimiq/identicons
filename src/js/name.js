@@ -5,8 +5,7 @@ import { WordCatalog } from './word-catalog.js';
 import { WordDimensions } from './word-dimensions.js';
 // endRemoveIf(production)
 
-// Generate a word description of the Nimiqon
-// Returns: [oneLineString, twoLineString]
+// Generate a word description of the Iqon
 export function name(text) {
     const hash1 = makeHash(text);
     const hash2 = makeHash(hash1);
@@ -27,7 +26,7 @@ export function name(text) {
 //  - The *Nr are indices of word families/modifiers (see catalog.html)
 //  - featureSelectors decides which feature (face, top, side, bottom) is included as which word type
 //  - wordsVariation   decides which variation of the max 27 legal tuples is chosen
-// Returns: [oneLineString, twoLineString] by calling _wordRound until it succeeds
+// Returns a valid name by calling _wordRound until it succeeds
 export function wordsByEntropy(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVariation, color, bgColor) {
     featureSelectors = Number(featureSelectors);
     wordsVariation   = Number(wordsVariation);
@@ -39,10 +38,16 @@ export function wordsByEntropy(faceNr, topNr, sidesNr, bottomNr, featureSelector
     for (i = 0; i < 100; i++) {
         const _e1 = featureSelectors + i;
         const result = _wordRound(faceNr, topNr, sidesNr, bottomNr, _e1, wordsVariation, mainColor);
-        if (result) return [...result, i];
+        if (result) return result;
     }
 
-    return ["Rare Shiny Bug", "Rare\nShiny Bug", 100];
+    return 'Rare Shiny Bug';
+}
+
+export function makeLetterHash(text) {
+    const hash = makeHash(text).substring(0, 6);
+    const letters = 'ABCDEFGHIJ'; // 10 letters to cover numbers 0-9
+    return hash.split('').map(num => letters[num]).join('');
 }
 
 // Returns: [oneLineString, twoLineString, iterations] or null
@@ -74,7 +79,7 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
     // We have four features, but we want only three words to describe them.
     // The order of the three words must be: adjective, verb, noun.
     // That leaves us with
-    const _idx2 =  featureSelectors           % 2;
+    const _idx2 =  featureSelectors          % 2;
     const _idx1 = (featureSelectors / 2 | 0) % 3;
     const _idx0 = (featureSelectors / 6 | 0) % 5;
 
@@ -101,11 +106,16 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
     // Get each possible (adjective, verb, noun) tuple
     //   (string[3])[27]
     const combinations = [];
-    for (let k = 0; k < 3; k++) for (let j = 0; j < 3; j++) {
-        if (useColor)
-            combinations.push([features[0], features[1][j], features[2][k]]);
-        else for (let i = 0; i < 3; i++)
-            combinations.push([features[0][i], features[1][j], features[2][k]]);
+    for (let k = 0; k < 3; k++) {
+        for (let j = 0; j < 3; j++) {
+            if (useColor) {
+                combinations.push([features[0], features[1][j], features[2][k]]);
+            } else {
+                for (let i = 0; i < 3; i++) {
+                    combinations.push([features[0][i], features[1][j], features[2][k]]);
+                }
+            }
+        }
     }
 
     const dim = WordDimensions;
@@ -114,18 +124,22 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
     //   (string[3])[<=27]
     const cleaned = [];
     for (const combo of combinations) {
-        // Rule 1: Any two words must be <75px (space is 1px)
-        const line1 = dim[combo[0]] + 1 + dim[combo[1]];
-        const line2 = dim[combo[1]] + 1 + dim[combo[2]];
-        if (line1 >= 75 && line2 >= 75)
+        const word0dim = makeLetterHash(combo[0]);
+        const word1dim = makeLetterHash(combo[1]);
+        const word2dim = makeLetterHash(combo[2]);
+        // Rule 1: Any two words must be <=74px (space is 2px)
+        const line1 = dim[word0dim] + 2 + dim[word1dim];
+        const line2 = dim[word1dim] + 2 + dim[word2dim];
+        if (line1 > 74 && line2 > 74)
             continue;
 
-        // Rule 2: Max name width must be <125px (spaces are 2px)
-        const line = dim[combo[0]] + 1 + dim[combo[1]] + 1 + dim[combo[2]];
-        if (line >= 125)
+        // Rule 2: Max name width must be <=124px (spaces are 2px each)
+        const line = dim[word0dim] + 2 + dim[word1dim] + 2 + dim[word2dim];
+        if (line > 124)
             continue;
 
-        // TODO Rule 3: One word must contain less than 3 syllables
+        // TODO Rule 3: At least one word must contain less than 3 syllables
+
         cleaned.push(combo);
     }
 
@@ -137,18 +151,5 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
     wordsVariation %= cleaned.length;
     const tuple = cleaned[wordsVariation];
 
-    // Format the three strings in two ways:
-    // 1. one line with three words
-    const threeLine = tuple.join(" ");
-    // 2. two lines, minimum total width
-    let twoLine;
-    const line1 = dim[tuple[0]] + dim[tuple[1]];
-    const line2 = dim[tuple[1]] + dim[tuple[2]];
-    if (line1 < line2)
-        twoLine = `${tuple[0]} ${tuple[1]}\n${tuple[2]}`;
-    else
-        twoLine = `${tuple[0]}\n${tuple[1]} ${tuple[2]}`;
-
-    // phew
-    return [threeLine, twoLine];
+    return tuple.join(" ");
 }

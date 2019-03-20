@@ -17,7 +17,7 @@ function renderIdenticons(text) {
 }
 
 function renderWords(text) {
-    document.getElementById('words-text').innerText = text ? name(text)[1] : '';
+    document.getElementById('words-text').innerText = text ? name(text) : '';
 }
 
 const firstText = '' + Date.now();
