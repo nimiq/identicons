@@ -39,7 +39,7 @@ Then specify the path where the library can find this SVG file, either by settin
 
 **Note:** Besides installing the package yourself, you can also use
 a npm-enabled CDN:
-`import Iqons from https://unpkg.com/@nimiq/iqons@1.2.0/dist/iqons.bundle.min.js`.
+`import Iqons from https://unpkg.com/@nimiq/iqons@1.3/dist/iqons.bundle.min.js`.
 
 ### NodeJS
 
