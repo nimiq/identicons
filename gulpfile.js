@@ -137,4 +137,15 @@ gulp.task('commonjs-bundle', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', gulp.series('prepare-svg', 'prepare-iqons-js', 'prepare-name-js', 'prepare-bundle', 'commonjs-bundle'));
+gulp.task('commonjs-name', function() {
+    return gulp
+        .src('dist/iqons-name.min.js')
+        .pipe(babel({
+            plugins: ["@babel/plugin-transform-modules-commonjs"],
+        }))
+        // .pipe(uglify())
+        .pipe(rename('iqons-name.cjs.js'))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', gulp.series('prepare-svg', 'prepare-iqons-js', 'prepare-name-js', 'prepare-bundle', 'commonjs-bundle', 'commonjs-name'));
