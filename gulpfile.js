@@ -80,6 +80,7 @@ gulp.task('prepare-iqons-js', function () {
         .src([
             'src/js/iqons.js',
             'src/js/hash.js',
+            'src/js/color-names.js',
             'src/js/colors.js',
         ])
         .pipe(remove_code({ production: true }))
@@ -100,6 +101,7 @@ gulp.task('prepare-name-js', function () {
         .src([
             'src/js/name.js',
             'src/js/hash.js',
+            'src/js/color-names.js',
             'src/js/colors.js',
             'src/js/word-catalog.js',
             'src/js/word-dimensions.js',

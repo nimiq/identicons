@@ -1,11 +1,16 @@
+// removeIf(production)
+import { makeHash } from './hash.js';
+import { colorNames } from './color-names.js';
+// endRemoveIf(production)
+
 export function hashToRGB(main, background, accent) {
     return indicesToRGB(hashToIndices(main, background, accent));
 }
 
 export function hashToIndices(main, background, accent) {
-    main = parseInt(main);
-    background = parseInt(background);
-    accent = parseInt(accent);
+    main = parseInt(main, 10);
+    background = parseInt(background, 10);
+    accent = parseInt(accent, 10);
 
     if (main === background)
         if (++main > 9) main = 0;
@@ -26,6 +31,12 @@ function indicesToRGB(indices) {
         background: backgroundColors[indices.background],
         accent: colors[indices.accent]
     };
+}
+
+export function getBackgroundColorName(text) {
+    const hash = makeHash(text);
+    const index = parseInt(hash[2], 10);
+    return colorNames[index];
 }
 
 export const colors = [

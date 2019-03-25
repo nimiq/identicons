@@ -1,17 +1,9 @@
+// removeIf(production)
+import { colorNames } from './color-names.js';
+// endRemoveIf(production)
+
 export const WordCatalog = {
-color: [
-    'Orange',
-    'Red',
-    'Yellow',
-    'Indigo',
-    'Light Blue',
-    'Purple',
-    'Teal',
-    'Pink',
-    'Light Green',
-    'Brown'
-    // TODO Better names for Light Colors?
-],
+color: colorNames,
 face: [
     ['Cute', 'Whiskered', 'Proud', 'Purring', 'Straying', 'Meowing', 'Cat', 'Kitten', 'Tomcat'],
     ['Red-Nosed', 'Comical', 'Clownish', 'Entertaining', 'Amusing', 'Hoaxing', 'Bubble-Nose', 'Rudolph', 'Clown'],
