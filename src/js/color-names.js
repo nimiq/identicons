@@ -2,10 +2,10 @@ export const colorNames = [
     'Orange',
     'Red',
     'Yellow',
-    'Indigo',
+    'Blue',
     'Light Blue',
     'Purple',
-    'Teal',
+    'Green',
     'Pink',
     'Light Green',
     'Brown'

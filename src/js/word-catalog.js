@@ -89,7 +89,7 @@ bottom : [
     ['Peg-Legged', 'Wooden', 'Tripling', 'Limping', 'Hobbling', 'Stumbling', 'Pirate', 'Hobble', 'Veteran'],
     ['Hyperactive', 'Active', 'Energetic', 'Jumping', 'Hopping', 'Skipping', 'Bouncy-Ball', 'Doer', 'Motivator'],
     ['Teenage', 'Fly', 'Skillful', 'Riding', 'Skateboarding', 'Kickflipping', 'Amateur', 'Pro-Skater', 'Skateboarder'],
-    ['Old-school', 'Childish', 'Weird', 'Skating', 'Rolling', 'Spinning', 'Fly ', 'Skater', '80s-Kid'],
+    ['Old-school', 'Childish', 'Weird', 'Skating', 'Rolling', 'Spinning', 'Fly', 'Skater', '80s-Kid'],
     ['Fast', 'Downhill', 'Alpine', 'Skiing', 'Gliding', 'Speeding', 'Skier', 'Ski-Instructor', 'Snow-Slider'],
     ['Skillful', 'Quick', 'Vigorous', 'Kicking', 'Dribbling', 'Scoring', 'Striker', 'Goalkeeper', 'Kicker'],
     ['Outboxed', 'Jumpy', 'Bouncy', 'Surprising', 'Flip-Flopping', 'Trolling', 'Surprise', 'Jester', 'Joker'],
