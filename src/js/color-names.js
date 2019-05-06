@@ -2,12 +2,11 @@ export const colorNames = [
     'Orange',
     'Red',
     'Yellow',
+    'Indigo',
     'Blue',
-    'Light Blue',
     'Purple',
-    'Green',
+    'Teal',
     'Pink',
-    'Light Green',
+    'Green',
     'Brown'
-    // TODO Better names for Light Colors?
 ];
