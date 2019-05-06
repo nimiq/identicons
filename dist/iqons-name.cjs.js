@@ -92,7 +92,7 @@ function _padEnd(t, r, e) {
   return t.substring(0, Math.max(t.length, r));
 }
 
-const colorNames = ["Orange", "Red", "Yellow", "Blue", "Light Blue", "Purple", "Green", "Pink", "Light Green", "Brown"];
+const colorNames = ["Orange", "Red", "Yellow", "Indigo", "Blue", "Purple", "Teal", "Pink", "Green", "Brown"];
 exports.colorNames = colorNames;
 
 function hashToRGB(o, n, r) {
