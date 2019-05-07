@@ -134,7 +134,7 @@ ${ content }
     }
 }
 
-/* @asset(/libraries/iqons/dist/iqons.min.svg) */
+// @asset(/libraries/iqons/dist/iqons.min.svg)
 Iqons.svgPath = '/libraries/iqons/dist/iqons.min.svg';
 
 Iqons.ASSET_COUNTS = {

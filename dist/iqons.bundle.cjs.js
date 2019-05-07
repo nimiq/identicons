@@ -96,12 +96,10 @@ class Iqons {
     return Math.floor(256 * Math.random());
   }
 
-}
-/* @asset(/libraries/iqons/dist/iqons.min.svg) */
+} // @asset(/libraries/iqons/dist/iqons.min.svg);
 
 
 exports.default = Iqons;
-;
 Iqons.svgPath = "/libraries/iqons/dist/iqons.min.svg", Iqons.ASSET_COUNTS = {
   top: 21,
   side: 21,
