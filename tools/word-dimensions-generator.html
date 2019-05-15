@@ -83,9 +83,9 @@
         async function start() {
             startButton.disabled = true;
             const doubles = testHashes();
-            console.log('Doubles (expect 33):', doubles);
+            console.log('Doubles (expect 19):', doubles);
 
-            if (doubles !== 33) {
+            if (doubles !== 19) {
                 console.error('Too many doubles, increase hash length!');
                 startButton.disabled = false;
                 return;
