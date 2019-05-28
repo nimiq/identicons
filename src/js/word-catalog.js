@@ -13,7 +13,7 @@ face: [
     ['Ghostly', 'Transilvanian', 'Undead', 'Nipping', 'Biting', 'Nibbling', 'Vampire', 'Dracula', 'Bloodsucker'],
     ['Duckfaced', 'Short-Billed', 'Ducky', 'Chattering', 'Cackling', 'Quacking', 'Chick', 'Duck', 'Goose'],
     ['Naughty', 'Ingenious', 'Mischievous', 'Crafting', 'Planning', 'Devising', 'Ringleader', 'Mastermind', 'Instigator'],
-    ['Impassioned', 'Amorous', 'Infatuated', 'Loving', 'Admiring', 'Desiring', 'Lover', 'Romantic', 'Valentine'],
+    ['Impassioned', 'Amorous', 'Infatuated', 'Loving', 'Admiring', 'Desiring', 'Sweetheart', 'Romantic', 'Valentine'],
     ['Stunned', 'Speechless', 'Breathless', 'Resetting', 'Regenerating', 'Rebooting', 'Phantasm', 'Phantom', 'Ghost'],
     ['Mustached', 'Bearded', 'Trimmed', 'Grooming', 'Shaving', 'Trimming', 'Mustache', 'Barber', 'Beard'],
     ['Studious', 'Four-Eyed', 'Nerdy', 'Learning', 'Reading', 'Studying', 'Nerd', 'Geek', 'Genius'],
@@ -29,7 +29,7 @@ face: [
 ],
 side : [
     ['Astronomical', 'Artificial', 'Metallic', 'Transmitting', 'Orbiting', 'Connecting', 'Satellite', 'Cyborg', 'Drone'],
-    ['In-Love', 'Brave', 'Pierced', 'Braving', 'Withstanding', 'Enduring', 'Archer', 'Arrow', 'Cupid'],
+    ['In-Love', 'Brave', 'Pierced', 'Braving', 'Defying', 'Enduring', 'Archer', 'Arrow', 'Cupid'],
     ['Bavarian', 'Sober', 'Malty', 'Brewing', 'Sipping', 'Partying', 'Lager', 'Beer-Fan', 'Octoberfest'],
     ['Protective', 'Punchy', 'Gloved', 'Boxing', 'Sparring', 'Slamming', 'Boxer', 'Champ', 'Hero'],
     ['Horned', 'Spiky', 'Pointy', 'Braving', 'Ramming', 'Pricking', 'Viking', 'Corsair', 'Hunk'],
