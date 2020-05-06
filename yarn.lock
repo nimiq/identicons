@@ -1200,9 +1200,9 @@ gulp-rename@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.2.2.tgz#3ad4428763f05e2764dec1c67d868db275687817"
 
-gulp-svgmin@tr33m4n/gulp-svgmin#upgrade-svgo:
+"gulp-svgmin@https://github.com/ben-eb/gulp-svgmin/archive/8e15c77205e143e8149e8ef2da519054c65b37bb.tar.gz":
   version "1.2.4"
-  resolved "https://codeload.github.com/tr33m4n/gulp-svgmin/tar.gz/8e15c77205e143e8149e8ef2da519054c65b37bb"
+  resolved "https://github.com/ben-eb/gulp-svgmin/archive/8e15c77205e143e8149e8ef2da519054c65b37bb.tar.gz#009ac9bdf0a3829ce3e209f0c2e494d37373cc01"
   dependencies:
     plugin-error "^0.1.2"
     svgo "^1.0.4"
