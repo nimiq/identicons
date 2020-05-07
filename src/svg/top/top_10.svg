@@ -1,79 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="Layer_1"
-   x="0px"
-   y="0px"
-   viewBox="0 0 160 160"
-   style="enable-background:new 0 0 160 160;"
-   xml:space="preserve"
-   sodipodi:docname="top_10.svg"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
-     id="metadata25"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-     id="defs23" /><sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="976"
-     id="namedview21"
-     showgrid="false"
-     inkscape:zoom="2.95"
-     inkscape:cx="-23.234662"
-     inkscape:cy="136.27182"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="Layer_1" /><style
-     type="text/css"
-     id="style2">
-	.st0{fill:#FFFFFF;}
-	.st1{opacity:5.000000e-02;}
-</style><title
-     id="title4">Artboard 42 copy 194</title><path
-     class="st0"
-     d="M 44.6,62 C 55.1,45 63.9,28.7 67,15 c 3.8,-1.3 24.3,18 42,38.5 0,0 -29.123634,-31.863331 -64.4,8.5 z"
-     id="path6"
-     style="fill:#00ff00;fill-opacity:1"
-     inkscape:connector-curvature="0"
-     sodipodi:nodetypes="cccc" /><g
-     class="st1"
-     id="g10"
-     style="fill:#010101;fill-opacity:1;opacity:0.1"><path
-       d="M68,15c8.4,4.8,25.2,22.5,41,38.5c-9.9-8.7-17.9-12.4-24.7-12.8L68,15z"
-       id="path8"
-       style="fill:#010101;fill-opacity:1" /></g><path
-     class="st0"
-     d="m 113.72666,37.891506 c 0,0 11,5 10,12 -1,7 -10,5 -10,-1 0,-6 -3,-10 0,-11 z"
-     id="path12"
-     style="fill:#000000;fill-opacity:1"
-     inkscape:connector-curvature="0" /><path
-     class="st0"
-     d="m 115.22666,33.791506 c 0,0 4.2,-1.4 5.7,0.7 1.5,2.1 -1.4,3.8 -2.9,2.2 -1.5,-1.6 -3.3,-1.9 -2.8,-2.9 z"
-     id="path14"
-     style="fill:#000000;fill-opacity:1"
-     inkscape:connector-curvature="0" /><path
-     class="st0"
-     d="M48.8,25.5c0,0-10,4.5-9.1,10.9s9.1,4.5,9.1-0.9S51.5,26.4,48.8,25.5z"
-     id="path16"
-     style="fill:#000000;fill-opacity:1" /><path
-     class="st0"
-     d="M33.5,46.8c0,0,0.7,5.6-2.4,6.9s-4.4-2.8-2-4.2S32.4,45.9,33.5,46.8z"
-     id="path18"
-     style="fill:#000000;fill-opacity:1" /></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <path d="M44.6 62C55.1 45 63.9 28.7 67 15c3.8-1.3 24.3 18 42 38.5 0 0-29.1-31.9-64.4 8.5z" fill="#0f0"/>
+  <path d="M68 15c8.4 4.8 25.2 22.5 41 38.5-9.9-8.7-17.9-12.4-24.7-12.8L68 15z" fill="#010101" opacity=".1"/>
+  <path d="M113.7 37.9s11 5 10 12-10 5-10-1-3-10 0-11z"/>
+  <path d="M115.2 33.8s4.2-1.4 5.7.7c1.5 2-1.4 3.8-2.9 2.2-1.5-1.6-3.3-2-2.8-3z"/>
+  <path d="M48.8 25.5s-10 4.5-9.1 10.9 9.1 4.5 9.1-.9 2.7-9.1 0-10z"/>
+  <path d="M33.5 46.8s.7 5.6-2.4 6.9-4.4-2.8-2-4.2 3.3-3.6 4.4-2.7z"/>
+</svg>
