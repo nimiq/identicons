@@ -1,6 +1,6 @@
 {
   "name": "@nimiq/iqons",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "Nimiq Identiqons",
   "main": "dist/iqons.bundle.cjs.js",
   "module": "dist/iqons.bundle.min.js",
