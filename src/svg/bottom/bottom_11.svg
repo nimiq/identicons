@@ -6,11 +6,11 @@
     <path d="M101.5 112s6.2 13.5 15.2 3.9c0 0 5.6-5.6 3.4 1.1s-11.2 18.7-30.3.9c-.1.1 7.8-2 11.7-5.9z"/>
   </g>
   <ellipse transform="rotate(-65 46 121.6)" cx="45.9" cy="121.6" rx="1.4" ry="1.8"/>
-  <ellipse transform="rotate(-2.5 51 122.3) scale(.99998)" cx="51" cy="122.3" rx="1.8" ry="1.4"/>
+  <ellipse transform="rotate(-2.5 51 122.3)" cx="51" cy="122.3" rx="1.8" ry="1.4"/>
   <ellipse transform="rotate(-27.5 55.6 121)" cx="55.6" cy="121.1" rx="1.4" ry="1.1"/>
   <ellipse transform="rotate(-47.8 58.4 118.6)" cx="58.4" cy="118.6" rx="1.4" ry="1.1"/>
   <ellipse transform="rotate(-25 113.5 121.6)" cx="113.5" cy="121.6" rx="1.8" ry="1.4"/>
-  <ellipse transform="rotate(-87.5 108.5 122.3) scale(.99998)" cx="108.5" cy="122.3" rx="1.4" ry="1.8"/>
+  <ellipse transform="rotate(-87.5 108.5 122.3)" cx="108.5" cy="122.3" rx="1.4" ry="1.8"/>
   <ellipse transform="rotate(-62.5 103.9 121.1)" cx="103.9" cy="121.1" rx="1.1" ry="1.4"/>
   <ellipse transform="rotate(-42.2 101 118.6)" cx="101.1" cy="118.6" rx="1.1" ry="1.4"/>
   <path d="M58 112s-6.2 13.5-15.2 3.9c0 0-5.6-5.6-3.4 1.1s11.1 18.7 30.3.9c0 .1-7.8-2-11.7-5.9z" fill="#010101" opacity=".3"/>
