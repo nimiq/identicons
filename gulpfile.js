@@ -10,6 +10,7 @@ var uglify = composer(uglify_es, console);
 var concat = require('gulp-concat');
 var remove_code = require('gulp-remove-code');
 var babel = require('gulp-babel');
+var replace = require('gulp-replace');
 
 gulp.task('prepare-svg', function () {
     return gulp
@@ -96,8 +97,29 @@ gulp.task('prepare-name-js', function () {
 });
 
 gulp.task('prepare-bundle', function () {
-    return gulp
-        .src(['src/js/svg.prefix.js', 'dist/iqons.min.svg', 'src/js/svg.suffix.js', 'dist/iqons.min.js'])
+    return gulp.src(['src/js/svg.prefix.js', 'dist/iqons.min.svg'])
+        .pipe(replace(/<symbol/g, '<S'))
+        .pipe(replace(/symbol>/g, 'S>'))
+        .pipe(replace(/<path/g, '<p'))
+        .pipe(replace(/<circle/g, '<c'))
+        .pipe(replace(/<ellipse/g, '<e'))
+        .pipe(replace(/fill="#fff"/g, 'fW'))
+        .pipe(replace(/fill="currentColor"/g, 'fC'))
+        .pipe(replace(/fill="#010101"/g, 'fB'))
+        .pipe(replace(/fill=/g, 'f='))
+        .pipe(replace(/currentColor/g, 'CC'))
+        .pipe(replace(/opacity=/g, 'o='))
+        .pipe(replace(/id="bottom_/g, 'i="b'))
+        .pipe(replace(/id="face_/g, 'i="f'))
+        .pipe(replace(/id="side_/g, 'i="s'))
+        .pipe(replace(/id="top_/g, 'i="t'))
+        .pipe(replace(/transform="rotate/g, 't="r'))
+        .pipe(replace(/transform="translate/g, 't="t'))
+        .pipe(replace(/transform="matrix/g, 't="m'))
+        .pipe(gulp.src([
+            'src/js/svg.suffix.js',
+            'dist/iqons.min.js',
+        ], { passthrough: true }))
         .pipe(concat('iqons.bundle.min.js'))
         .pipe(gulp.dest('dist'));
 });
