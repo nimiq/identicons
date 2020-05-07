@@ -10,6 +10,7 @@ var uglify = composer(uglify_es, console);
 var concat = require('gulp-concat');
 var remove_code = require('gulp-remove-code');
 var babel = require('gulp-babel');
+var replace = require('gulp-replace');
 
 gulp.task('prepare-svg', function () {
     return gulp
@@ -20,13 +21,8 @@ gulp.task('prepare-svg', function () {
             return {
                 plugins: [
                     {
-                        inlineStyles: {
-                            onlyMatchedOnce: false
-                        }
-                    },
-                    {
                         removeAttrs: {
-                            attrs: ['data.*', 'viewBox']
+                            attrs: ['viewBox']
                         }
                     },
                     {
@@ -37,8 +33,8 @@ gulp.task('prepare-svg', function () {
                             prefix: prefix,
                             minify: true
                         }
-                    }
-                ]
+                    },
+                ],
             };
         }))
         // Combine SVG files as symbols
@@ -46,25 +42,6 @@ gulp.task('prepare-svg', function () {
         // Remove unused tags
         .pipe(cheerio({
             run: function ($, file) {
-                /**
-                 * We currently remove all gradients in the source SVG files, to keep the Iqons in flat style.
-                 * Therefore, we can also remove all clip paths from the combined SVG file, because they are only
-                 * used by gradients. #g92-5 is the last remaining element that uses the clip-path attribute, but
-                 * is empty without the gradients anyway, so can be removed.
-                 */
-                $('linearGradient').remove();
-                $('radialGradient').remove();
-                $('defs').remove();
-                $('clipPath').remove();
-                $('#g92-5').remove();
-
-                $('style').remove();
-                $('path').each(function(i, el) {
-                    var fillAttr = $(el).attr('fill');
-                    if (fillAttr && fillAttr.indexOf('url(#linear-gradient') === 0) {
-                        $(el).remove();
-                    }
-                });
                 $('[fill="#0f0"]').attr('fill', 'currentColor');
             },
             parserOptions: {
@@ -120,8 +97,29 @@ gulp.task('prepare-name-js', function () {
 });
 
 gulp.task('prepare-bundle', function () {
-    return gulp
-        .src(['src/js/svg.prefix.js', 'dist/iqons.min.svg', 'src/js/svg.suffix.js', 'dist/iqons.min.js'])
+    return gulp.src(['src/js/svg.prefix.js', 'dist/iqons.min.svg'])
+        .pipe(replace(/<symbol/g, '<S'))
+        .pipe(replace(/symbol>/g, 'S>'))
+        .pipe(replace(/<path/g, '<p'))
+        .pipe(replace(/<circle/g, '<c'))
+        .pipe(replace(/<ellipse/g, '<e'))
+        .pipe(replace(/fill="#fff"/g, 'fW'))
+        .pipe(replace(/fill="currentColor"/g, 'fC'))
+        .pipe(replace(/fill="#010101"/g, 'fB'))
+        .pipe(replace(/fill=/g, 'f='))
+        .pipe(replace(/currentColor/g, 'CC'))
+        .pipe(replace(/opacity=/g, 'o='))
+        .pipe(replace(/id="bottom_/g, 'i="b'))
+        .pipe(replace(/id="face_/g, 'i="f'))
+        .pipe(replace(/id="side_/g, 'i="s'))
+        .pipe(replace(/id="top_/g, 'i="t'))
+        .pipe(replace(/transform="rotate/g, 't="r'))
+        .pipe(replace(/transform="translate/g, 't="t'))
+        .pipe(replace(/transform="matrix/g, 't="m'))
+        .pipe(gulp.src([
+            'src/js/svg.suffix.js',
+            'dist/iqons.min.js',
+        ], { passthrough: true }))
         .pipe(concat('iqons.bundle.min.js'))
         .pipe(gulp.dest('dist'));
 });

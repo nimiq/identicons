@@ -1,73 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="Layer_1"
-   x="0px"
-   y="0px"
-   viewBox="0 0 160 160"
-   style="enable-background:new 0 0 160 160;"
-   xml:space="preserve"
-   sodipodi:docname="bottom_19.svg"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
-     id="metadata27"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-     id="defs25" /><sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="976"
-     id="namedview23"
-     showgrid="false"
-     inkscape:zoom="2.95"
-     inkscape:cx="77.942426"
-     inkscape:cy="40.98288"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="Layer_1" /><style
-     type="text/css"
-     id="style2">
-	.st0{opacity:0.2;enable-background:new    ;}
-	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;}
-	.st2{opacity:0.4;enable-background:new    ;}
-	.st3{opacity:0.6;enable-background:new    ;}
-	.st4{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
-</style><title
-     id="title4">Artboard 42 copy 215</title><path
-     class="st0"
-     d="M39,110l9,23c0,0,48-1,47-2c-0.6-0.6-2.8-7.3-4.6-13c-22.4,5-36.3-8-36.3-8H39z"
-     id="path6" /><path
-     class="st1"
-     d="M63.5,131.9c-0.8-2.8,31.9-12.5,32.7-8.3c0.4,2.4-34.4,5-34.8,2.6s7.1-5.2,16.7-6.2c0.7-0.1,1.4-0.1,2.1-0.2"
-     id="path8" /><path
-     class="st1"
-     d="M63.5,137.9c-0.8-2.1,32.1-10.7,32.8-7.4c0.3,1.9-7.2,3.4-16.8,4.5s-17.6,0.4-17.9-1.4  c-0.1-0.6,0.5-1.2,1.7-1.8"
-     id="path10" /><polyline
-     class="st2"
-     points="95,131 121,140 95,142.4 78,144 48,133 "
-     id="polyline12" /><polygon
-     class="st2"
-     points="95,130.9 95,142 121,140 "
-     id="polygon14" /><path
-     class="st3"
-     d="M48,133v18.2c0.8,0.5,3.1,0.6,5.2,0.8H78v-8L48,133z"
-     id="path16" /><path
-     class="st4"
-     d="M121,140v7.2c-4.4,3.1-9.6,4.8-15,4.8H78v-8L121,140z"
-     id="path18" /></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <path d="M39 110l9 23s48-1 47-2c-.6-.6-2.8-7.3-4.6-13-22.4 5-36.3-8-36.3-8H39z" opacity=".3"/>
+  <path d="M95 131l26 9-26 2.4-17 1.6-30-11" opacity=".5"/>
+  <path d="M95 130.9V142l26-2z" opacity=".5"/>
+  <g fill="none" stroke="#000" stroke-miterlimit="10">
+    <path d="M63.5 131.9c-.8-2.8 31.9-12.5 32.7-8.3.4 2.4-34.4 5-34.8 2.6s7.1-5.2 16.7-6.2l2.1-.2"/>
+    <path d="M63.5 137.9c-.8-2.1 32.1-10.7 32.8-7.4.3 1.9-7.2 3.4-16.8 4.5s-17.6.4-17.9-1.4c-.1-.6.5-1.2 1.7-1.8"/>
+  </g>
+  <path d="M48 133v18.2c.8.5 3.1.6 5.2.8H78v-8l-30-11z" opacity=".7"/>
+  <path d="M121 140v7.2a26 26 0 01-15 4.8H78v-8l43-4z"/>
+  <path d="M121 140v7.2a26 26 0 01-15 4.8H78v-8l43-4z" opacity=".1" fill="#fff"/>
+</svg>
