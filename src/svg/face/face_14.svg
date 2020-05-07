@@ -1,58 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="Layer_1"
-   x="0px"
-   y="0px"
-   viewBox="0 0 160 160"
-   style="enable-background:new 0 0 160 160;"
-   xml:space="preserve"
-   sodipodi:docname="face_14.svg"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
-     id="metadata21"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-     id="defs19" /><sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="976"
-     id="namedview17"
-     showgrid="false"
-     inkscape:zoom="8.34386"
-     inkscape:cx="108.53689"
-     inkscape:cy="75.828276"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="Layer_1" /><style
-     type="text/css"
-     id="style2">
-	.st0{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}
-</style><title
-     id="title4">Artboard 42 copy 232</title><path
-     d="M84,63c-2-1-5-2-9,3s-8,13-5,19s11,3,12-1s0-6,3-9S89,66,84,63z"
-     id="path6"
-     style="fill:#010101;fill-opacity:1;opacity:0.6" /><path
-     d="M103.2,62.8c1.9-0.9,4.7-1.9,8.4,2.8s7.4,12.1,4.7,17.7S106,86,105.1,82.3s0-5.6-2.8-8.4S98.6,65.6,103.2,62.8z"
-     id="path8"
-     style="fill:#010101;fill-opacity:1;opacity:0.6" /><path
-     d="M 98.001953,83.113281 C 94.309326,83.054199 91,84 91,84 c -1.5,0.3 -2,1 -1,2 0,0 4.739467,3.158198 6.492188,3.857422 -0.01693,1.026249 -0.05841,2.350555 -0.166016,3.677734 -0.111164,1.371025 -0.293249,2.732902 -0.566406,3.69336 -0.136579,0.480228 -0.297972,0.782922 -0.404276,1.013972 -0.222732,0.484108 -0.377983,0.61152 -0.377983,0.61152 -0.381274,0.03737 -0.463835,0.02685 -0.463835,0.02685 -1.50631,-0.05776 -2.882821,-0.335595 -4.109375,-0.732421 -4.118869,-1.332577 -6.535156,-3.984376 -6.535156,-3.984376 -0.100925,-0.114035 -0.248314,-0.175866 -0.400391,-0.167968 -0.42283,0.02391 -0.626347,0.529763 -0.337891,0.839844 0,0 2.583713,2.848201 6.964844,4.265624 4.381131,1.417429 10.603747,1.376769 17.712887,-4.208984 0.57507,-0.404562 -0.0882,-1.24841 -0.61718,-0.785156 -4.12315,3.23961 -7.843654,4.516722 -11.052738,4.742187 0.253687,-0.363634 0.431127,-0.817055 0.582031,-1.347656 0.308092,-1.083292 0.48968,-2.482743 0.603516,-3.886719 0.110749,-1.365915 0.155277,-2.722667 0.171875,-3.767578 C 99.090837,89.125905 103,86 103,86 c 1,-0.9 1.2,-1.6 0,-2 -1.5625,-0.625 -3.31958,-0.859863 -4.998047,-0.886719 z"
-     id="path12"
-     inkscape:connector-curvature="0"
-     sodipodi:nodetypes="scccscsccsccccccccscccs" /></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <g fill="#010101" opacity=".6">
+    <path d="M84 63c-2-1-5-2-9 3s-8 13-5 19 11 3 12-1 0-6 3-9 4-9-1-12z"/>
+    <path d="M103.2 62.8c1.9-.9 4.7-1.9 8.4 2.8s7.4 12.1 4.7 17.7-10.3 2.7-11.2-1 0-5.6-2.8-8.4-3.7-8.3.9-11.1z"/>
+  </g>
+  <path d="M98 83.11c-3.7-.06-7 .89-7 .89-1.5.3-2 1-1 2 0 0 4.74 3.16 6.5 3.86a58.45 58.45 0 01-.17 3.68c-.11 1.37-.3 2.73-.57 3.69-.14.48-.3.78-.4 1.01-.23.49-.38.61-.38.61-.38.04-.47.03-.47.03-1.5-.06-2.88-.33-4.1-.73a16.37 16.37 0 01-6.54-3.99.5.5 0 10-.74.68s2.58 2.84 6.97 4.26c4.38 1.42 10.6 1.38 17.7-4.2.58-.41-.08-1.26-.6-.8-4.13 3.25-7.85 4.52-11.06 4.75.25-.36.43-.82.58-1.35.3-1.08.49-2.48.6-3.88.11-1.37.16-2.73.18-3.77C99.1 89.13 103 86 103 86c1-.9 1.2-1.6 0-2a14.21 14.21 0 00-5-.89z"/>
+</svg>
