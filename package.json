@@ -26,7 +26,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-remove-code": "^3.0.2",
     "gulp-rename": "^1.2.2",
-    "gulp-svgmin": "https://github.com/ben-eb/gulp-svgmin/archive/8e15c77205e143e8149e8ef2da519054c65b37bb.tar.gz",
+    "gulp-svgmin": "^2.2.0",
     "gulp-svgstore": "^6.1.1",
     "gulp-uglify": "^3.0.0",
     "uglify-es": "^3.3.9"
