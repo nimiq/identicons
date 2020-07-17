@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nimiq Iqon Builder</title>
+    <title>Nimiq Identicon Builder</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,700">
     <style type="text/css">
@@ -102,7 +102,7 @@
             height: 100%;
         }
 
-        .iqon {
+        .identicon {
             width: 320px;
             height: 320px;
             max-width: 100%;
@@ -110,13 +110,13 @@
             margin: 16px 0;
         }
 
-        .iqon.smaller {
+        .identicon.smaller {
             width: 160px;
             height: 160px;
             margin-left: -30px;
         }
 
-        .iqon.small {
+        .identicon.small {
             width: 80px;
             height: 80px;
             margin-left: -10px;
@@ -149,7 +149,7 @@
     </style>
 </head>
 <body>
-    <h1>Nimiq Iqon Builder</h1>
+    <h1>Nimiq Identicon Builder</h1>
 
     <div id="settings">
         <div class="float-left">
@@ -186,23 +186,23 @@
         <div class="words-text" id="words"></div>
     </div>
 
-    <div class="iqon"></div>
-    <div class="iqon smaller"></div>
-    <div class="iqon small"></div>
+    <div class="identicon"></div>
+    <div class="identicon smaller"></div>
+    <div class="identicon small"></div>
 
     <script type="module">
-        window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
+        window.NIMIQ_IDENTICONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/identicons.min.svg');
 
-        import Iqons from './src/js/iqons.js';
+        import Identicons from './src/js/identicons.js';
         import { WordCatalog } from './src/js/word-catalog.js';
         import { colors } from './src/js/colors.js';
         import { wordsByEntropy } from './src/js/name.js';
         window.WordCatalog = WordCatalog;
 
-        Iqons._getAssets().then(() => {
-            Iqons.colors = colors;
-            Iqons.wordsByEntropy = wordsByEntropy;
-            window.Iqons = Iqons;
+        Identicons._getAssets().then(() => {
+            Identicons.colors = colors;
+            Identicons.wordsByEntropy = wordsByEntropy;
+            window.Identicons = Identicons;
 
             createColorPickers();
             createFeatureSelects();
@@ -228,11 +228,11 @@
         });
     </script>
     <script>
-        const iqons = document.querySelectorAll('.iqon');
+        const identicons = document.querySelectorAll('.identicon');
         const $words = document.getElementById('words');
 
         function createColorPickers() {
-            const html = Iqons.colors.map((color, index) => {
+            const html = Identicons.colors.map((color, index) => {
                 return `<div onclick="updateOption('color', ${index})" style="background: ${color};"></div>`;
             }).join('');
 
@@ -264,17 +264,17 @@
             const featureSelectors = `${options.accentColor}0`; // gaze is hardcoded to 0
             const wordsVariation   = `${options.bodyColor}${options.backgroundColor}`;
 
-            const name = Iqons.wordsByEntropy(options.face, options.top, options.side, options.bottom, featureSelectors, wordsVariation, options.bodyColor, options.backgroundColor);
+            const name = Identicons.wordsByEntropy(options.face, options.top, options.side, options.bottom, featureSelectors, wordsVariation, options.bodyColor, options.backgroundColor);
             $words.textContent = name;
 
-            const svg = await Iqons._svgTemplate(options.bodyColor, options.backgroundColor, options.face, options.top, options.side, options.bottom, options.accentColor, 0, true);
+            const svg = await Identicons._svgTemplate(options.bodyColor, options.backgroundColor, options.face, options.top, options.side, options.bottom, options.accentColor, 0, true);
             const dataUrl = `data:image/svg+xml;base64,${btoa(svg)}`;
 
-            iqons.forEach($iqon => {
+            identicons.forEach($identicon => {
                 const $img = document.createElement('img');
                 $img.src = dataUrl;
-                if($iqon.firstChild) $iqon.removeChild($iqon.firstChild);
-                $iqon.appendChild($img);
+                if($identicon.firstChild) $identicon.removeChild($identicon.firstChild);
+                $identicon.appendChild($img);
             });
         }
     </script>

@@ -1,10 +1,10 @@
 {
-  "name": "@nimiq/iqons",
+  "name": "@nimiq/identicons",
   "version": "1.6.0",
-  "description": "Nimiq Identiqons",
-  "main": "dist/iqons.bundle.cjs.js",
-  "module": "dist/iqons.bundle.min.js",
-  "browser": "dist/iqons.min.js",
+  "description": "Nimiq Identicons",
+  "main": "dist/identicons.bundle.cjs.js",
+  "module": "dist/identicons.bundle.min.js",
+  "browser": "dist/identicons.min.js",
   "files": [
     "dist"
   ],

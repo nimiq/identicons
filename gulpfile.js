@@ -48,14 +48,14 @@ gulp.task('prepare-svg', function () {
                 xmlMode: true
             }
         }))
-        .pipe(rename('iqons.min.svg'))
+        .pipe(rename('identicons.min.svg'))
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('prepare-iqons-js', function () {
+gulp.task('prepare-identicons-js', function () {
     return gulp
         .src([
-            'src/js/iqons.js',
+            'src/js/identicons.js',
             'src/js/hash.js',
             'src/js/color-names.js',
             'src/js/colors.js',
@@ -69,7 +69,7 @@ gulp.task('prepare-iqons-js', function () {
                 comments: /@asset/
             }
         }))
-        .pipe(concat('iqons.min.js'))
+        .pipe(concat('identicons.min.js'))
         .pipe(gulp.dest('dist'));
 });
 
@@ -92,12 +92,12 @@ gulp.task('prepare-name-js', function () {
                 comments: /@asset/
             }
         }))
-        .pipe(concat('iqons-name.min.js'))
+        .pipe(concat('identicons-name.min.js'))
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('prepare-bundle', function () {
-    return gulp.src(['src/js/svg.prefix.js', 'dist/iqons.min.svg'])
+    return gulp.src(['src/js/svg.prefix.js', 'dist/identicons.min.svg'])
         .pipe(replace(/<symbol/g, '<S'))
         .pipe(replace(/symbol>/g, 'S>'))
         .pipe(replace(/<path/g, '<p'))
@@ -118,32 +118,32 @@ gulp.task('prepare-bundle', function () {
         .pipe(replace(/transform="matrix/g, 't="m'))
         .pipe(gulp.src([
             'src/js/svg.suffix.js',
-            'dist/iqons.min.js',
+            'dist/identicons.min.js',
         ], { passthrough: true }))
-        .pipe(concat('iqons.bundle.min.js'))
+        .pipe(concat('identicons.bundle.min.js'))
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('commonjs-bundle', function () {
     return gulp
-        .src('dist/iqons.bundle.min.js')
+        .src('dist/identicons.bundle.min.js')
         .pipe(babel({
             plugins: ["@babel/plugin-transform-modules-commonjs"],
         }))
         // .pipe(uglify())
-        .pipe(rename('iqons.bundle.cjs.js'))
+        .pipe(rename('identicons.bundle.cjs.js'))
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('commonjs-name', function() {
     return gulp
-        .src('dist/iqons-name.min.js')
+        .src('dist/identicons-name.min.js')
         .pipe(babel({
             plugins: ["@babel/plugin-transform-modules-commonjs"],
         }))
         // .pipe(uglify())
-        .pipe(rename('iqons-name.cjs.js'))
+        .pipe(rename('identicons-name.cjs.js'))
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', gulp.series('prepare-svg', 'prepare-iqons-js', 'prepare-name-js', 'prepare-bundle', 'commonjs-bundle', 'commonjs-name'));
+gulp.task('default', gulp.series('prepare-svg', 'prepare-identicons-js', 'prepare-name-js', 'prepare-bundle', 'commonjs-bundle', 'commonjs-name'));

@@ -1,1 +1,1 @@
-export const IqonsAssets = `
+export const IdenticonsAssets = `

@@ -11,7 +11,7 @@ export function makeHash(text) {
         .substr(4, 17);
 
     // The index 5 of `fullHash` is currently unused (index 1 of `hash`,
-    // after cutting off the first 4 elements). Iqons.svg() is not using it.
+    // after cutting off the first 4 elements). Identicons.svg() is not using it.
 
     // A small percentage of returned values are actually too short,
     // leading to an invalid bottom index and feature color. Adding

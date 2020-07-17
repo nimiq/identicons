@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title></title>
+    <title>Nimiq Identicon Catalog</title>
 </head>
 <link href="./demo.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,700">
@@ -25,12 +25,12 @@ h2 {
     margin-top: 64px;
 }
 
-.iqon {
+.identicon {
     display: inline-block;
     margin: 16px 8px;
 }
 
-.iqon svg {
+.identicon svg {
     width: 160px;
     height: 160px;
     display: block;
@@ -41,7 +41,7 @@ h2 {
 </style>
 
 <body>
-    <h1>Nimiq Iqons Catalog</h1>
+    <h1>Nimiq Identicons Catalog</h1>
     <div id="top">
         <h2>Tops</h2>
     </div>
@@ -56,19 +56,19 @@ h2 {
     </div>
 </body>
 <script type="module">
-window.NIMIQ_IQONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/iqons.min.svg');
+window.NIMIQ_IDENTICONS_SVG_PATH = location.pathname.replace(/[^/]*$/, 'dist/identicons.min.svg');
 
-import Iqons from './src/js/iqons.js';
+import Identicons from './src/js/identicons.js';
 import { WordCatalog } from './src/js/word-catalog.js';
-// import Iqons, { WordCatalog } from './dist/iqons.bundle.min.js';
+// import Identicons, { WordCatalog } from './dist/identicons.bundle.min.js';
 
 async function render(type) {
-    const count = Iqons.ASSET_COUNTS[type];
+    const count = Identicons.ASSET_COUNTS[type];
     const $el = document.getElementById(type);
     for (var i = 0; i < count; i++) {
         const name = getName(type, i);
-        const $iqon = renderIqon(await renderFns[type](i), name);
-        $el.appendChild($iqon)
+        const $identicon = renderIdenticon(await renderFns[type](i), name);
+        $el.appendChild($identicon)
     }
 }
 
@@ -80,17 +80,17 @@ function getName(type, index) {
 }
 
 const renderFns = {
-    face: async index => await Iqons._svgTemplate(0, 3, index, -1, -1, -1, 6),
-    top: async index => await Iqons._svgTemplate(0, 3, -1, index, -1, -1, 6),
-    side: async index => await Iqons._svgTemplate(0, 3, -1, -1, index, -1, 6),
-    bottom: async index => await Iqons._svgTemplate(0, 3, -1, -1, -1, index, 6),
+    face: async index => await Identicons._svgTemplate(0, 3, index, -1, -1, -1, 6),
+    top: async index => await Identicons._svgTemplate(0, 3, -1, index, -1, -1, 6),
+    side: async index => await Identicons._svgTemplate(0, 3, -1, -1, index, -1, 6),
+    bottom: async index => await Identicons._svgTemplate(0, 3, -1, -1, -1, index, 6),
 }
 
-function renderIqon(svg, name) {
-    const $iqon = document.createElement('div');
-    $iqon.innerHTML = svg + `<span>${name}</span>`;
-    $iqon.className = 'iqon'
-    return $iqon;
+function renderIdenticon(svg, name) {
+    const $identicon = document.createElement('div');
+    $identicon.innerHTML = svg + `<span>${name}</span>`;
+    $identicon.className = 'identicon'
+    return $identicon;
 }
 
 render('face')

@@ -5,7 +5,7 @@ import { WordCatalog } from './word-catalog.js';
 import { WordDimensions } from './word-dimensions.js';
 // endRemoveIf(production)
 
-// Generate a word description of the Iqon
+// Generate a word description of the Identicon
 export function name(text) {
     const hash1 = makeHash(text);
     const hash2 = makeHash(hash1);
@@ -22,7 +22,7 @@ export function name(text) {
     );
 }
 
-// Generate a nice tuple of (adjective, verb, noun) describing the Nimiqon.
+// Generate a nice tuple of (adjective, verb, noun) describing the Identicon.
 //  - The *Nr are indices of word families/modifiers (see catalog.html)
 //  - featureSelectors decides which feature (face, top, side, bottom) is included as which word type
 //  - wordsVariation   decides which variation of the max 27 legal tuples is chosen
@@ -66,7 +66,7 @@ function _wordRound(faceNr, topNr, sidesNr, bottomNr, featureSelectors, wordsVar
     // Build array of all possible word lists
     //   (string[9])[4]
     // The catalog contains four of five features: Faces, Tops, Sides and Bottoms.
-    // The fifth feature is the body color of the Iqon, which is not using synonyms.
+    // The fifth feature is the body color of the Identicon, which is not using synonyms.
     // Each feature has a list of 21 word families.
     // We select the same word families as shown in the identicon.
     const wordLists = [

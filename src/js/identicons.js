@@ -3,7 +3,7 @@ import { makeHash } from './hash.js';
 import { hashToRGB } from './colors.js';
 // endRemoveIf(production)
 
-export default class Iqons {
+export default class Identicons {
 
     /* Public API */
 
@@ -57,10 +57,10 @@ export default class Iqons {
     /* Private API */
 
     static async _svgTemplate(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor) {
-        return this._$svg(await this._$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor));
+        return this._$svg(await this._$identicons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor));
     }
 
-    static async _$iqons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor) {
+    static async _$identicons(color, backgroundColor, faceNr, topNr, sidesNr, bottomNr, accentColor) {
         const colors = hashToRGB(color, backgroundColor, accentColor);
 
         color = colors.main;
@@ -107,8 +107,8 @@ ${ content }
     static async _getAssets() {
         return this._assetsPromise || (this._assetsPromise = new Promise(async function (resolve) {
             let assetsText;
-            if (typeof IqonsAssets !== 'undefined') assetsText = IqonsAssets; // Check for inlined assets
-            else assetsText = await fetch(self.NIMIQ_IQONS_SVG_PATH || Iqons.svgPath)
+            if (typeof IdenticonsAssets !== 'undefined') assetsText = IdenticonsAssets; // Check for inlined assets
+            else assetsText = await fetch(self.NIMIQ_IDENTICONS_SVG_PATH || Identicons.svgPath)
                 .then(response => response.text());
 
             if (typeof module !== 'undefined' && module.exports) global.DOMParser = require('dom-parser');
@@ -134,5 +134,5 @@ ${ content }
     }
 }
 
-// @asset(/node_modules/@nimiq/iqons/dist/iqons.min.svg)
-Iqons.svgPath = '/node_modules/@nimiq/iqons/dist/iqons.min.svg';
+// @asset(/node_modules/@nimiq/identicons/dist/identicons.min.svg)
+Identicons.svgPath = '/node_modules/@nimiq/identicons/dist/identicons.min.svg';

@@ -6,7 +6,7 @@ body {
     font-family: system-ui, sans-serif;
 }
 
-.iqons {
+.identicons {
     width: 160px;
     height: 160px;
     display: inline-block;
@@ -14,7 +14,7 @@ body {
     /*filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));*/
 }
 
-#iqons {
+#identicons {
     width: 256px;
     height: 256px;
     margin: 0 auto;
