@@ -118,9 +118,13 @@ ${ content }
         }));
     }
 
+    /**
+     * @param {string} text
+     */
     static _btoa(text) {
-        if (typeof module !== 'undefined' && module.exports) return new Buffer(text).toString('base64');
-        return btoa(text);
+        if (typeof globalThis.btoa === 'function') return btoa(text);
+        else if (typeof module !== 'undefined' && module.exports) return Buffer.from(text).toString('base64');
+        throw new Error('No btoa or equivalent available');
     }
 
     static _assetIndex(index, part) {
