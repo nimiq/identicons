@@ -111,7 +111,10 @@ ${ content }
             else assetsText = await fetch(self.NIMIQ_IDENTICONS_SVG_PATH || Identicons.svgPath)
                 .then(response => response.text());
 
-            if (typeof module !== 'undefined' && module.exports) global.DOMParser = require('dom-parser');
+            if (typeof DOMParser !== 'function') {
+                if (typeof module !== 'undefined' && module.exports) global.DOMParser = require('dom-parser');
+                else throw new Error('No DOMParser available');
+            }
 
             const parser = new DOMParser();
             resolve(parser.parseFromString(assetsText, 'image/svg+xml'));
@@ -122,7 +125,7 @@ ${ content }
      * @param {string} text
      */
     static _btoa(text) {
-        if (typeof globalThis.btoa === 'function') return btoa(text);
+        if (typeof btoa === 'function') return btoa(text);
         else if (typeof module !== 'undefined' && module.exports) return Buffer.from(text).toString('base64');
         throw new Error('No btoa or equivalent available');
     }
