@@ -1,6 +1,6 @@
 {
   "name": "@nimiq/identicons",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Nimiq Identicons",
   "main": "dist/identicons.bundle.cjs.js",
   "module": "dist/identicons.bundle.min.js",
