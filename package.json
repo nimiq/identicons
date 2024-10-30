@@ -1,35 +1,89 @@
 {
   "name": "@nimiq/identicons",
-  "version": "1.6.2",
+  "type": "module",
+  "version": "2.0.0",
+  "packageManager": "pnpm@9.9.0",
   "description": "Nimiq Identicons",
-  "main": "dist/identicons.bundle.cjs.js",
-  "module": "dist/identicons.bundle.min.js",
-  "browser": "dist/identicons.min.js",
+  "license": "MIT",
+  "homepage": "https://github.com/nimiq/identicons#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimiq/identicons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nimiq/identicons/issues"
+  },
+  "keywords": [
+    "identicons",
+    "nimiq"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "browser": "./dist/index.mjs",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "dom-parser": "^0.1.5"
+    "build": "vite build",
+    "dev": "vite build --watch & pnpm --filter=./playground run dev",
+    "dev:pkg": "vite build --watch",
+    "dev:playground": "pnpm --filter=./playground run dev",
+    "lint": "eslint . && pnpm -C playground run lint",
+    "lint:fix": "eslint . --fix && pnpm -C playground run lint:fix",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit --ignore",
+    "prepare": "simple-git-hooks",
+    "optimize-svg": "esno ./scripts/optimize-svgs.ts"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-cheerio": "^0.6.3",
-    "gulp-concat": "^2.6.1",
-    "gulp-remove-code": "^3.0.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^1.0.0",
-    "gulp-svgmin": "^2.2.0",
-    "gulp-svgstore": "^6.1.1",
-    "gulp-uglify": "^3.0.0",
-    "uglify-es": "^3.3.9"
+    "@antfu/eslint-config": "^3.3.2",
+    "@antfu/ni": "^0.23.0",
+    "@antfu/utils": "^0.7.10",
+    "@types/node": "^22.5.4",
+    "bumpp": "^9.5.2",
+    "consola": "^3.2.3",
+    "eslint": "^9.9.1",
+    "eslint-plugin-format": "^0.1.2",
+    "esno": "^4.7.0",
+    "lint-staged": "^15.2.10",
+    "pathe": "^1.1.2",
+    "pnpm": "^9.9.0",
+    "simple-git-hooks": "^2.11.1",
+    "svgo": "^3.3.2",
+    "tiny-glob": "^0.2.9",
+    "typescript": "^5.5.4",
+    "unbuild": "^2.0.0",
+    "vite": "^5.4.3",
+    "vite-plugin-dts": "^4.3.0",
+    "vitest": "^2.0.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix ."
+  },
+  "directories": {
+    "test": "test"
   }
 }
