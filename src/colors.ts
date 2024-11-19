@@ -1,5 +1,4 @@
 import type { Colors, ColorType } from './types'
-import { makeHash } from './hash'
 
 export const colors = [
   '#FC8702',
@@ -39,10 +38,4 @@ export function colorsToRgb({ main, background, accent }: Record<ColorType, numb
     background: backgroundColors[background],
     accent: colors[accent],
   }
-}
-
-export function getBackgroundColorName(text: string): string {
-  const hash = makeHash(text)
-  const index = Number.parseInt(hash[2], 10) % 10
-  return colorNames[index]
 }
