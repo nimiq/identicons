@@ -8,8 +8,8 @@ The library is heavily optimized for performance.
 [See the Identicons in action here.](https://nimiq.github.io/identicons/)
 
 - [Installation](#installation)
-    - [Browsers](#browsers)
-    - [NodeJS](#nodejs)
+  - [Browsers](#browsers)
+  - [NodeJS](#nodejs)
 - [Usage](#usage)
 - [Demos](#demos)
 
@@ -62,37 +62,37 @@ All methods generating identicons are async and return promises.
 Get a raw SVG text string:
 
 ```js
-    const svg = await Identicons.svg(text)
+const svg = await Identicons.svg(text)
 ```
 
 Get a SVG data url string (the one starting with `data:image/svg+xml;base64,...`),
 which can be set as `img.src`:
 
 ```js
-    const dataUrl = await Identicons.toDataUrl(text)
+const dataUrl = await Identicons.toDataUrl(text)
 ```
 
 Render an identicon SVG into the DOM (only in browsers!):
 
 ```js
-    await Identicons.render(text, element)
+await Identicons.render(text, element)
 ```
 
 Get an `<img>` DOM node (only in browsers!):
 
 ```js
-    const img = await Identicons.image(text)
+const img = await Identicons.image(text)
 ```
 
 You can generate a placeholder icon with these (sync) methods:
 
 ```js
-    // Placeholder SVG:
-    const svg = Identicons.placeholder(color = '#bbb', strokeWidth = 1)
-    // Placeholder data url:
-    const dataUrl = Identicons.placeholderToDataUrl(color = '#bbb', strokeWidth = 1)
-    // Render placeholder SVG into `element`:
-    Identicons.renderPlaceholder(element, color = '#bbb', strokeWidth = 1)
+// Placeholder SVG:
+const svg = Identicons.placeholder(color = '#bbb', strokeWidth = 1)
+// Placeholder data url:
+const dataUrl = Identicons.placeholderToDataUrl(color = '#bbb', strokeWidth = 1)
+// Render placeholder SVG into `element`:
+Identicons.renderPlaceholder(element, color = '#bbb', strokeWidth = 1)
 ```
 
 ## Demos
